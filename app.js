@@ -1,18 +1,18 @@
 const $ = (s) => document.querySelector(s);
-const state = { assessments: [], commitments: [], indicators: [], positions: [], manifestos: [], expandedCommitments: [] };
+const state = { assessments: [], commitments: [], indicators: [], positions: [], manifestos: [], expandedCommitments: [], feasibility: null };
 const icons = {Housing:"⌂",Health:"✚","Economy & taxation":"€","Immigration & asylum":"◎","Climate & energy":"♧",Transport:"↗","Transport & infrastructure":"↗","Education & skills":"▤","Education":"▤","Justice & public safety":"⚖","Agriculture & rural affairs":"♣","Disability & equality":"◉","Foreign affairs & defence":"◇"};
 const safe = (v) => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const link = (url,label="View source") => url ? `<a class="source-link" href="${safe(url)}" target="_blank" rel="noopener noreferrer">${safe(label)} ↗</a>` : "";
 const formatNum = (v) => typeof v === "number" ? new Intl.NumberFormat("en-IE").format(v) : safe(v ?? "Not reported");
 async function load(){
- const files=["policy_assessments.json","commitment_tracker.json","research_register.json","party_position_register.json","manifesto_comparison_2024.json","pfg_commitments_expanded.json"];
- const [a,c,r,p,m,e]=await Promise.all(files.map(f=>fetch(`data/${f}`).then(x=>{if(!x.ok)throw Error(f);return x.json()})));
- state.assessments=a.assessments||[];state.commitments=c.starter_rows||[];state.indicators=r.indicators||[];state.positions=p.positions||[];state.manifestos=m.parties||[];state.expandedCommitments=e.commitments||[];
+ const files=["policy_assessments.json","commitment_tracker.json","research_register.json","party_position_register.json","manifesto_comparison_2024.json","pfg_commitments_expanded.json","feasibility_assessment.json"];
+ const [a,c,r,p,m,e,f]=await Promise.all(files.map(f=>fetch(`data/${f}`).then(x=>{if(!x.ok)throw Error(f);return x.json()})));
+ state.assessments=a.assessments||[];state.commitments=c.starter_rows||[];state.indicators=r.indicators||[];state.positions=p.positions||[];state.manifestos=m.parties||[];state.expandedCommitments=e.commitments||[];state.feasibility=f;
  const date=a.metadata?.research_cutoff||r.metadata?.research_cutoff||"Not stated";
  $("#research-date").textContent=`Research snapshot: ${date} · Expanded edition; conclusions remain provisional`;
  $("#method-date").textContent=date;
  $("#area-count").textContent=state.assessments.length;$("#indicator-count").textContent=state.indicators.length;$("#promise-count").textContent=state.commitments.length;
- populateAreaFilter();renderPolicies();renderEvidence();renderPromises();renderParties();renderManifestos();renderExpandedCommitments();
+ populateAreaFilter();renderPolicies();renderEvidence();renderPromises();renderParties();renderManifestos();renderExpandedCommitments();renderFeasibility();
 }
 function populateAreaFilter(){const areas=[...new Set(state.indicators.map(x=>x.area))].sort();$("#evidence-filter").innerHTML='<option value="">All areas</option>'+areas.map(x=>`<option>${safe(x)}</option>`).join("");}
 function renderPolicies(){
@@ -58,4 +58,14 @@ function renderManifestos(){
 }function renderExpandedCommitments(){
  const groups=[...new Set(state.expandedCommitments.map(x=>x.policy_area))];
  $("#expanded-pfg-list").innerHTML=groups.map(area=>`<details class="pfg-group"><summary>${safe(area)} <span>${state.expandedCommitments.filter(x=>x.policy_area===area).length} commitments</span></summary><div>${state.expandedCommitments.filter(x=>x.policy_area===area).map(x=>`<article class="pfg-item"><h4>${safe(x.commitment_summary)}</h4><p class="meta">PFG printed page ${safe(x.programme_page)} · ${safe(x.id)}</p><p><strong>How to measure:</strong> ${safe(x.measurement_required)}</p><p class="meta">Baseline: ${safe(x.baseline)} Status: ${safe(x.delivery_status)}</p>${link(x.source_url,"Programme for Government PDF")}</article>`).join("")}</div></details>`).join("");
+}
+
+function renderFeasibility(){
+ const f=state.feasibility;if(!f)return;
+ const labels={fiscal:"Fiscal arithmetic",funding:"Funding credibility",baseline:"Baseline and additionality",delivery:"Delivery capacity",outcomes:"Measurable outcomes",uncertainty:"Risk and sensitivity"};
+ $("#feasibility-method").innerHTML=f.rubric.map(x=>`<article><h4>${safe(x.label)}</h4><p>${safe(x.question)}</p></article>`).join("");
+ $("#feasibility-list").innerHTML=f.parties.map(p=>`<article class="feasibility-card"><div class="party-card-head"><h3>${safe(p.party)}</h3><span class="status">${safe(p.confidence)} confidence</span></div><p class="meta">PBO comparison: ${safe(p.pbo)}</p><p>${safe(p.pbo_profile)}</p><div class="feasibility-columns"><section><h4>Strengths in published plan</h4><ul>${p.strengths.map(s=>`<li>${safe(s)}</li>`).join("")}</ul></section><section><h4>Risks and unresolved tests</h4><ul>${p.risks.map(s=>`<li>${safe(s)}</li>`).join("")}</ul></section></div><p><strong>Funding test:</strong> ${safe(p.funding_watch)}</p><p><strong>Delivery test:</strong> ${safe(p.delivery_watch)}</p></article>`).join("");
+ $("#feasibility-conclusion").textContent=f.system_conclusion;
+ $("#feasibility-next").innerHTML=f.next_steps.map(s=>`<li>${safe(s)}</li>`).join("");
+ $("#feasibility-sources").innerHTML=f.metadata.primary_sources.map(s=>`<li><a href="${safe(s.url)}" target="_blank" rel="noopener noreferrer">${safe(s.name)} ↗</a><p>${safe(s.scope)}</p></li>`).join("");
 }
