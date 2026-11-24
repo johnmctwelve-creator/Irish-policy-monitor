@@ -99,12 +99,19 @@ function renderFiscalModel(){
 function renderQuestionnaire(){
  const q=state.questionnaire;if(!q)return;
  const root=$("#alignment-questions");if(!root)return;
- root.innerHTML=q.dimensions.map((d,i)=>`<fieldset class="alignment-question"><legend><span>${i+1} / ${q.dimensions.length}</span>${safe(d.label)}</legend><p>${safe(d.question)}</p><div class="alignment-options">${d.options.map(o=>`<label><input type="radio" name="align-${safe(d.id)}" value="${safe(o.id)}"><span>${safe(o.label)}</span></label>`).join("")}</div><label class="nonnegotiable-toggle"><input type="checkbox" class="alignment-redline" data-issue="${safe(d.id)}"><span><strong>Non-negotiable issue</strong><small>A party must match my selected answer exactly on this issue.</small></span></label></fieldset>`).join("");
- $("#alignment-progress").textContent="0 of "+q.dimensions.length+" answered";
+ const symbols={housing:"⌂",health:"✚",economy:"€",climate:"♧",immigration:"◎",education:"▤"};
+ root.innerHTML=q.dimensions.map((d,i)=>`<fieldset class="alignment-question"><legend><span class="alignment-question-icon" aria-hidden="true">${symbols[d.id]||"◈"}</span><span class="alignment-question-heading"><small>QUESTION ${String(i+1).padStart(2,"0")} / ${String(q.dimensions.length).padStart(2,"0")}</small><strong>${safe(d.label)}</strong></span></legend><p>${safe(d.question)}</p><div class="alignment-options">${d.options.map(o=>`<label><input type="radio" name="align-${safe(d.id)}" value="${safe(o.id)}"><span>${safe(o.label)}</span></label>`).join("")}</div><label class="nonnegotiable-toggle"><input type="checkbox" class="alignment-redline" data-issue="${safe(d.id)}"><span><strong>Make this a deal-breaker</strong><small>Prioritise parties that match your choice exactly on this issue.</small></span></label></fieldset>`).join("");
  root.addEventListener("change",updateAlignmentProgress);
  $("#alignment-reset").addEventListener("click",()=>{root.querySelectorAll("input").forEach(x=>x.checked=false);$("#alignment-results").hidden=true;updateAlignmentProgress();});
  $("#alignment-submit").addEventListener("click",calculateAlignment);
- function updateAlignmentProgress(){const n=q.dimensions.filter(d=>root.querySelector(`input[name="align-${d.id}"]:checked`)).length;$("#alignment-progress").textContent=n+" of "+q.dimensions.length+" answered";}
+ function updateAlignmentProgress(){
+  const n=q.dimensions.filter(d=>root.querySelector(`input[name="align-${d.id}"]:checked`)).length;
+  const pct=Math.round(n/q.dimensions.length*100);
+  $("#alignment-progress").textContent=n+" of "+q.dimensions.length+" answered";
+  $("#alignment-progress-percent").textContent=pct+"%";
+  $("#alignment-progress-fill").style.width=pct+"%";
+ }
+ updateAlignmentProgress();
 }
 function calculateAlignment(){
  const q=state.questionnaire,root=$("#alignment-questions");
