@@ -39,3 +39,12 @@ if(search)search.addEventListener("input",render);if(clear)clear.addEventListene
 if(progress||topBtn){const update=()=>{const max=document.documentElement.scrollHeight-window.innerHeight;const pct=max>0?Math.min(100,Math.max(0,window.scrollY/max*100)):0;if(progress)progress.style.width=pct+"%";if(topBtn)topBtn.classList.toggle("is-visible",window.scrollY>500);};window.addEventListener("scroll",update,{passive:true});window.addEventListener("resize",update);update();}
 if(topBtn)topBtn.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
 });
+
+// Close an expanded navigation group after choosing a destination; move focus to the destination.
+document.querySelectorAll(".section-nav a[href^='#']").forEach(link=>{
+ link.addEventListener("click",()=>{
+  document.querySelectorAll(".section-nav details[open]").forEach(group=>group.removeAttribute("open"));
+  const target=document.getElementById(decodeURIComponent(link.getAttribute("href").slice(1)));
+  if(target){target.setAttribute("tabindex","-1");window.setTimeout(()=>target.focus({preventScroll:true}),350);}
+ });
+});
