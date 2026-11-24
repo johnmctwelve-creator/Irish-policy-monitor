@@ -12,7 +12,7 @@ async function load(){
  $("#research-date").textContent=`Research snapshot: ${date} · Expanded edition; conclusions remain provisional`;
  $("#method-date").textContent=date;
  $("#area-count").textContent=state.assessments.length;$("#indicator-count").textContent=state.indicators.length;$("#promise-count").textContent=state.commitments.length;
- populateAreaFilter();renderExecutiveDashboard();renderPolicies();renderEvidence();renderPromises();renderParties();renderManifestos();renderExpandedCommitments();renderFeasibility();renderFiscalModel();renderQuestionnaire();
+ populateAreaFilter();populatePartyFilter();renderExecutiveDashboard();renderPolicies();renderEvidence();renderPromises();renderParties();renderManifestos();renderExpandedCommitments();renderFeasibility();renderFiscalModel();renderQuestionnaire();
 }
 function populateAreaFilter(){const areas=[...new Set(state.indicators.map(x=>x.area))].sort();$("#evidence-filter").innerHTML='<option value="">All areas</option>'+areas.map(x=>`<option>${safe(x)}</option>`).join("");}
 function renderPolicies(){
@@ -41,21 +41,33 @@ function renderPromises(){
  $("#promise-list").innerHTML=rows.length?rows.map(x=>`<article class="promise-item"><div><h3>${safe(x.commitment_theme)}</h3><div class="meta">${safe(x.commitment_id)} · ${safe(x.policy_area)} · ${safe(x.responsible_department||"Department not specified")}</div></div><div class="promise-description"><strong>Latest evidence</strong><p>${safe(x.latest_metric||x.progress_note||x.notes||"No latest metric recorded")}</p><p class="meta">Target: ${safe(x.target||"Not quantified")} · Deadline: ${safe(x.deadline||"Not stated")}</p></div><div class="promise-status"><span class="status ${safe(x.status||"not_verifiable")}">${safe((x.status||"not_verifiable").replaceAll("_"," "))}</span><p class="meta">Confidence: ${safe(x.confidence||"Not stated")}</p></div><div class="promise-source">${link(x.delivery_evidence_url,x.delivery_evidence_title||"Delivery evidence")}</div><p class="meta promise-caveat">${safe(x.notes||"No further note recorded.")}</p></article>`).join(""):'<div class="empty">No commitments match that status.</div>';
 }
 function renderParties(){
- const rows=state.positions;
- $("#party-list").innerHTML=rows.length?rows.map(x=>`<article class="party-card"><div class="party-card-head"><h3>${safe(x.party)}</h3><span class="status">${safe(x.status||"Status not stated")}</span></div><p class="meta">${safe(x.policy_area)} · ${safe(x.publication_date||"Date not stated")}</p><p>${safe(x.position_summary)}</p><p>${safe(x.proposal_text)}</p><p class="meta">Costing: ${safe(x.costing_source||"No costing source recorded")}</p>${link(x.source_url,"Original party source")}</article>`).join(""):'<div class="empty">No party positions have been verified yet.</div>';
+ const query=$("#party-search")?.value.trim().toLowerCase()||"",party=$("#party-filter")?.value||"";
+ const rows=state.positions.filter(x=>(!party||x.party===party)&&`${x.party} ${x.policy_area} ${x.position_summary} ${x.proposal_text} ${x.status}`.toLowerCase().includes(query));
+ $("#party-list").innerHTML=rows.length?rows.map(x=>`<tr><th scope="row">${safe(x.party)}</th><td>${safe(x.policy_area)}</td><td>${safe(x.position_summary)}</td><td>${safe(x.proposal_text)}<p class="meta">Costing: ${safe(x.costing_source||"No costing source recorded")}</p></td><td>${safe(x.publication_date||"Date not stated")}<br><span class="meta">${safe(x.status||"Status not stated")}</span></td><td>${link(x.source_url,"Original source")}</td></tr>`).join(""):'<tr><td colspan="6">No party positions match those filters.</td></tr>';
+ $("#party-count").textContent=`${rows.length} of ${state.positions.length} verified position records`;
+}
+function populatePartyFilter(){
+ const select=$("#party-filter");if(!select)return;
+ const parties=[...new Set(state.positions.map(x=>x.party))].sort();
+ select.innerHTML='<option value="">All parties</option>'+parties.map(x=>`<option value="${safe(x)}">${safe(x)}</option>`).join("");
 }
 $("#policy-search").addEventListener("input",renderPolicies);$("#evidence-search").addEventListener("input",renderEvidence);$("#evidence-filter").addEventListener("change",renderEvidence);$("#status-filter").addEventListener("change",renderPromises);
+$("#party-search").addEventListener("input",renderParties);$("#party-filter").addEventListener("change",renderParties);$("#manifesto-area").addEventListener("change",renderManifestos);$("#manifesto-search").addEventListener("input",renderManifestos);
 load().catch(err=>{console.error(err);document.querySelectorAll(".loading").forEach(n=>n.textContent="Research data could not be loaded. Check that the data folder and four JSON files are published.");});
 
 function renderManifestos(){
- const cols=[["Housing","housing"],["Health","health"],["Economy","economy"],["Climate","climate"],["Immigration","immigration"],["Education","education"]];
+ const fields={housing:"Housing",health:"Health",economy:"Economy",climate:"Climate",immigration:"Immigration",education:"Education"};
+ const key=$("#manifesto-area")?.value||"housing",query=$("#manifesto-search")?.value.trim().toLowerCase()||"";
+ const rows=state.manifestos.filter(p=>p.party.toLowerCase().includes(query));
+ $("#manifesto-list").innerHTML=rows.length?rows.map(p=>{
+  const v=p.verification||{},pr=v.page_refs||{};
+  return `<tr><th scope="row">${safe(p.party)}<span class="meta manifesto-subtitle">${safe(p.manifesto_title)} · ${safe(p.manifesto_year)}</span></th><td>${safe(p[key]||"No sufficiently verified summary recorded.")}</td><td>${safe(pr[key]||"Not verified")}</td><td>${safe(v.evidence_quality||p.status||"Not stated")}</td><td>${link(v.official||p.manifesto_source,"Open manifesto")}</td></tr>`;
+ }).join(""):'<tr><td colspan="5">No parties match that search.</td></tr>';
+ $("#manifesto-count").textContent=`${rows.length} of ${state.manifestos.length} manifestos · Showing ${fields[key]} positions`;
  const pct=v=>v===undefined?"Not modelled":(v>0?"+":"")+v.toFixed(1)+"%";
- $("#manifesto-list").innerHTML=state.manifestos.map(p=>{
-  const v=p.verification||{},pr=v.page_refs||{},c=v.costing||{},pb=v.pbo||{};
-  const pageRows=cols.map(([label,key])=>`<div><dt>${safe(label)}</dt><dd>${safe(p[key]||"No sufficiently verified summary recorded.")}</dd><small>Manifesto pages: ${safe(pr[key]||"Not verified")}</small></div>`).join("");
-  const figures=(c.key_figures||[]).map(x=>`<li>${safe(x)}</li>`).join("");
-  const pbo=pb.coverage==="Included"?`<div class="pbo-result"><strong>Independent PBO model — household income change by decile</strong><div><span>Poorest decile</span><b>${pct(pb.poorest_decile_income_change_pct)}</b></div><div><span>Richest decile</span><b>${pct(pb.richest_decile_income_change_pct)}</b></div><p>${safe(pb.summary)}</p><p class="meta">${safe(pb.caveat)}</p></div>`:`<div class="pbo-result"><strong>Independent PBO comparison</strong><p>${safe(pb.summary||"No comparable PBO microsimulation result recorded.")}</p><p class="meta">${safe(pb.caveat||"Not included in the six-party model.")}</p></div>`;
-  return `<article class="manifesto-card"><div class="party-card-head"><div><h3>${safe(p.party)}</h3><p class="meta">${safe(p.manifesto_title)} · ${safe(p.manifesto_year)} · ${safe(v.evidence_quality||p.status)}</p></div>${link(v.official||p.manifesto_source,"Open original manifesto")}</div><dl class="manifesto-grid">${pageRows}</dl><details class="costing-details"><summary>Costings and fiscal assumptions</summary><div><p><strong>Type:</strong> ${safe(c.type||"Not verified")}</p><ul>${figures||"<li>No sufficiently verified figures recorded.</li>"}</ul><p>${safe(v.checks?.costing||"No costing analysis recorded.")}</p><p><strong>Independent review:</strong> ${safe(c.independent_review||"No independent review located.")}</p></div></details>${pbo}<p class="meta">${safe(p.status)}</p>${link(p.manifesto_source,"Manifesto archive/source")}</article>`;
+ $("#manifesto-pbo").innerHTML=state.manifestos.map(p=>{
+  const pb=p.verification?.pbo||{};
+  return `<article class="pbo-compare-row"><strong>${safe(p.party)}</strong><span>Poorest decile: ${pct(pb.poorest_decile_income_change_pct)}</span><span>Richest decile: ${pct(pb.richest_decile_income_change_pct)}</span><small>${safe(pb.summary||"No comparable PBO result recorded.")} ${safe(pb.caveat||"")}</small></article>`;
  }).join("");
 }function renderExpandedCommitments(){
  const groups=[...new Set(state.expandedCommitments.map(x=>x.policy_area))];
