@@ -1,0 +1,530 @@
+{
+  "metadata": {
+    "title": "Irish Policy Monitor — Research Register",
+    "version": "0.8.0",
+    "research_cutoff": "2026-11-24",
+    "editorial_status": "Starter evidence register; not a complete policy audit",
+    "rules": [
+      "Distinguish policy commitments, enacted measures, implementation outputs and population outcomes.",
+      "Attribute party proposals to the party publishing them; do not describe proposals as enacted policy.",
+      "For every indicator retain its definition, period, publication date, source URL and caveats.",
+      "Do not compare unlike international systems without explaining institutional differences.",
+      "Do not issue an overall success score without published criteria, weighting and uncertainty."
+    ]
+  },
+  "indicators": [
+    {
+      "id": "public_spending_total_2026",
+      "area": "Public finances",
+      "indicator": "Total public expenditure",
+      "value": 133.0,
+      "unit": "EUR billion",
+      "period": "2026",
+      "published": "2026",
+      "source": "Where Your Money Goes",
+      "url": "https://www.whereyourmoneygoes.gov.ie/en/2026/",
+      "type": "Government budget data",
+      "interpretation": "Budget allocation context only; spending level is not evidence of service effectiveness.",
+      "caveat": "Departmental functions and classifications can change between years."
+    },
+    {
+      "id": "housing_completions_2025",
+      "area": "Housing",
+      "indicator": "New dwelling completions",
+      "value": 36246,
+      "unit": "dwellings",
+      "period": "2025",
+      "published": "2026",
+      "source": "CSO — Measuring Ireland's Progress 2026",
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-mip/measuringirelandsprogress2026/economy/",
+      "type": "Official statistics",
+      "interpretation": "Completions increased from 30,136 in 2024 and 32,473 in 2023. This is a supply measure, not a direct measure of affordability or adequacy.",
+      "caveat": "Need compare with household formation, vacancy, tenure, location, affordability and public/private mix."
+    },
+    {
+      "id": "health_outpatient_waiting_2026_09",
+      "area": "Health",
+      "indicator": "Outpatient waiting list",
+      "value": 692524,
+      "unit": "people",
+      "period": "2026-09",
+      "published": "2026-10",
+      "source": "National Treatment Purchase Fund",
+      "url": "https://www.ntpf.ie/news_and_events/ntpf-publishes-september-2026-national-public-hospital-waiting-list-data/",
+      "type": "Administrative statistics",
+      "interpretation": "Stock of people awaiting a first hospital outpatient consultation at end-September 2026.",
+      "caveat": "Waiting-list stock does not by itself describe clinical urgency, time waited, duplicates or patient outcomes. Pair with waiting-time bands and activity."
+    },
+    {
+      "id": "health_inpatient_daycase_waiting_2026_09",
+      "area": "Health",
+      "indicator": "Inpatient and day-case waiting list",
+      "value": 114722,
+      "unit": "people",
+      "period": "2026-09",
+      "published": "2026-10",
+      "source": "National Treatment Purchase Fund",
+      "url": "https://www.ntpf.ie/news_and_events/ntpf-publishes-september-2026-national-public-hospital-waiting-list-data/",
+      "type": "Administrative statistics",
+      "interpretation": "Stock awaiting inpatient or day-case treatment at end-September 2026.",
+      "caveat": "Interpret with waiting-time bands, case mix, admissions and treatment throughput."
+    },
+    {
+      "id": "climate_emissions_change_2025",
+      "area": "Climate & energy",
+      "indicator": "Greenhouse gas emissions year-on-year change",
+      "value": -2.2,
+      "unit": "percent",
+      "period": "2025",
+      "published": "2026-07",
+      "source": "Environmental Protection Agency",
+      "url": "https://www.epa.ie/news-releases/news-releases-2026/irelands-greenhouse-gas-emissions-decrease-by-22-in-2025-/",
+      "type": "Provisional official environmental inventory",
+      "interpretation": "Provisional emissions fell 2.2% in 2025. EPA states that the 2030 national target remains very challenging and annual reductions need to accelerate.",
+      "caveat": "2025 data are provisional; LULUCF estimates and final inventory will be updated."
+    },
+    {
+      "id": "crime_victim_personal_2025",
+      "area": "Justice",
+      "indicator": "Survey respondents reporting personal crime",
+      "value": 19,
+      "unit": "percent of respondents",
+      "period": "2025",
+      "published": "2026-09",
+      "source": "CSO Crime and Victimisation 2025",
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-cv/crimeandvictimisation2025/keyfindings/",
+      "type": "Victimisation survey",
+      "interpretation": "CSO reports 19% in 2025 compared with 10% in 2019. Survey-based victimisation differs from police-recorded crime.",
+      "caveat": "Personal crime includes violent and non-violent theft, fraud and physical assault; compare survey definitions and recall period."
+    },
+    {
+      "id": "crime_local_safety_effectiveness_2025",
+      "area": "Justice",
+      "indicator": "Respondents viewing Gardaí as effective in tackling local crime",
+      "value": 57,
+      "unit": "percent",
+      "period": "2025",
+      "published": "2026-09",
+      "source": "CSO Crime and Victimisation 2025",
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-cv/crimeandvictimisation2025/keyfindings/",
+      "type": "Victimisation survey",
+      "interpretation": "CSO reports 57% in 2025, down from 68% in 2019.",
+      "caveat": "Perception measure, not a direct measure of detection or clearance rates."
+    },
+    {
+      "id": "homeless_emergency_accommodation_2026_09",
+      "area": "Housing",
+      "indicator": "People in homeless emergency accommodation",
+      "value": 18065,
+      "unit": "people",
+      "period": "2026-09",
+      "published": "2026-11",
+      "source": "Department of Housing — September 2026 Homelessness Report",
+      "url": "https://assets.gov.ie/static/documents/d1bd3946/Homeless_Report_September_2026.pdf",
+      "type": "Government administrative statistics",
+      "interpretation": "The report records 12,168 adults and 5,897 children in emergency accommodation in September 2026.",
+      "caveat": "This measure covers people in emergency accommodation and is not a complete count of all forms of homelessness or housing insecurity."
+    },
+    {
+      "id": "rent_index_latest",
+      "area": "Housing",
+      "indicator": "RTB/ESRI Rent Index — latest published series",
+      "value": null,
+      "unit": "Quarterly index and rent series",
+      "period": "2026-Q1",
+      "published": "2026",
+      "source": "Residential Tenancies Board / ESRI",
+      "url": "https://rtb.ie/data-insights/rtb-research-reports/rtb-esri-rent-index/",
+      "type": "Regulatory data independently analysed by ESRI",
+      "interpretation": "The RTB/ESRI index tracks new and existing tenancy rents using registered tenancy data and standardises for property characteristics.",
+      "caveat": "Load the actual Q1 2026 report tables before quoting a numerical rent level or growth rate."
+    },
+    {
+      "id": "farm_income_forecast_2026",
+      "area": "Agriculture",
+      "indicator": "Average family farm income forecast",
+      "value": 33600,
+      "unit": "EUR",
+      "period": "2026 forecast",
+      "published": "2026-07",
+      "source": "Teagasc — Farm incomes to fall in 2026 as milk and cattle prices ease",
+      "url": "https://teagasc.ie/news--events/daily/farm-incomes-to-fall-in-2026-as-milk-and-cattle-prices-ease/",
+      "type": "Research-based forecast",
+      "interpretation": "Teagasc forecast average family farm income around €33,600 in 2026, down 38% on the 2025 average of about €53,800.",
+      "caveat": "Forecast, not final observed income; substantial variation between farm systems. Figures include support payments."
+    },
+    {
+      "id": "water_biological_quality_2025",
+      "area": "Agriculture & environment",
+      "indicator": "Rivers and lakes in good or better biological quality",
+      "value": 54,
+      "unit": "percent",
+      "period": "2025",
+      "published": "2026",
+      "source": "EPA — Water Quality in Ireland 2025",
+      "url": "https://www.epa.ie/publications/monitoring--assessment/freshwater--marine/water-quality-in-ireland-2025.php",
+      "type": "Official environmental monitoring",
+      "interpretation": "EPA reports just over half (54%) of rivers and lakes were in good or better biological quality; nutrient pressures remain significant.",
+      "caveat": "The percentage is one indicator among several; water-body status, nutrient trends and ecological quality should be assessed together."
+    },
+    {
+      "id": "river_nitrogen_change_2025",
+      "area": "Agriculture & environment",
+      "indicator": "Average nitrogen levels at 20 representative river monitoring sites",
+      "value": 10,
+      "unit": "percent increase",
+      "period": "2025 vs 2024",
+      "published": "2026-03",
+      "source": "EPA Early Insights Nitrogen Indicators",
+      "url": "https://www.epa.ie/news-releases/news-releases-2026/river-nitrogen-levels-increased-in-2025-/",
+      "type": "Official environmental monitoring",
+      "interpretation": "EPA reported average annual nitrogen levels at 20 representative sites increased by 10% in 2025 compared with 2024.",
+      "caveat": "Monitoring-site sample and weather, inputs and land-management factors all matter; this is not a direct attribution of change to one policy."
+    },
+    {
+      "id": "housing_completions_q3_2026",
+      "area": "Housing",
+      "indicator": "New dwelling completions in Q3",
+      "value": 10154,
+      "unit": "dwellings",
+      "period": "2026-Q3",
+      "published": "2026-10-29",
+      "source": "CSO — New Dwelling Completions Q3 2026",
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-ndc/newdwellingcompletionsq32026/",
+      "type": "Official statistics",
+      "interpretation": "Q3 completions rose 10.4% compared with Q3 2025. Apartments were 3,464; scheme houses 5,163; single houses 1,527.",
+      "caveat": "Quarterly completions are volatile. Compare rolling 12-month totals, regional distribution, affordability and household formation."
+    },
+    {
+      "id": "housing_completions_rolling_12m_sep_2026",
+      "area": "Housing",
+      "indicator": "New dwelling completions in the 12 months to September 2026",
+      "value": 38792,
+      "unit": "dwellings",
+      "period": "12 months to 2026-09",
+      "published": "2026-11",
+      "source": "Department of Housing — Monthly Housing Update November 2026",
+      "url": "https://assets.gov.ie/static/documents/9104bf5e/20261104_Monthly_Housing_November.pdf",
+      "type": "Government administrative statistics",
+      "interpretation": "The November update reports 38,792 completions in the 12 months to Q3 2026, up 18% on the equivalent prior period.",
+      "caveat": "Departmental summary of CSO data; use CSO release for the underlying series and methodology."
+    },
+    {
+      "id": "housing_price_growth_aug_2026",
+      "area": "Housing",
+      "indicator": "Residential Property Price Index annual change",
+      "value": 5.1,
+      "unit": "percent",
+      "period": "12 months to 2026-08",
+      "published": "2026-11",
+      "source": "Department of Housing — Monthly Housing Update November 2026",
+      "url": "https://assets.gov.ie/static/documents/9104bf5e/20261104_Monthly_Housing_November.pdf",
+      "type": "Official statistical summary",
+      "interpretation": "Residential property prices rose 5.1% in the 12 months to August 2026.",
+      "caveat": "National annual price growth does not measure affordability relative to incomes, rents or regional differences."
+    },
+    {
+      "id": "population_2026",
+      "area": "Society",
+      "indicator": "Estimated population",
+      "value": 5.5,
+      "unit": "million people",
+      "period": "2026",
+      "published": "2026-10-20",
+      "source": "CSO Measuring Ireland's Progress 2026",
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-mip/measuringirelandsprogress2026/keyfindings/",
+      "type": "Official statistics",
+      "interpretation": "Ireland's population was estimated at 5.5 million in 2026. Between 2016 and 2026 the share aged 45 or over rose from 37.1% to 42.2%.",
+      "caveat": "Population growth and ageing affect housing, health, education, labour supply and infrastructure demand; they are context, not policy outcomes."
+    },
+    {
+      "id": "employment_rate_2025",
+      "area": "Economy & taxation",
+      "indicator": "Employment rate (working-age population)",
+      "value": 74.6,
+      "unit": "percent",
+      "period": "2025",
+      "published": "2026-10-20",
+      "source": "CSO Measuring Ireland's Progress 2026",
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-mip/measuringirelandsprogress2026/keyfindings/",
+      "type": "Official statistics",
+      "interpretation": "Employment rate was 74.6% in 2025, up from 64.8% in 2015 and above the EU27 average of 71.0%.",
+      "caveat": "Employment rate alone does not measure pay adequacy, hours, job security, underemployment or regional differences."
+    },
+    {
+      "id": "consumer_price_level_2025",
+      "area": "Cost of living",
+      "indicator": "Irish consumer price level relative to EU27 average",
+      "value": 36.2,
+      "unit": "percent above EU average",
+      "period": "2025",
+      "published": "2026-10-20",
+      "source": "CSO Measuring Ireland's Progress 2026",
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-mip/measuringirelandsprogress2026/keyfindings/",
+      "type": "Official statistics / Eurostat comparison",
+      "interpretation": "Ireland had the second-highest consumer goods and services price level in the EU27 in 2025, 36.2% above the EU average.",
+      "caveat": "Price level comparison is not the same as inflation. Income levels and purchasing power must also be considered."
+    },
+    {
+      "id": "third_level_qualification_2025",
+      "area": "Education",
+      "indicator": "25–34 year-olds with third-level qualification",
+      "value": 66.8,
+      "unit": "percent",
+      "period": "2025",
+      "published": "2026-10-20",
+      "source": "CSO Measuring Ireland's Progress 2026",
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-mip/measuringirelandsprogress2026/keyfindings/",
+      "type": "Official statistics",
+      "interpretation": "Ireland had the highest rate in the EU27 in 2025.",
+      "caveat": "Qualification attainment does not directly measure literacy, numeracy, skills match, course quality or access inequalities."
+    },
+    {
+      "id": "neet_rate_2025",
+      "area": "Education & employment",
+      "indicator": "Young people aged 18–24 not in employment, education or training",
+      "value": 8.8,
+      "unit": "percent",
+      "period": "2025",
+      "published": "2026-10-20",
+      "source": "CSO Measuring Ireland's Progress 2026",
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-mip/measuringirelandsprogress2026/keyfindings/",
+      "type": "Official statistics",
+      "interpretation": "Ireland's rate was the fifth-lowest in the EU27 and below the EU27 average of 11.8%.",
+      "caveat": "Examine breakdowns by disability, gender, region, socioeconomic status and duration."
+    },
+    {
+      "id": "healthy_life_expectancy_male_2024",
+      "area": "Health",
+      "indicator": "Male healthy life expectancy at birth",
+      "value": 66.6,
+      "unit": "years",
+      "period": "2024",
+      "published": "2026-10-20",
+      "source": "CSO Measuring Ireland's Progress 2026",
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-mip/measuringirelandsprogress2026/keyfindings/",
+      "type": "Official statistics / Eurostat",
+      "interpretation": "Ireland ranked seventh in the EU27 for male healthy life expectancy in 2024.",
+      "caveat": "Healthy life expectancy is a population measure, not a direct measure of access to care or avoidable waiting."
+    },
+    {
+      "id": "healthy_life_expectancy_female_2024",
+      "area": "Health",
+      "indicator": "Female healthy life expectancy at birth",
+      "value": 67.3,
+      "unit": "years",
+      "period": "2024",
+      "published": "2026-10-20",
+      "source": "CSO Measuring Ireland's Progress 2026",
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-mip/measuringirelandsprogress2026/keyfindings/",
+      "type": "Official statistics / Eurostat",
+      "interpretation": "Ireland ranked seventh in the EU27 for female healthy life expectancy in 2024.",
+      "caveat": "Healthy life expectancy is a population measure, not a direct measure of access to care or avoidable waiting."
+    },
+    {
+      "id": "government_surplus_2025",
+      "area": "Public finances",
+      "indicator": "General Government Balance",
+      "value": 10.7,
+      "unit": "EUR billion surplus",
+      "period": "2025",
+      "published": "2026-10-20",
+      "source": "CSO Government Finance Statistics 2025",
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-gfsa/governmentfinancestatistics2025october2026/keyfindings/",
+      "type": "Official national accounts",
+      "interpretation": "Surplus was 1.8% of GDP in 2025, less than half the €23.4bn surplus in 2024, which included a €14.2bn one-off receipt linked to a CJEU ruling.",
+      "caveat": "Irish fiscal aggregates are affected by multinational activity and volatile corporation tax; distinguish headline balance from structural fiscal capacity."
+    },
+    {
+      "id": "government_debt_2025",
+      "area": "Public finances",
+      "indicator": "Gross General Government Debt",
+      "value": 209.9,
+      "unit": "EUR billion",
+      "period": "2025 year-end",
+      "published": "2026-10-20",
+      "source": "CSO Government Finance Statistics 2025",
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-gfsa/governmentfinancestatistics2025october2026/keyfindings/",
+      "type": "Official national accounts",
+      "interpretation": "Debt fell €5.6bn during 2025 and equalled 34.8% of GDP.",
+      "caveat": "GDP is distorted by multinational activity; debt sustainability should also be assessed against GNI*, interest costs and future spending commitments."
+    },
+    {
+      "id": "recorded_assaults_2026",
+      "area": "Justice",
+      "indicator": "Annualised assaults, threats, harassment and related offences",
+      "value": 26017,
+      "unit": "recorded incidents",
+      "period": "12 months to Q2 2026",
+      "published": "2026-10",
+      "source": "CSO Recorded Crime Q2 2026",
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-rc/recordedcrimeq22026/mainresults/",
+      "type": "Official recorded crime statistics",
+      "interpretation": "Annualised recorded incidents were 4% higher than the 12 months to Q2 2025.",
+      "caveat": "Recorded crime depends on reporting and recording practices; use alongside victimisation surveys, detection and court outcomes."
+    },
+    {
+      "id": "recorded_burglary_2026",
+      "area": "Justice",
+      "indicator": "Annualised burglary and related offences",
+      "value": 8587,
+      "unit": "recorded incidents",
+      "period": "12 months to Q2 2026",
+      "published": "2026-10",
+      "source": "CSO Recorded Crime Q2 2026",
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-rc/recordedcrimeq22026/mainresults/",
+      "type": "Official recorded crime statistics",
+      "interpretation": "Annualised recorded burglaries were 6% lower than the 12 months to Q2 2025.",
+      "caveat": "Recorded crime depends on reporting and recording practices; compare with victimisation and detection data."
+    }
+  ],
+  "government_baseline": [
+    {
+      "id": "programme_for_government_2025",
+      "title": "Programme for Government 2025 — Securing Ireland's Future",
+      "published": "2025-01-23",
+      "url": "https://www.gov.ie/en/department-of-the-taoiseach/publications/programme-for-government-2025-securing-irelands-future/",
+      "type": "Coalition programme",
+      "use": "Baseline commitments across policy areas; individual commitments should be extracted with page references and owners."
+    },
+    {
+      "id": "budget_2026",
+      "title": "Where Your Money Goes — 2026",
+      "published": "2026",
+      "url": "https://www.whereyourmoneygoes.gov.ie/en/2026/",
+      "type": "Budget allocations",
+      "use": "Spending context and departmental allocations; pair with outturns and service outcomes."
+    }
+  ],
+  "party_alternatives": [
+    {
+      "party": "Labour",
+      "document": "Labour's Alternative Budget 2026",
+      "published": "2025/2026 budget cycle; verify document date on publisher page",
+      "url": "https://labour.ie/labours-alternative-budget-2026/",
+      "proposals": [
+        "Targeted second-tier child benefit and child-poverty measures",
+        "6,000 public childcare places",
+        "Increase state-funded social and affordable housing delivery",
+        "Weekly social welfare increases and income-tax/USC indexation",
+        "Targeted household energy supports",
+        "Reduce public transport fares"
+      ],
+      "status": "Party proposal, not government policy"
+    },
+    {
+      "party": "Social Democrats",
+      "document": "Alternative Budget 2027",
+      "published": "2026",
+      "url": "https://www.socialdemocrats.ie/our-policies/alternative-budget/",
+      "proposals": [
+        "Additional child benefit and pension/welfare supports",
+        "More state-led affordable housing and modular housing capacity",
+        "Investment in Sláintecare, health staffing and disability services",
+        "Public early-childhood education and care",
+        "Education cost and school-support measures"
+      ],
+      "status": "Party proposal, not government policy"
+    },
+    {
+      "party": "Sinn Féin",
+      "document": "Budget and policy proposals",
+      "published": "2026",
+      "url": "https://sinnfein.ie/policies/",
+      "proposals": [
+        "Alternative approaches to housing supply, rents and tax credits",
+        "Cost-of-living and energy supports",
+        "Health capacity and social protection proposals"
+      ],
+      "status": "Party proposal; individual current policy pages and costings require verification"
+    },
+    {
+      "party": "People Before Profit",
+      "document": "Alternative Budget proposals reported October 2026",
+      "published": "2026-10",
+      "url": "https://www.irishtimes.com/politics/2026/10/01/main-points-from-taxes-to-bills-what-does-the-opposition-want-in-budget-2027/",
+      "proposals": [
+        "Expanded public housing construction",
+        "Energy price and standing-charge interventions",
+        "Public-service and public-transport measures"
+      ],
+      "status": "Secondary-source summary; obtain and cite original party document before treating details as fully verified"
+    }
+  ],
+  "international_comparators": [
+    {
+      "area": "Housing",
+      "jurisdictions": [
+        "Austria (Vienna)",
+        "Netherlands",
+        "Singapore"
+      ],
+      "questions": [
+        "Who owns land?",
+        "What share is public or limited-profit?",
+        "How is construction financed?",
+        "Who qualifies?",
+        "What is the effect on affordability and supply?"
+      ],
+      "caveat": "Different constitutional, land, finance and planning systems limit direct transferability."
+    },
+    {
+      "area": "Health",
+      "jurisdictions": [
+        "United Kingdom",
+        "Germany",
+        "Netherlands",
+        "Nordic countries"
+      ],
+      "questions": [
+        "How are services financed?",
+        "How are primary and hospital care integrated?",
+        "What are waiting times and outcomes?",
+        "How is the workforce planned?"
+      ],
+      "caveat": "Compare age-adjusted outcomes, coverage, out-of-pocket costs and definitions."
+    },
+    {
+      "area": "Transport",
+      "jurisdictions": [
+        "Netherlands",
+        "Switzerland",
+        "Denmark"
+      ],
+      "questions": [
+        "How are land use and transit planned together?",
+        "What is the rural service model?",
+        "How are projects appraised and delivered?"
+      ],
+      "caveat": "Population density, geography and existing network maturity differ."
+    },
+    {
+      "area": "Climate & energy",
+      "jurisdictions": [
+        "Denmark",
+        "Germany",
+        "Sweden"
+      ],
+      "questions": [
+        "How are renewables integrated?",
+        "What grid, storage and interconnection investments are needed?",
+        "Who bears transition costs?"
+      ],
+      "caveat": "Generation mix, interconnection and industrial structure differ."
+    },
+    {
+      "area": "Education",
+      "jurisdictions": [
+        "Finland",
+        "Germany",
+        "Netherlands"
+      ],
+      "questions": [
+        "How are teachers trained and retained?",
+        "How are vocational pathways designed?",
+        "How are inclusion and school funding organised?"
+      ],
+      "caveat": "Student demographics, school governance and selection practices differ."
+    }
+  ]
+}
