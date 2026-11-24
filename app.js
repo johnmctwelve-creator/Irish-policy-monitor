@@ -219,3 +219,30 @@ function renderExecutiveDashboard(){
  const label=node.querySelector(".executive-donut span");
  if(label)label.textContent="marked in progress";
 }
+
+(function(){
+const root=document.getElementById("revolutionary-quiz-app");if(!root)return;
+const questions=[
+["What event took place in Dublin in April 1916?",["The Easter Rising","The Anglo-Irish Treaty","The foundation of the Free State","The Battle of the Boyne"],0,"The Easter Rising began on 24 April 1916."],
+["Which building served as headquarters of the 1916 Rising?",["Dublin Castle","The General Post Office","Kilmainham Gaol","Four Courts"],1,"The GPO was the headquarters of the Rising."],
+["Who was the principal author of the 1916 Proclamation?",["Michael Collins","James Connolly","Patrick Pearse","Arthur Griffith"],2,"Patrick Pearse was the principal author and read the Proclamation."],
+["Which revolutionary was a socialist and co-founded the Irish Citizen Army?",["James Connolly","Éamon de Valera","Joseph Plunkett","Thomas Ashe"],0,"James Connolly was a socialist and labour organiser."],
+["Who became the first woman elected to the British House of Commons?",["Hanna Sheehy-Skeffington","Constance Markievicz","Kathleen Clarke","Maud Gonne"],1,"Constance Markievicz was elected in 1918 but did not take her seat."],
+["Which agreement did Michael Collins help negotiate in 1921?",["The Good Friday Agreement","The Anglo-Irish Treaty","The Act of Union","The Treaty of Versailles"],1,"Collins helped negotiate the 1921 Anglo-Irish Treaty."],
+["What was one of Collins’s key roles during the War of Independence?",["Director of Intelligence","British Army commander","Archbishop of Dublin","President throughout the war"],0,"Collins served as Director of Intelligence and Minister for Finance."],
+["Where was Michael Collins killed in August 1922?",["Dublin","Cork city","Béal na Bláth, County Cork","Kilmainham"],2,"Collins was killed at Béal na Bláth on 22 August 1922."]
+];
+const people=[
+[0,1,"Thomas Ashe","1885–1917","Teacher, poet and revolutionary","Ashe took part in the 1916 Rising as commandant of the Fingal Battalion. He died in 1917 after being force-fed during a hunger strike in Mountjoy Prison.","https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Ashe.jpg","https://www.dib.ie/biography/ashe-thomas-a0254"],
+[2,3,"Joseph Plunkett","1887–1916","Poet and Proclamation signatory","Plunkett was a poet, journalist and republican activist, one of the seven signatories of the 1916 Proclamation. He was executed in Kilmainham Gaol in May 1916.","https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Plunkett.jpg","https://www.dib.ie/biography/plunkett-joseph-mary-a7360"],
+[4,5,"Constance Markievicz","1868–1927","Revolutionary, socialist and politician","Markievicz took part in the 1916 Rising, was elected to the House of Commons in 1918, and later served as Minister for Labour in the revolutionary Dáil.","https://commons.wikimedia.org/wiki/Special:FilePath/Countess_Markievicz.jpg","https://www.dib.ie/biography/markievicz-constance-georgine-a5464"],
+[6,7,"James Connolly","1868–1916","Socialist, trade unionist and revolutionary","Connolly was a leading socialist and labour organiser, co-founded the Irish Citizen Army, took part in the Rising and was executed after the surrender.","https://commons.wikimedia.org/wiki/Special:FilePath/James_Connolly-2.2.jpg","https://www.dib.ie/biography/connolly-james-a1975"],
+[8,8,"Michael Collins","1890–1922","Revolutionary leader and treaty negotiator","Collins was central to the struggle for Irish independence, serving as Director of Intelligence and Minister for Finance. He helped negotiate the 1921 Treaty and chaired the Provisional Government. He was killed at Béal na Bláth in August 1922.","https://commons.wikimedia.org/wiki/Special:FilePath/Michael_Collins.jpg","https://www.dib.ie/biography/collins-michael-a1835"]
+];
+let n=0,score=0,done=false;
+const el=id=>root.querySelector("#rq-"+id),progress=el("progress"),scoreText=el("score"),fill=el("fill"),question=el("question"),options=el("options"),feedback=el("feedback"),next=el("next"),result=el("result");
+function draw(){done=false;progress.textContent="Question "+(n+1)+" of 8";scoreText.textContent="Score: "+score;fill.style.width=(n/8*100)+"%";question.textContent=questions[n][0];options.innerHTML=questions[n][1].map((v,i)=>'<button type="button" class="revolutionary-quiz-option" data-i="'+i+'"><b>'+String.fromCharCode(65+i)+'</b>'+v+'</button>').join("");feedback.textContent="";next.disabled=true;next.textContent=n===7?"Reveal your result":"Next question";options.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>choose(Number(b.dataset.i))));}
+function choose(i){if(done)return;done=true;const q=questions[n],ok=i===q[2];if(ok)score++;options.querySelectorAll("button").forEach((b,j)=>{b.disabled=true;if(j===q[2])b.classList.add("is-correct");if(j===i&&!ok)b.classList.add("is-wrong");});scoreText.textContent="Score: "+score;feedback.textContent=(ok?"Correct. ":"Not quite. ")+q[3];next.disabled=false;}
+function finish(){const p=people.find(x=>score>=x[0]&&score<=x[1]);fill.style.width="100%";progress.textContent="Challenge complete";scoreText.textContent="Final score: "+score+" / 8";question.hidden=true;options.hidden=true;root.querySelector(".revolutionary-quiz-controls").hidden=true;result.hidden=false;result.innerHTML='<p class="eyebrow">Unlocked profile · '+score+' / 8</p><img src="'+p[6]+'" alt="Portrait of '+p[2]+'"><h3>'+p[2]+'</h3><b>'+p[3]+' · '+p[4]+'</b><p>'+p[5]+'</p><a href="'+p[7]+'" target="_blank" rel="noopener noreferrer">Read the Dictionary of Irish Biography ↗</a><button type="button" id="rq-restart">Play again</button>';result.querySelector("#rq-restart").addEventListener("click",()=>{n=0;score=0;question.hidden=false;options.hidden=false;root.querySelector(".revolutionary-quiz-controls").hidden=false;result.hidden=true;draw();});}
+next.addEventListener("click",()=>{if(n===7)finish();else{n++;draw();}});draw();
+})();
