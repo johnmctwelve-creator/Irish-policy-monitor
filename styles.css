@@ -510,3 +510,24 @@ html{scroll-padding-top:24px}
 .ipm-guide-shortcuts .visitor-question small{margin-top:3px;font-size:10px;line-height:1.4;color:#6b786f}
 .ipm-guide-shortcuts .visitor-question i{font-style:normal;color:#9b7942;font-size:17px}
 .ipm-guide-shortcuts .visitor-question:hover,.ipm-guide-shortcuts .visitor-question:focus-visible{background:#f5f8f5;border-color:#9ab6a1;outline:none}
+
+/* Accessibility and navigation refinement */
+.skip-link{position:absolute;z-index:2000;top:8px;left:8px;transform:translateY(-160%);padding:10px 14px;border-radius:7px;background:#fff;color:#123b32;font-weight:800;box-shadow:0 3px 15px rgba(0,0,0,.2)}.skip-link:focus{transform:translateY(0)}
+html{scroll-padding-top:18px;scroll-behavior:smooth}
+main:focus{outline:none}
+section[id],main[id]{scroll-margin-top:18px}
+.site-header{position:relative}
+.site-header .section-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:10px}
+.site-header .nav-group{min-width:0;padding:0;border:1px solid rgba(255,255,255,.16);border-radius:10px;background:rgba(4,25,20,.28);overflow:hidden}
+.site-header .nav-group-title{display:flex;align-items:center;gap:10px;min-height:52px;margin:0;padding:12px 14px;cursor:pointer;list-style:none;color:#fff;font-size:11px;line-height:1.35;letter-spacing:.045em}
+.site-header .nav-group-title::-webkit-details-marker{display:none}
+.site-header .nav-group-title:after{content:"+";margin-left:auto;color:#e8c27c;font-size:20px;font-weight:400}
+.site-header .nav-group[open]>.nav-group-title:after{content:"−"}
+.site-header .nav-group-title>span{display:grid;place-items:center;flex:0 0 25px;width:25px;height:25px;border-radius:7px;background:rgba(232,194,124,.17);color:#e8c27c;font-size:10px}
+.site-header .nav-group-links{display:grid;grid-template-columns:1fr;gap:6px;padding:0 10px 10px}
+.site-header .nav-group-links>a{display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:10px;min-height:43px;padding:8px 10px;border:1px solid rgba(255,255,255,.12);border-radius:7px;background:rgba(255,255,255,.06);font-size:12px;line-height:1.35;white-space:normal;overflow-wrap:anywhere}
+.site-header .nav-group-links>a>span:last-child{min-width:0;flex:1}
+.site-header .nav-group-links>a .nav-icon{flex:0 0 26px;width:26px;height:26px}
+.site-header .nav-group-links>a:hover,.site-header .nav-group-links>a:focus-visible{background:#e8c27c;color:#17392f}
+@media(max-width:760px){.site-header{padding:12px}.site-header .header-brand-row{margin-bottom:10px}.site-header .section-nav{grid-template-columns:1fr;gap:7px;padding:8px}.site-header .nav-group-title{min-height:48px}.site-header .nav-group-links{grid-template-columns:1fr;padding:0 8px 8px}.site-header .nav-group-links>a{min-height:46px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.site-header .section-nav a{transition:none}}
