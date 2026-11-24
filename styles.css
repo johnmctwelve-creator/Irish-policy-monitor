@@ -35,3 +35,21 @@
 .pfg-item h4{margin:0 0 6px;font-size:14px;color:#243b32;line-height:1.45}
 .pfg-item p{font-size:12px;line-height:1.55;overflow-wrap:anywhere}
 @media(max-width:600px){.manifesto-grid{grid-template-columns:1fr}.manifesto-card{padding:15px}}
+
+/* Manifesto evidence and fiscal scrutiny */
+.manifesto-card .meta{line-height:1.5}
+.manifesto-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}
+.manifesto-grid>div{min-width:0;background:#f7f8f6;border-radius:8px;padding:12px}
+.manifesto-grid dt{font-size:12px;font-weight:800;color:var(--green);margin-bottom:5px}
+.manifesto-grid dd{margin:0;font-size:12px;line-height:1.55;color:#53615b;overflow-wrap:anywhere}
+.manifesto-grid small{display:block;margin-top:7px;color:#77847d;font-size:10px}
+.costing-details{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin:12px 0}
+.costing-details summary{cursor:pointer;color:var(--green);font-weight:800;font-size:13px}
+.costing-details>div{padding:10px 2px 0;color:#53615b;font-size:12px;line-height:1.6;overflow-wrap:anywhere}
+.costing-details li{margin:5px 0}
+.pbo-result{background:#f0f4f1;border-radius:8px;padding:14px;margin:12px 0}
+.pbo-result>strong{display:block;color:var(--green);font-size:12px;margin-bottom:10px}
+.pbo-result>div{display:flex;justify-content:space-between;gap:12px;border-top:1px solid #dbe4dd;padding:7px 0;font-size:12px}
+.pbo-result b{font-variant-numeric:tabular-nums}
+.pbo-result p{font-size:11px;line-height:1.55;color:#53615b}
+@media(max-width:600px){.manifesto-grid{grid-template-columns:1fr}.manifesto-card{padding:15px}.pbo-result{padding:12px}}
