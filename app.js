@@ -1,18 +1,18 @@
 const $ = (s) => document.querySelector(s);
-const state = { assessments: [], commitments: [], indicators: [], positions: [], manifestos: [], expandedCommitments: [], feasibility: null };
+const state = { assessments: [], commitments: [], indicators: [], positions: [], manifestos: [], expandedCommitments: [], feasibility: null, fiscal: null };
 const icons = {Housing:"⌂",Health:"✚","Economy & taxation":"€","Immigration & asylum":"◎","Climate & energy":"♧",Transport:"↗","Transport & infrastructure":"↗","Education & skills":"▤","Education":"▤","Justice & public safety":"⚖","Agriculture & rural affairs":"♣","Disability & equality":"◉","Foreign affairs & defence":"◇"};
 const safe = (v) => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const link = (url,label="View source") => url ? `<a class="source-link" href="${safe(url)}" target="_blank" rel="noopener noreferrer">${safe(label)} ↗</a>` : "";
 const formatNum = (v) => typeof v === "number" ? new Intl.NumberFormat("en-IE").format(v) : safe(v ?? "Not reported");
 async function load(){
- const files=["policy_assessments.json","commitment_tracker.json","research_register.json","party_position_register.json","manifesto_comparison_2024.json","pfg_commitments_expanded.json","feasibility_assessment.json"];
- const [a,c,r,p,m,e,f]=await Promise.all(files.map(f=>fetch(`data/${f}`).then(x=>{if(!x.ok)throw Error(f);return x.json()})));
- state.assessments=a.assessments||[];state.commitments=c.starter_rows||[];state.indicators=r.indicators||[];state.positions=p.positions||[];state.manifestos=m.parties||[];state.expandedCommitments=e.commitments||[];state.feasibility=f;
+ const files=["policy_assessments.json","commitment_tracker.json","research_register.json","party_position_register.json","manifesto_comparison_2024.json","pfg_commitments_expanded.json","feasibility_assessment.json","five_year_fiscal_model.json"];
+ const [a,c,r,p,m,e,f,g]=await Promise.all(files.map(f=>fetch(`data/${f}`).then(x=>{if(!x.ok)throw Error(f);return x.json()})));
+ state.assessments=a.assessments||[];state.commitments=c.starter_rows||[];state.indicators=r.indicators||[];state.positions=p.positions||[];state.manifestos=m.parties||[];state.expandedCommitments=e.commitments||[];state.feasibility=f;state.fiscal=g;
  const date=a.metadata?.research_cutoff||r.metadata?.research_cutoff||"Not stated";
  $("#research-date").textContent=`Research snapshot: ${date} · Expanded edition; conclusions remain provisional`;
  $("#method-date").textContent=date;
  $("#area-count").textContent=state.assessments.length;$("#indicator-count").textContent=state.indicators.length;$("#promise-count").textContent=state.commitments.length;
- populateAreaFilter();renderPolicies();renderEvidence();renderPromises();renderParties();renderManifestos();renderExpandedCommitments();renderFeasibility();
+ populateAreaFilter();renderPolicies();renderEvidence();renderPromises();renderParties();renderManifestos();renderExpandedCommitments();renderFeasibility();renderFiscalModel();
 }
 function populateAreaFilter(){const areas=[...new Set(state.indicators.map(x=>x.area))].sort();$("#evidence-filter").innerHTML='<option value="">All areas</option>'+areas.map(x=>`<option>${safe(x)}</option>`).join("");}
 function renderPolicies(){
@@ -68,4 +68,16 @@ function renderFeasibility(){
  $("#feasibility-conclusion").textContent=f.system_conclusion;
  $("#feasibility-next").innerHTML=f.next_steps.map(s=>`<li>${safe(s)}</li>`).join("");
  $("#feasibility-sources").innerHTML=f.metadata.primary_sources.map(s=>`<li><a href="${safe(s.url)}" target="_blank" rel="noopener noreferrer">${safe(s.name)} ↗</a><p>${safe(s.scope)}</p></li>`).join("");
+}
+
+function renderFiscalModel(){
+ const m=state.fiscal;if(!m)return;
+ const money=v=>"€"+Number(v).toFixed(1)+"bn";
+ $("#fiscal-baseline").innerHTML=m.baseline.map(x=>`<tr><td>${x.year}</td><td>${money(x.tax)}</td><td>${money(x.ct)}</td><td>${money(x.windfall)}</td><td>${money(x.gg_balance)}</td><td>${money(x.gross_voted)}</td></tr>`).join("");
+ $("#fiscal-stress").innerHTML=m.baseline.map(x=>`<tr><td>${x.year}</td>${m.stress.map(s=>{const val=x.gg_balance-x.windfall*s.haircut/100;return `<td class="${val<0?"negative":""}">${money(val)}</td>`}).join("")}</tr>`).join("");
+ $("#fiscal-pbo").innerHTML=m.pbo.map(p=>`<tr><td>${safe(p.party)}</td><td>${p.tax_receipts_pct>0?"+":""}${p.tax_receipts_pct.toFixed(1)}%</td><td>${p.welfare_spending_pct>0?"+":""}${p.welfare_spending_pct.toFixed(1)}%</td><td>${p.poorest_decile_income_pct>0?"+":""}${p.poorest_decile_income_pct.toFixed(1)}%</td><td>${p.richest_decile_income_pct>0?"+":""}${p.richest_decile_income_pct.toFixed(1)}%</td></tr>`).join("");
+ $("#fiscal-party-inputs").innerHTML=m.parties.map(p=>`<article class="fiscal-party"><h4>${safe(p.party)}</h4><p>${safe(p.known)}</p><strong>Still required for a comparable annual balance</strong><ul>${p.missing.map(x=>`<li>${safe(x)}</li>`).join("")}</ul></article>`).join("");
+ $("#fiscal-conclusion").textContent=m.conclusion;
+ $("#fiscal-rules").innerHTML=m.rules.map(x=>`<li>${safe(x)}</li>`).join("");
+ $("#fiscal-sources").innerHTML=m.metadata.sources.map(s=>`<li><a href="${safe(s.url)}" target="_blank" rel="noopener noreferrer">${safe(s.name)} ↗</a></li>`).join("");
 }
