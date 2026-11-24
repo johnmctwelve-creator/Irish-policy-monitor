@@ -51,3 +51,12 @@ Two additional datasets are published and rendered on the website:
 - `data/manifesto_comparison_2024.json`: thematic comparison of nine 2024 party manifesto sources across housing, health, economy, climate, immigration and education.
 
 The manifesto comparison is a first comparative edition, not yet a page-by-page manifesto audit. The Aontú link resolves to its policy portal and the Independent Ireland link to an archive index; obtain direct PDF links and verify page-level detail before treating those entries as fully sourced. The 2024 manifestos are historical party positions and must not be conflated with current policy or Government measures.
+
+
+## Manifesto comparison — expanded verification
+
+The 2024 manifesto comparison contains nine parties and six thematic policy areas. It now includes printed-page references (with approximate ranges explicitly labelled), party-published fiscal assumptions, measure-level cost estimates where stated, and independent PBO distributional results for the seven parties included in the PBO's 2025 microsimulation. Aontú and Independent Ireland were not included in that model.
+
+The PBO model covers selected tax and welfare measures using SWITCH and EVE. It explicitly excludes public-service provision, including health, education and infrastructure spending. Its household-income results are modelled average effects relative to a wage-indexed baseline, not a complete costing or forecast of each manifesto. Party costings remain attributed claims unless independently verified.
+
+The expanded Programme for Government register contains 44 paraphrased monitorable commitments across 11 policy areas. It is not a verbatim extraction of every action in the 162-page programme; delivery status is not assigned in that dataset.
