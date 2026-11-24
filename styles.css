@@ -284,3 +284,31 @@ html{scroll-padding-top:24px}
 .civic-action-note{font-size:10px;line-height:1.6;color:#78867e;margin:13px 0 0}
 @media(max-width:850px){.civic-action-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.civic-action-section{padding:48px 18px}.civic-action-grid{grid-template-columns:1fr}.civic-action-card{min-height:0;padding:17px}.civic-action-callout{align-items:flex-start;flex-direction:column;gap:10px}.civic-action-callout a{white-space:normal}}
+
+/* Policy-linked campaign and movement directory */
+.campaigns-section{padding:72px max(5vw,24px);background:#fff}
+.campaigns-shell{max-width:1180px;margin:0 auto}
+.campaigns-heading{max-width:760px;margin-bottom:24px}
+.campaigns-heading .eyebrow{color:#98713d}
+.campaigns-heading h2{font:800 clamp(30px,3.8vw,43px)/1.08 Manrope;letter-spacing:-.045em;color:var(--green);margin:0}
+.campaigns-heading>p:last-child{font-size:14px;line-height:1.65;color:#596960;margin:13px 0 0}
+.campaigns-notice{padding:14px 17px;border-left:3px solid #c49a55;background:#f8f6f0;border-radius:7px;font-size:11px;line-height:1.6;color:#58665e;margin:20px 0}
+.campaigns-notice strong{color:var(--green)}
+.campaigns-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.campaign-card{min-width:0;padding:19px;border:1px solid #dfe7e1;border-radius:11px;background:#fff;display:flex;flex-direction:column;align-items:flex-start}
+.campaign-card:hover{border-color:#aac2b1;box-shadow:0 7px 20px rgba(20,57,42,.055)}
+.campaign-topic{display:inline-flex;padding:4px 8px;border-radius:20px;background:#eaf1eb;color:#315f45;font-size:9px;font-weight:800;letter-spacing:.04em}
+.campaign-card h3{font:800 16px/1.25 Manrope;color:var(--green);margin:12px 0 7px}
+.campaign-card>p{font-size:11px;line-height:1.55;color:#68766e;margin:0 0 8px}
+.campaign-card ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.campaign-card li{font-size:10px;line-height:1.5}
+.campaign-card a,.campaigns-footer a{color:#286648;font-weight:800;text-decoration:none}
+.campaign-card a:hover,.campaigns-footer a:hover{text-decoration:underline}
+.campaign-card small{font-size:9px;line-height:1.55;color:#7a867f;margin-top:12px;padding-top:9px;border-top:1px solid #edf0ed}
+.campaigns-footer{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:17px;padding:18px 20px;background:#f1f5f1;border-radius:10px}
+.campaigns-footer strong{font:800 14px Manrope;color:var(--green)}
+.campaigns-footer p{font-size:10px;line-height:1.5;color:#66746c;margin:5px 0 0;max-width:720px}
+.campaigns-footer a{font-size:10px;white-space:nowrap}
+.campaigns-disclaimer{font-size:9px;line-height:1.6;color:#839087;margin:12px 0 0}
+@media(max-width:900px){.campaigns-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.campaigns-section{padding:48px 18px}.campaigns-grid{grid-template-columns:1fr}.campaign-card{padding:17px}.campaigns-footer{align-items:flex-start;flex-direction:column;gap:9px}.campaigns-footer a{white-space:normal}}
