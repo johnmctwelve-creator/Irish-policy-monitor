@@ -2,7 +2,8 @@
   "metadata": {
     "purpose": "Record attributable and current policy positions; party proposals are not enacted government policy.",
     "research_cutoff": "2026-11-24",
-    "caveat": "Proposals and costings must be checked against original party budget documents. Press summaries are secondary sources."
+    "caveat": "Source-linked register of selected published party positions, not a complete manifesto-by-manifesto comparison. Government parties' positions are distinguished from adopted Government policy. Absence from this register does not mean a party has no policy on an area.",
+    "version": "1.0"
   },
   "fields": [
     "party",
@@ -63,6 +64,42 @@
       "costing_source": "Secondary reporting; obtain original party document and costings",
       "parliamentary_record": "",
       "status": "Party proposal — secondary-source summary",
+      "last_verified": "2026-11-24"
+    },
+    {
+      "party": "Fianna Fáil",
+      "policy_area": "Housing; Budget 2027; health; justice; defence",
+      "position_summary": "Government party. Its published housing policy supports home ownership, a 300,000-home pathway to 2030, Help to Buy and cost-rental housing. Government budget measures must be distinguished from party-only proposals.",
+      "proposal_text": "Published housing page describes Help to Buy (up to €30,000 under stated conditions), cost-rental homes and a 300,000-home pathway. Its Budget 2027 speech announces allocations for health, justice and defence as Government policy. The party-published completion figure should be reconciled with CSO definitions before use.",
+      "publication_date": "Current policy page; Budget 2027 speech",
+      "source_url": "https://www.fiannafail.ie/housing",
+      "costing_source": "Party housing page; Budget 2027 Ministerial speech for Government allocations",
+      "parliamentary_record": "",
+      "status": "Government party position; distinguish manifesto/policy statements from enacted and funded Government measures",
+      "last_verified": "2026-11-24"
+    },
+    {
+      "party": "Fine Gael",
+      "policy_area": "Housing; migration; criminal justice; Budget 2027",
+      "position_summary": "Government party. Published priorities include increasing housing supply and home ownership, faster international-protection processing and returns after due process, Garda investment, prison capacity and victim-centred justice.",
+      "proposal_text": "Housing policy page proposes 60,000 homes annually, 18,000 homes through the Land Development Agency and expanded first-time-buyer supports. Its migration and justice page advocates faster processing, stronger border security, returns of unsuccessful applicants subject to law, Garda recruitment and additional prison places. These are party commitments; check the Programme for Government and Budget for adopted Government policy.",
+      "publication_date": "Current policy pages; Budget 2027 page",
+      "source_url": "https://www.finegael.ie/our-plan/delivering-homes-and-building-better-communities/",
+      "costing_source": "Fine Gael published policy pages and Budget 2027 programme; full independent costing not assessed here",
+      "parliamentary_record": "",
+      "status": "Government party position; party targets are not proof of delivery",
+      "last_verified": "2026-11-24"
+    },
+    {
+      "party": "Green Party",
+      "policy_area": "Housing; climate; transport; Budget 2027",
+      "position_summary": "The Green Party's published policies emphasise compact, transit-oriented development, stronger public and affordable housing, lower-carbon transport and accelerated household energy transition.",
+      "proposal_text": "Housing policy supports a right-to-home constitutional amendment, a Land Use Authority, public and community housing, retrofit of vacant buildings and stronger rental security. Its Budget 2027 submission proposes a €2.5bn Fossil Fuel Inflation Fund, childcare wage support, phased abolition of the student contribution charge, reversal of a planned public-transport fare increase and a data-centre energy levy. These are party proposals, not adopted Government measures.",
+      "publication_date": "Housing policy page; Budget 2027 submission 1 October 2026",
+      "source_url": "https://www.greenparty.ie/news/greens-publish-budget-ideas-cut-bills-and-invest-surplus-future",
+      "costing_source": "Green Party Budget 2027 submission; detailed costing assumptions require independent review",
+      "parliamentary_record": "",
+      "status": "Opposition party proposal; some standing policy pages pre-date the current Dáil term",
       "last_verified": "2026-11-24"
     }
   ]
