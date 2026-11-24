@@ -2,7 +2,7 @@
   "metadata": {
     "version": "1.0",
     "research_cutoff": "2026-11-24",
-    "status": "Expanded second research edition. Each policy area has a dated evidence-based assessment, a provisional conclusion, source links and explicit evidence gaps. Not an independent audit; conclusions are limited to the cited indicators."
+    "status": "Expanded second research edition. All 11 areas now have an indicative judgement; three judgements are explicitly provisional because operational outcome data are incomplete. This is not an independent audit and conclusions remain limited to cited indicators."
   },
   "assessments": [
     {
@@ -88,7 +88,7 @@
       "right_case": "Improve border and identity controls, faster fair decisions, enforce final decisions lawfully, plan migration around infrastructure and labour needs, and prevent abuse. Risks include wrongful decisions, legal challenge, labour shortages and excessive deterrence of people entitled to protection.",
       "opposition": "Parties differ across asylum processing, accommodation, migration pathways, integration, returns and EU burden-sharing. Record only explicit current policy statements with dates and links; do not infer a party position from left/right labels.",
       "international": "Compare EU asylum systems and reception models, including Germany, Netherlands and Denmark, against EU law, geography, arrival routes, legal safeguards and capacity. Avoid simple league tables.",
-      "verdict": "Not rated on overall effectiveness because the essential operational series have not been assembled into one consistent, dated dashboard. It is possible to state the legal framework and accommodation obligation, but not responsibly to conclude whether the system is becoming faster, fairer or more sustainable without application-to-decision times, recognition rates, appeal outcomes, accommodation occupancy and lawful-return data. Future updates must distinguish international protection from other migration and must not use homelessness figures as a proxy for asylum-system performance.",
+      "verdict": "Provisional rating: Weak / at risk. This is a risk assessment of system readiness and accountability, not a finding that individual asylum decisions or outcomes are poor. The available evidence confirms the legal framework and the six-month work-eligibility rule, but the site does not yet have a reconciled series for application volumes, decision times, accommodation capacity, appeals, returns or integration. Without those measures, Government cannot demonstrate that the system is timely, predictable or sustainable. The absence of a public, joined-up performance picture is itself a material accountability weakness. The rating should be revised when comparable operational data are assembled.",
       "sources": [
         [
           "Department of Justice, International Protection Accommodation and Supports",
@@ -232,7 +232,7 @@
       "right_case": "Personalised budgets, service-user choice, family supports, community providers and efficient commissioning. Risks include postcode variation, fragmented accountability and unpaid care burdens.",
       "opposition": "Social Democrats propose substantial disability-service and community-living investment; Labour proposes a Cost of Disability payment and expanded supports; Sinn Féin's reported proposals include disability payment measures. Costing and delivery pathways require source-level validation.",
       "international": "Compare personal assistance and independent-living models in Nordic countries and community support approaches in the Netherlands. Rights frameworks and service definitions must be aligned.",
-      "verdict": "Not yet rateable across the full disability-services agenda, but the employment gap is substantial and measurable. The public-sector target result is a positive implementation indicator, not evidence that wider employment or service inequalities have been resolved. A complete assessment requires current data on assessment-of-need delays, therapy waiting times, personal-assistance hours unmet, respite, accessible housing, school supports, congregated settings and rights-based independent living.",
+      "verdict": "Provisional rating: Mixed, with a significant inclusion gap. The public-sector disability employment share reached 5.4% in 2024, above the then 4.5% target, although the statutory target rose to 6% in 2025. Across the working-age population, employment was 49.3% for people with disabilities versus 70.8% for people without disabilities. That 21.5 percentage-point gap is a substantial negative outcome alongside a positive public-sector indicator. Because current service-access evidence for therapy, assessment of need, personal assistance, respite and accessible housing is not consolidated, this rating cannot establish performance across the full disability-services agenda.",
       "sources": [
         [
           "National Disability Authority, Employment and Disability factsheet",
@@ -254,7 +254,7 @@
       "right_case": "Strengthen defence capability, maritime and cyber security, EU cooperation, strategic resilience and protection of trade routes. Risks include cost, mission creep and changes to the traditional neutrality position without adequate public consent.",
       "opposition": "Record current party positions on neutrality, triple lock, defence spending, EU security and development aid from dated manifestos and parliamentary votes. Do not infer policy solely from party labels.",
       "international": "Compare neutral or non-aligned states and small EU members with different defence models, including Austria, Finland, Sweden and Malta, while noting major differences in history, geography and treaty commitments.",
-      "verdict": "Policy direction and funding are identifiable, but operational effectiveness is not yet rateable. A credible conclusion requires verified Defence Forces strength and retention, equipment availability, maritime and air-surveillance coverage, cyber resilience, procurement milestones, peacekeeping commitments, overseas development assistance and legal analysis of neutrality and the triple lock. Increased allocations alone do not demonstrate readiness or strategic coherence.",
+      "verdict": "Provisional rating: Mixed — investment and policy direction are visible, operational outcomes remain unproven. Budget 2026 allocated €1.5bn to Defence, including €300m capital, and the 2026–2030 Defence Sectoral NDP provides €1.7bn in capital investment. These are meaningful inputs and planned capability improvements, but they do not establish that personnel strength, retention, equipment availability, maritime surveillance, cyber resilience or procurement delivery have improved. The assessment therefore credits policy and funding activity while withholding a positive effectiveness judgement until readiness and delivery outcomes are independently verified. Foreign affairs, development assistance and defence also need separate outcome measures rather than one blended score.",
       "sources": [
         [
           "Department of Defence, Budget 2026 — €1.5bn allocation",
