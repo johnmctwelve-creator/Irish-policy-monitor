@@ -1,18 +1,18 @@
 const $ = (s) => document.querySelector(s);
-const state = { assessments: [], commitments: [], indicators: [], positions: [] };
+const state = { assessments: [], commitments: [], indicators: [], positions: [], manifestos: [], expandedCommitments: [] };
 const icons = {Housing:"⌂",Health:"✚","Economy & taxation":"€","Immigration & asylum":"◎","Climate & energy":"♧",Transport:"↗","Transport & infrastructure":"↗","Education & skills":"▤","Education":"▤","Justice & public safety":"⚖","Agriculture & rural affairs":"♣","Disability & equality":"◉","Foreign affairs & defence":"◇"};
 const safe = (v) => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const link = (url,label="View source") => url ? `<a class="source-link" href="${safe(url)}" target="_blank" rel="noopener noreferrer">${safe(label)} ↗</a>` : "";
 const formatNum = (v) => typeof v === "number" ? new Intl.NumberFormat("en-IE").format(v) : safe(v ?? "Not reported");
 async function load(){
- const files=["policy_assessments.json","commitment_tracker.json","research_register.json","party_position_register.json"];
- const [a,c,r,p]=await Promise.all(files.map(f=>fetch(`data/${f}`).then(x=>{if(!x.ok)throw Error(f);return x.json()})));
- state.assessments=a.assessments||[];state.commitments=c.starter_rows||[];state.indicators=r.indicators||[];state.positions=p.positions||[];
+ const files=["policy_assessments.json","commitment_tracker.json","research_register.json","party_position_register.json","manifesto_comparison_2024.json","pfg_commitments_expanded.json"];
+ const [a,c,r,p,m,e]=await Promise.all(files.map(f=>fetch(`data/${f}`).then(x=>{if(!x.ok)throw Error(f);return x.json()})));
+ state.assessments=a.assessments||[];state.commitments=c.starter_rows||[];state.indicators=r.indicators||[];state.positions=p.positions||[];state.manifestos=m.parties||[];state.expandedCommitments=e.commitments||[];
  const date=a.metadata?.research_cutoff||r.metadata?.research_cutoff||"Not stated";
  $("#research-date").textContent=`Research snapshot: ${date} · Expanded edition; conclusions remain provisional`;
  $("#method-date").textContent=date;
  $("#area-count").textContent=state.assessments.length;$("#indicator-count").textContent=state.indicators.length;$("#promise-count").textContent=state.commitments.length;
- populateAreaFilter();renderPolicies();renderEvidence();renderPromises();renderParties();
+ populateAreaFilter();renderPolicies();renderEvidence();renderPromises();renderParties();renderManifestos();renderExpandedCommitments();
 }
 function populateAreaFilter(){const areas=[...new Set(state.indicators.map(x=>x.area))].sort();$("#evidence-filter").innerHTML='<option value="">All areas</option>'+areas.map(x=>`<option>${safe(x)}</option>`).join("");}
 function renderPolicies(){
@@ -44,3 +44,12 @@ function renderParties(){
 }
 $("#policy-search").addEventListener("input",renderPolicies);$("#evidence-search").addEventListener("input",renderEvidence);$("#evidence-filter").addEventListener("change",renderEvidence);$("#status-filter").addEventListener("change",renderPromises);
 load().catch(err=>{console.error(err);document.querySelectorAll(".loading").forEach(n=>n.textContent="Research data could not be loaded. Check that the data folder and four JSON files are published.");});
+
+function renderManifestos(){
+ const cols=[["Housing","housing"],["Health","health"],["Economy","economy"],["Climate","climate"],["Immigration","immigration"],["Education","education"]];
+ $("#manifesto-list").innerHTML=state.manifestos.map(p=>`<article class="manifesto-card"><div class="party-card-head"><h3>${safe(p.party)}</h3><span class="meta">${safe(p.manifesto_title)} · ${safe(p.manifesto_year)}</span></div><div class="manifesto-grid">${cols.map(c=>`<section><h4>${safe(c[0])}</h4><p>${safe(p[c[1]])}</p></section>`).join("")}</div><p class="meta">${safe(p.status)}</p>${link(p.manifesto_source,"Manifesto source")}</article>`).join("");
+}
+function renderExpandedCommitments(){
+ const groups=[...new Set(state.expandedCommitments.map(x=>x.policy_area))];
+ $("#expanded-pfg-list").innerHTML=groups.map(area=>`<details class="pfg-group"><summary>${safe(area)} <span>${state.expandedCommitments.filter(x=>x.policy_area===area).length} commitments</span></summary><div>${state.expandedCommitments.filter(x=>x.policy_area===area).map(x=>`<article class="pfg-item"><h4>${safe(x.commitment_summary)}</h4><p class="meta">PFG printed page ${safe(x.programme_page)} · ${safe(x.id)}</p><p><strong>How to measure:</strong> ${safe(x.measurement_required)}</p><p class="meta">Baseline: ${safe(x.baseline)} Status: ${safe(x.delivery_status)}</p>${link(x.source_url,"Programme for Government PDF")}</article>`).join("")}</div></details>`).join("");
+}
