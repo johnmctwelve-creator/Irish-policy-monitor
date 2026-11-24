@@ -408,3 +408,13 @@ html{scroll-padding-top:24px}
 .revolutionary-quiz-section:before{background-image:linear-gradient(90deg,rgba(242,245,241,.92),rgba(242,245,241,.48)),url("https://commons.wikimedia.org/wiki/Special:FilePath/Michael_Collins.jpg");background-position:center,right 15%;opacity:.13}
 .executive-section>*,.evidence-section>*,#parties>*,#manifestos>*,#promises>*,.feasibility-section>*,.fiscal-section>*,.method-section>*,#proclamation-1916>*,.revolutionary-quiz-section>*{position:relative;z-index:1}
 @media(max-width:760px){.executive-section:before,.evidence-section:before,#parties:before,#manifestos:before,#promises:before,.feasibility-section:before,.fiscal-section:before,.method-section:before,#proclamation-1916:before,.revolutionary-quiz-section:before{background-size:cover,auto 58%;background-position:center,right bottom;opacity:.09}}
+
+/* Grouped, layered navigation: policy first, civic action second, quizzes last */
+.section-nav{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,.85fr) minmax(0,.85fr);gap:12px;padding:16px;border:1px solid rgba(255,255,255,.25);border-radius:14px;background-image:linear-gradient(90deg,rgba(8,30,25,.94),rgba(8,30,25,.86)),url("https://upload.wikimedia.org/wikipedia/commons/5/5b/The_shell_of_the_G.P.O._on_Sackville_Street_after_the_Easter_Rising_%286937669789%29.jpg");background-size:cover;background-position:center 43%}
+.nav-group{min-width:0;padding:10px;border:1px solid rgba(255,255,255,.13);border-radius:10px;background:rgba(5,29,23,.36)}
+.nav-group-title{display:flex;align-items:center;gap:9px;margin:0 0 10px;padding:0 2px 9px;border-bottom:1px solid rgba(255,255,255,.2);color:#f1d18f;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.nav-group-title span{display:grid;place-items:center;width:23px;height:23px;border-radius:6px;background:rgba(239,202,130,.16);font-size:9px;letter-spacing:0}
+.nav-group-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.nav-group-action .nav-group-links,.nav-group-quiz .nav-group-links{grid-template-columns:1fr}
+@media(max-width:900px){.section-nav{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}.nav-group-policy{grid-row:span 2}.nav-group-links{grid-template-columns:1fr}}
+@media(max-width:560px){.section-nav{grid-template-columns:1fr;gap:8px;padding:8px}.nav-group{padding:9px}.nav-group-policy{grid-row:auto}.nav-group-policy .nav-group-links,.nav-group-action .nav-group-links,.nav-group-quiz .nav-group-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
