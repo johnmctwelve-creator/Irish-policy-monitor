@@ -1,18 +1,18 @@
 const $ = (s) => document.querySelector(s);
-const state = { assessments: [], commitments: [], indicators: [], positions: [], manifestos: [], expandedCommitments: [], feasibility: null, fiscal: null };
+const state = { assessments: [], commitments: [], indicators: [], positions: [], manifestos: [], expandedCommitments: [], feasibility: null, fiscal: null, questionnaire: null };
 const icons = {Housing:"⌂",Health:"✚","Economy & taxation":"€","Immigration & asylum":"◎","Climate & energy":"♧",Transport:"↗","Transport & infrastructure":"↗","Education & skills":"▤","Education":"▤","Justice & public safety":"⚖","Agriculture & rural affairs":"♣","Disability & equality":"◉","Foreign affairs & defence":"◇"};
 const safe = (v) => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const link = (url,label="View source") => url ? `<a class="source-link" href="${safe(url)}" target="_blank" rel="noopener noreferrer">${safe(label)} ↗</a>` : "";
 const formatNum = (v) => typeof v === "number" ? new Intl.NumberFormat("en-IE").format(v) : safe(v ?? "Not reported");
 async function load(){
- const files=["policy_assessments.json","commitment_tracker.json","research_register.json","party_position_register.json","manifesto_comparison_2024.json","pfg_commitments_expanded.json","feasibility_assessment.json","five_year_fiscal_model.json"];
- const [a,c,r,p,m,e,f,g]=await Promise.all(files.map(f=>fetch(`data/${f}`).then(x=>{if(!x.ok)throw Error(f);return x.json()})));
- state.assessments=a.assessments||[];state.commitments=c.starter_rows||[];state.indicators=r.indicators||[];state.positions=p.positions||[];state.manifestos=m.parties||[];state.expandedCommitments=e.commitments||[];state.feasibility=f;state.fiscal=g;
+ const files=["policy_assessments.json","commitment_tracker.json","research_register.json","party_position_register.json","manifesto_comparison_2024.json","pfg_commitments_expanded.json","feasibility_assessment.json","five_year_fiscal_model.json","policy_alignment_questionnaire.json"];
+ const [a,c,r,p,m,e,f,g,q]=await Promise.all(files.map(f=>fetch(`data/${f}`).then(x=>{if(!x.ok)throw Error(f);return x.json()})));
+ state.assessments=a.assessments||[];state.commitments=c.starter_rows||[];state.indicators=r.indicators||[];state.positions=p.positions||[];state.manifestos=m.parties||[];state.expandedCommitments=e.commitments||[];state.feasibility=f;state.fiscal=g;state.questionnaire=q;
  const date=a.metadata?.research_cutoff||r.metadata?.research_cutoff||"Not stated";
  $("#research-date").textContent=`Research snapshot: ${date} · Expanded edition; conclusions remain provisional`;
  $("#method-date").textContent=date;
  $("#area-count").textContent=state.assessments.length;$("#indicator-count").textContent=state.indicators.length;$("#promise-count").textContent=state.commitments.length;
- populateAreaFilter();renderPolicies();renderEvidence();renderPromises();renderParties();renderManifestos();renderExpandedCommitments();renderFeasibility();renderFiscalModel();
+ populateAreaFilter();renderPolicies();renderEvidence();renderPromises();renderParties();renderManifestos();renderExpandedCommitments();renderFeasibility();renderFiscalModel();renderQuestionnaire();
 }
 function populateAreaFilter(){const areas=[...new Set(state.indicators.map(x=>x.area))].sort();$("#evidence-filter").innerHTML='<option value="">All areas</option>'+areas.map(x=>`<option>${safe(x)}</option>`).join("");}
 function renderPolicies(){
@@ -80,4 +80,40 @@ function renderFiscalModel(){
  $("#fiscal-conclusion").textContent=m.conclusion;
  $("#fiscal-rules").innerHTML=m.rules.map(x=>`<li>${safe(x)}</li>`).join("");
  $("#fiscal-sources").innerHTML=m.metadata.sources.map(s=>`<li><a href="${safe(s.url)}" target="_blank" rel="noopener noreferrer">${safe(s.name)} ↗</a></li>`).join("");
+}
+
+function renderQuestionnaire(){
+ const q=state.questionnaire;if(!q)return;
+ const root=$("#alignment-questions");if(!root)return;
+ root.innerHTML=q.dimensions.map((d,i)=>`<fieldset class="alignment-question"><legend><span>${i+1} / ${q.dimensions.length}</span>${safe(d.label)}</legend><p>${safe(d.question)}</p><div class="alignment-options">${d.options.map(o=>`<label><input type="radio" name="align-${safe(d.id)}" value="${safe(o.id)}"><span>${safe(o.label)}</span></label>`).join("")}</div></fieldset>`).join("");
+ $("#alignment-progress").textContent="0 of "+q.dimensions.length+" answered";
+ root.addEventListener("change",updateAlignmentProgress);
+ $("#alignment-reset").addEventListener("click",()=>{root.querySelectorAll("input").forEach(x=>x.checked=false);$("#alignment-results").hidden=true;updateAlignmentProgress();});
+ $("#alignment-submit").addEventListener("click",calculateAlignment);
+ function updateAlignmentProgress(){const n=q.dimensions.filter(d=>root.querySelector(`input[name="align-${d.id}"]:checked`)).length;$("#alignment-progress").textContent=n+" of "+q.dimensions.length+" answered";}
+}
+function calculateAlignment(){
+ const q=state.questionnaire,root=$("#alignment-questions");
+ const answers={};q.dimensions.forEach(d=>{const x=root.querySelector(`input[name="align-${d.id}"]:checked`);if(x)answers[d.id]=x.value;});
+ if(!Object.keys(answers).length){$("#alignment-validation").textContent="Answer at least one issue to see a comparison.";return;}
+ const adjacent={
+ housing:{state:["mixed"],mixed:["state","market"],market:["mixed"]},
+ health:{public:["reform"],reform:["public","choice"],choice:["reform"]},
+ economy:{redistribute:["balance"],balance:["redistribute","enterprise"],enterprise:["balance"]},
+ climate:{fast:["pragmatic"],pragmatic:["fast","cautious"],cautious:["pragmatic"]},
+ immigration:{rights:["managed"],managed:["rights","strict"],strict:["managed"]},
+ education:{inclusive:["capacity"],capacity:["inclusive","choice"],choice:["capacity"]}
+ };
+ const results=Object.entries(q.party_codes).map(([party,code])=>{
+  let score=0,max=0,matched=0,details=[];
+  q.dimensions.forEach(d=>{const ans=answers[d.id];if(!ans||ans==="unsure")return;const w=d.weight||1;max+=2*w;const p=code[d.id];const pts=p===ans?2:(adjacent[d.id]?.[ans]||[]).includes(p)?1:0;score+=pts*w;if(pts)matched++;details.push({label:d.label,points:pts*w,weight:w});});
+  return {party,score,max,percent:max?Math.round(score/max*100):0,matched,details};
+ }).sort((x,y)=>y.percent-x.percent||y.score-x.score||x.party.localeCompare(y.party));
+ const top=results[0].percent,tied=results.filter(x=>x.percent===top);
+ $("#alignment-results").hidden=false;
+ $("#alignment-validation").textContent="";
+ $("#alignment-summary").textContent=tied.length>1?"Your answers produce a joint highest match. These parties share the highest broad-category alignment in this questionnaire.":"Your answers produce the highest broad-category match shown below. This is a comparison aid, not a recommendation.";
+ $("#alignment-ranking").innerHTML=results.map((r,i)=>`<article class="alignment-result-row"><div><strong>${i+1}. ${safe(r.party)}</strong><small>${r.matched} of ${Object.keys(answers).length} answered issues with some alignment</small></div><div class="alignment-score"><b>${r.percent}%</b><div class="alignment-track"><i style="width:${r.percent}%"></i></div></div></article>`).join("");
+ $("#alignment-detail").innerHTML=tied.map(r=>`<section><h4>${safe(r.party)} — issue-by-issue</h4><ul>${r.details.map(d=>`<li>${safe(d.label)}: ${d.points===0?"No broad match":d.points%2===0?"Strong broad match":"Partial broad match"}</li>`).join("")}</ul><p class="meta">A category match reflects the questionnaire's simplified coding, not a full reading of every party proposal.</p></section>`).join("");
+ $("#alignment-results").scrollIntoView({behavior:"smooth",block:"start"});
 }
