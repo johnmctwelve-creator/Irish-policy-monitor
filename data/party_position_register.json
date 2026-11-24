@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "purpose": "Record attributable and current policy positions; party proposals are not enacted government policy.",
+    "research_cutoff": "2026-11-24",
+    "caveat": "Proposals and costings must be checked against original party budget documents. Press summaries are secondary sources."
+  },
+  "fields": [
+    "party",
+    "policy_area",
+    "position_summary",
+    "proposal_text",
+    "publication_date",
+    "source_url",
+    "costing_source",
+    "parliamentary_record",
+    "status",
+    "last_verified"
+  ],
+  "positions": [
+    {
+      "party": "Labour",
+      "policy_area": "Housing, health, cost of living, education, disability",
+      "position_summary": "Alternative Budget 2027 prioritises targeted child and energy supports, expanded public and affordable housing, childcare, health capacity and income-tax indexation.",
+      "proposal_text": "Proposals include a €400 targeted energy credit, 6,000 public childcare places, more than 6,000 social and affordable homes annually with a stated public-build target of 22,000, a second-tier Child Benefit, weekly welfare increases, expanded GP care and disability supports.",
+      "publication_date": "2026-10-01",
+      "source_url": "https://labour.ie/news/2026/10/01/a-future-we-can-afford-labours-alternative-budget-for-a-fairer-more-sustainable-ireland/",
+      "costing_source": "Party budget publication; verify detailed costing tables in original document",
+      "parliamentary_record": "",
+      "status": "Party proposal — not enacted government policy",
+      "last_verified": "2026-11-24"
+    },
+    {
+      "party": "Social Democrats",
+      "policy_area": "Housing, health, taxation, childcare, disability, cost of living",
+      "position_summary": "Alternative Budget 2027 proposes targeted household supports and long-term public capacity investment.",
+      "proposal_text": "Proposals include a €400 targeted energy credit, €300 monthly childcare fee reduction, additional State-led social and affordable housing and modular home factories, a €1bn-plus Sláintecare and health staffing investment, and a 2% wealth tax on assets over €5m.",
+      "publication_date": "2026",
+      "source_url": "https://www.socialdemocrats.ie/our-policies/alternative-budget/",
+      "costing_source": "Party Alternative Budget 2027; verify detailed costing tables in original document",
+      "parliamentary_record": "",
+      "status": "Party proposal — not enacted government policy",
+      "last_verified": "2026-11-24"
+    },
+    {
+      "party": "Sinn Féin",
+      "policy_area": "Housing, taxation, cost of living, health, public services",
+      "position_summary": "Budget 2027 proposals reported in October 2026 emphasise household cost supports, tax changes and increased social and affordable housing.",
+      "proposal_text": "Reported proposals include a €500 Everyday Essentials Card for one million lower-income households, €400 electricity credit, USC changes, increased social and affordable housing investment and a doubling of the renters tax credit. Treat these as a press-reported summary pending source-document extraction.",
+      "publication_date": "2026-10",
+      "source_url": "https://www.irishtimes.com/politics/2026/10/01/oppositions-alternative-budgets-propose-wealth-taxes-and-energy-credits/",
+      "costing_source": "Secondary reporting of party budget; original party costing document should be linked before final assessment",
+      "parliamentary_record": "",
+      "status": "Party proposal — secondary-source summary",
+      "last_verified": "2026-11-24"
+    },
+    {
+      "party": "People Before Profit",
+      "policy_area": "Housing, energy, public services, taxation",
+      "position_summary": "Budget 2027 proposals reported in October 2026 emphasise direct public provision, price interventions and higher taxation on wealth and excess profits.",
+      "proposal_text": "Reported proposals include expanded State housing construction, household energy credits, abolishing energy standing charges and price caps. Treat these as a press-reported summary pending original source-document extraction.",
+      "publication_date": "2026-10",
+      "source_url": "https://www.irishtimes.com/politics/2026/10/01/main-points-from-taxes-to-bills-what-does-the-opposition-want-in-budget-2027/",
+      "costing_source": "Secondary reporting; obtain original party document and costings",
+      "parliamentary_record": "",
+      "status": "Party proposal — secondary-source summary",
+      "last_verified": "2026-11-24"
+    }
+  ]
+}
