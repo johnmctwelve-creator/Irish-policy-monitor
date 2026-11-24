@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "title": "Irish General Election 2024 cross-party manifesto comparison",
+    "version": "0.1",
+    "scope": "Nine parties; six policy dimensions; 2024 election manifestos, not current party positions.",
+    "method": "High-level paraphrase of manifesto themes. Not exhaustive, not a costing review and not a feasibility assessment.",
+    "limitations": [
+      "The first comparison is thematic, not page-by-page. Add exact page references and selected quotations before presenting individual proposals as fully verified.",
+      "Aontú link currently resolves to a policy portal, not a direct manifesto PDF.",
+      "Independent Ireland link is an archive index, not a direct party PDF.",
+      "Do not conflate 2024 manifestos with later party policy, alternative budgets or adopted Government policy.",
+      "Omission from a summary does not mean the party has no policy on the subject."
+    ]
+  },
+  "parties": [
+    {
+      "party": "Fianna Fáil",
+      "manifesto_title": "Moving Forward. Together",
+      "manifesto_year": 2024,
+      "manifesto_source": "https://7358484.fs1.hubspotusercontent-na1.net/hubfs/7358484/FF%20Manifesto%202024_V4_Screen%5B45%5D.pdf",
+      "housing": "Housing supply, planning, infrastructure and first-time-buyer supports.",
+      "health": "Health investment and staffing, service reform and waiting-time reduction.",
+      "economy": "Pro-enterprise, SMEs, exporters, competitiveness and jobs.",
+      "climate": "Climate action and renewables balanced with household, farm and business costs.",
+      "immigration": "Managed migration and an effective international-protection system.",
+      "education": "Schools, teachers, childcare, skills and further education.",
+      "status": "High-level thematic summary; page-level verification outstanding."
+    },
+    {
+      "party": "Fine Gael",
+      "manifesto_title": "Securing your future",
+      "manifesto_year": 2024,
+      "manifesto_source": "https://www.finegael.ie/app/uploads/2024/11/Fine-Gael-General-Election-2024-Manifesto.pdf",
+      "housing": "300,000 homes by 2030, planning reform, infrastructure and buyer supports.",
+      "health": "Sláintecare, capacity, surgical hubs and primary care.",
+      "economy": "Pro-enterprise, competitiveness, employment and innovation.",
+      "climate": "Decarbonisation, renewables, affordability and energy security.",
+      "immigration": "Faster processing, enforcement and a fair-but-firmer approach.",
+      "education": "School places, special education, childcare, skills and apprenticeships.",
+      "status": "High-level thematic summary; page-level verification outstanding."
+    },
+    {
+      "party": "Sinn Féin",
+      "manifesto_title": "The Choice for Change",
+      "manifesto_year": 2024,
+      "manifesto_source": "https://vote.sinnfein.ie/wp-content/uploads/2024/11/SinnFeinManifesto2024.pdf",
+      "housing": "Public and affordable housing, renter protections and housing affordability.",
+      "health": "All-Ireland health service ambition, capacity, access and reduced inequalities.",
+      "economy": "Public investment, industrial policy, jobs and household income.",
+      "climate": "Just transition with household and worker protections.",
+      "immigration": "Fair and efficient protection processing, accommodation and integration.",
+      "education": "Reduce education costs, improve special-needs provision and staffing.",
+      "status": "High-level thematic summary; page-level verification outstanding."
+    },
+    {
+      "party": "Labour",
+      "manifesto_title": "Building Better Together",
+      "manifesto_year": 2024,
+      "manifesto_source": "https://labour.ie/wp-content/uploads/2021/10/Labour-Manifesto-2024-Building-Better-Together.pdf",
+      "housing": "Public and affordable housing, direct State construction and renter protections.",
+      "health": "Sláintecare, public capacity, workforce planning and primary care.",
+      "economy": "Workers' rights, public investment, fair taxation and regulated enterprise.",
+      "climate": "Just transition, retrofit and public transport.",
+      "immigration": "Rights-based migration, fair procedures and integration.",
+      "education": "Reduce family costs, invest in schools and childcare.",
+      "status": "High-level thematic summary; page-level verification outstanding."
+    },
+    {
+      "party": "Social Democrats",
+      "manifesto_title": "For the Future",
+      "manifesto_year": 2024,
+      "manifesto_source": "https://www.socialdemocrats.ie/wp-content/uploads/2024/11/GEManifesto2024.pdf",
+      "housing": "State-led social and affordable housing, renter protections and right-to-housing approach.",
+      "health": "Sláintecare, universal access and primary/community care.",
+      "economy": "Progressive taxation, strong public services and social protection.",
+      "climate": "Climate investment, fair transition, public transport and energy efficiency.",
+      "immigration": "Humane asylum policy, fair processing and integration.",
+      "education": "Reduce education costs, expand childcare and inclusive education.",
+      "status": "High-level thematic summary; page-level verification outstanding."
+    },
+    {
+      "party": "Green Party",
+      "manifesto_title": "Towards 2030: A decade of change",
+      "manifesto_year": 2024,
+      "manifesto_source": "https://www.greenparty.ie/sites/default/files/2024-11/Manifesto%20OCT%2024%20-%20digital%20version_final.pdf",
+      "housing": "Compact development, affordable/cost-rental homes, vacancy reuse and renter protections.",
+      "health": "Prevention, community care, public health and capacity.",
+      "economy": "Green industrial transition, circular economy and resilient infrastructure.",
+      "climate": "Emissions reduction, renewables, retrofit and biodiversity.",
+      "immigration": "Rights-based protection, integration and inclusion.",
+      "education": "Education investment, early-years provision and inclusion.",
+      "status": "High-level thematic summary; page-level verification outstanding."
+    },
+    {
+      "party": "People Before Profit",
+      "manifesto_title": "Another Ireland is Possible",
+      "manifesto_year": 2024,
+      "manifesto_source": "https://www.pbp.ie/ge24/manifesto/",
+      "housing": "Public housing at scale, rent controls and action on vacancy/speculation.",
+      "health": "Universal public healthcare and ending two-tier access.",
+      "economy": "Redistributive taxation, higher wages, public ownership and services.",
+      "climate": "Publicly planned decarbonisation and worker/household protection.",
+      "immigration": "Pro-migrant and refugee rights, anti-racist approach.",
+      "education": "Free and accessible education and special-needs supports.",
+      "status": "High-level thematic summary; page-level verification outstanding."
+    },
+    {
+      "party": "Aontú",
+      "manifesto_title": "Our Common Sense Manifesto",
+      "manifesto_year": 2024,
+      "manifesto_source": "https://aontu.ie/jobs-enterprise",
+      "housing": "Social/affordable supply, vacancy reuse, tenant protections and construction capacity.",
+      "health": "Health-system reform, frontline capacity and funding/management changes.",
+      "economy": "Fiscal prudence, family supports, rural enterprise and lower costs.",
+      "climate": "Caution about climate measures that burden farms and households; alternative cost/energy measures.",
+      "immigration": "Stricter and faster controls with fair-treatment commitments.",
+      "education": "Family supports, school choice and special-needs provision.",
+      "status": "High-level thematic summary; page-level verification outstanding."
+    },
+    {
+      "party": "Independent Ireland",
+      "manifesto_title": "Common Sense Solutions for a Better Ireland",
+      "manifesto_year": 2024,
+      "manifesto_source": "https://pidgeon.ie/manifestos/election.html",
+      "housing": "Construction incentives, planning reform and bringing more homes to market.",
+      "health": "Health-service reform and access; exact manifesto commitments need page verification.",
+      "economy": "Lower costs, rural/regional development and SME support.",
+      "climate": "Technology-neutral transition and energy affordability.",
+      "immigration": "Stronger control and more efficient processing.",
+      "education": "Rural school access and special-needs supports; page verification needed.",
+      "status": "High-level thematic summary; page-level verification outstanding."
+    }
+  ]
+}
