@@ -1,0 +1,130 @@
+{
+  "metadata": {
+    "version": "0.1",
+    "research_cutoff": "2026-11-24",
+    "status": "Structured initial assessments; provisional synthesis, not independent audit or party endorsement."
+  },
+  "assessments": [
+    {
+      "id": "housing",
+      "area": "Housing",
+      "government_policy": "The 2025 Programme for Government and updated National Development Plan prioritise increasing housing supply, affordability, infrastructure and public capital delivery. The NDP announced €275.4bn public capital investment for 2026–2035, including €102.4bn for 2026–2030. This is a funding plan, not proof of homes delivered.",
+      "progress": "Supply indicators improved: 36,246 completions in 2025; CSO recorded 10,154 completions in Q3 2026, up 10.4% year-on-year. The Department's November 2026 update reports 38,792 completions in the 12 months to September. At the same time, emergency accommodation remained high at 18,065 people in September 2026, including 5,897 children; property prices rose 5.1% in the year to August. Higher supply has not yet resolved affordability or homelessness.",
+      "left_case": "Increase direct public and cost-rental construction; expand local-authority and approved-housing-body capacity; strengthen tenant security and affordability; use public land strategically. Main risks to test: public-sector delivery capacity, construction cost, fiscal opportunity cost and whether additional rules reduce or improve supply.",
+      "right_case": "Make private construction viable through predictable planning, serviced land, infrastructure, construction productivity, stable rental regulation and targeted incentives. Main risks to test: subsidies may capitalise into land prices, private supply may not reach lower-income households, and weaker tenant protections may shift risk to renters.",
+      "opposition": "Labour's 2027 alternative proposes using €6bn of Apple tax receipts to transform the Land Development Agency into a state construction company and a 20% stamp duty on bulk property purchases. Social Democrats propose additional State-led delivery, including 12,500 social and 10,000 affordable homes, and modular factories. Sinn Féin proposes funding 24,000 social and affordable units annually and doubling the renters' tax credit. People Before Profit proposes trebling the housing budget and a State construction company. These are party proposals; costing, deliverability and legal details require scrutiny.",
+      "international": "Vienna: municipal and limited-profit housing at scale; Netherlands: housing associations and regulated social rental; Singapore: state land and HDB ownership model. Transferability is constrained by Irish land ownership, finance, tax, planning and institutional capacity.",
+      "verdict": "Mixed progress: construction volumes have risen, but housing need, homelessness and affordability remain severe. Do not label policy successful solely because completions increased. Test completions against household formation, location, tenure, price-to-income, rents, vacancy, infrastructure and homelessness."
+    },
+    {
+      "id": "health",
+      "area": "Health",
+      "government_policy": "Government policy continues Sláintecare and capacity expansion through staffing, beds, community care and waiting-list initiatives. Assess the policy against access, outcomes and workforce capacity, not budget inputs alone.",
+      "progress": "NTPF recorded 692,524 people on outpatient waiting lists and 114,722 on inpatient/day-case lists in September 2026. CSO reports healthy life expectancy in 2024 at 66.6 years for men and 67.3 for women, both seventh highest in the EU27. These measures tell different stories: population health is comparatively strong while access bottlenecks remain material.",
+      "left_case": "Prioritise universal access, public capacity, primary care and reduced out-of-pocket costs; strengthen public workforce planning and community services. Risks: recruitment bottlenecks, productivity and capital delays can limit the impact of increased public spending.",
+      "right_case": "Use mixed public/private capacity where it demonstrably reduces waits; focus on management, productivity, patient choice and measurable service standards. Risks: two-tier access, workforce competition with public hospitals and fragmented care.",
+      "opposition": "Sinn Féin's reported 2027 proposals include 4,000 additional hospital beds over five years and medical-card expansion. Social Democrats propose over €1bn for Sláintecare, health staffing, mental health and social care. Labour proposes expanding free GP care to children aged 8–12. PBP proposes additional acute and ICU beds and free GP care. Each proposal needs workforce, capital and operating-cost analysis.",
+      "international": "Germany and the Netherlands use social-insurance and regulated multi-provider arrangements; the UK and Nordic countries rely more heavily on tax-funded systems. Compare waiting times, avoidable mortality, out-of-pocket spending, primary-care access and equity.",
+      "verdict": "Mixed: strong population health indicators coexist with substantial waiting lists. The key test is whether reforms improve timely access and outcomes equitably, not whether capacity or expenditure announcements rise."
+    },
+    {
+      "id": "economy",
+      "area": "Economy & taxation",
+      "government_policy": "Government emphasises competitiveness, employment, fiscal stability, infrastructure and tax-policy predictability. Budget decisions should be evaluated against distribution, productivity, resilience and sustainable public services.",
+      "progress": "Employment reached 74.6% in 2025, above the EU27 average of 71%. Ireland's consumer price level was 36.2% above the EU average in 2025, second highest in the EU27. The State recorded a €10.7bn general government surplus in 2025; this was materially lower than 2024 because 2024 included a €14.2bn one-off CJEU-related receipt. Debt was €209.9bn, or 34.8% of GDP. GDP and headline fiscal measures require Irish-specific interpretation due to multinational activity.",
+      "left_case": "More progressive taxation and wealth/capital taxation can fund universal services and reduce inequality; targeted transfers can protect low-income households. Risks include tax-base mobility, avoidance, behavioural responses and spending capacity constraints.",
+      "right_case": "Competitive tax rates, stable rules, investment incentives and spending discipline support jobs and enterprise. Risks include underfunded services, regressive distribution, asset concentration and over-reliance on volatile corporation-tax receipts.",
+      "opposition": "Labour proposes indexation of income tax and USC bands/credits, energy credits and higher welfare supports. Social Democrats propose tax-credit and standard-rate-band changes plus a 2% net wealth tax above €5m. Sinn Féin proposes USC relief for first €40,000 and additional levies on higher earners. PBP proposes new high-income tax bands and higher employer PRSI. Assess distributional and behavioural impacts using Revenue/ESRI microsimulation.",
+      "international": "Nordic countries combine relatively high taxes with broad services; Germany and France use social insurance and mixed taxation; low-tax models prioritise private provision. Compare total tax wedge, disposable income, public-service coverage and productivity rather than headline rates alone.",
+      "verdict": "Strong employment and fiscal position, but high consumer price levels and revenue concentration are material vulnerabilities. The policy question is how to convert economic capacity into durable productivity, infrastructure and broadly shared living standards."
+    },
+    {
+      "id": "immigration",
+      "area": "Immigration & asylum",
+      "government_policy": "Government policy must balance EU and international protection obligations, migration management, labour-market needs, accommodation capacity, integration and returns following due process.",
+      "progress": "The OECD's 2026 Ireland country note reports 16,734 people in homelessness estimates for 2025 using PASS and a defined ETHOS-Light scope, excluding rough sleeping and some hidden homelessness categories. This illustrates why definitions matter. A complete current assessment also needs International Protection Office applications, processing times, decisions, accommodation capacity, appeals, returns and integration outcomes.",
+      "left_case": "Protect access to asylum, due process, family unity and non-discrimination; invest in reception capacity and integration, and address labour exploitation. Risks include pressure on housing and services if capacity planning lags population flows.",
+      "right_case": "Improve border and identity controls, faster fair decisions, enforce final decisions lawfully, plan migration around infrastructure and labour needs, and prevent abuse. Risks include wrongful decisions, legal challenge, labour shortages and excessive deterrence of people entitled to protection.",
+      "opposition": "Parties differ across asylum processing, accommodation, migration pathways, integration, returns and EU burden-sharing. Record only explicit current policy statements with dates and links; do not infer a party position from left/right labels.",
+      "international": "Compare EU asylum systems and reception models, including Germany, Netherlands and Denmark, against EU law, geography, arrival routes, legal safeguards and capacity. Avoid simple league tables.",
+      "verdict": "Not yet rated. A fair assessment needs a transparent dashboard of applications, processing times, recognition, accommodation, appeals, lawful returns and integration, with disaggregated data and legal context."
+    },
+    {
+      "id": "climate",
+      "area": "Climate & energy",
+      "government_policy": "Government policy is framed by the Climate Action and Low Carbon Development Act, carbon budgets, sectoral emissions ceilings, renewable deployment, energy security and adaptation.",
+      "progress": "EPA provisional data show greenhouse-gas emissions fell 2.2% in 2025, but the EPA says the pace of reductions must accelerate to meet 2030 targets. Water-quality and agricultural nutrient indicators also show pressures. Annual emissions changes should be compared with carbon budgets and sectoral pathways.",
+      "left_case": "Faster public investment, just-transition funding, stronger regulation, public transport, building retrofits and supports for low-income households. Risks include affordability, grid bottlenecks, implementation capacity and burdens on rural/farming communities if transition supports are inadequate.",
+      "right_case": "Technology-neutral and market-led decarbonisation, energy security, cost control, innovation and flexibility in sectoral pathways. Risks include delayed emissions cuts, lock-in of fossil infrastructure and failure to meet statutory targets.",
+      "opposition": "Labour's 2027 budget promotes plug-in solar units and energy credits. Social Democrats advocate Solar for All and long-term energy-cost measures. Sinn Féin and PBP propose different energy credits and price interventions. Assess emissions impact, additionality, grid integration and fiscal cost separately from short-term bill relief.",
+      "international": "Denmark for wind integration and district heating; Sweden for low-carbon electricity and carbon pricing; Germany for large-scale energy transition and grid challenges. Compare energy mix, interconnection, storage, industrial structure and household prices.",
+      "verdict": "Emissions fell in 2025, a positive annual movement, but a single year does not establish compliance with carbon budgets. Judge policy against cumulative emissions, sectoral ceilings, energy affordability and delivery."
+    },
+    {
+      "id": "transport",
+      "area": "Transport & infrastructure",
+      "government_policy": "The updated National Development Plan announced €275.4bn public capital investment for 2026–2035, including major investment in transport, housing, water and energy infrastructure.",
+      "progress": "The capital plan is a multi-year commitment, not completed infrastructure. Track project-level business cases, planning, procurement, cost changes, construction milestones, passenger numbers, journey times, accessibility and regional connectivity.",
+      "left_case": "Prioritise affordable public transport, integrated land-use planning, active travel, public ownership and rural access. Risks include capital cost, weak project management and insufficient service frequency outside dense corridors.",
+      "right_case": "Apply rigorous cost-benefit analysis, improve roads where justified, use private delivery where it improves value, and focus on reliability and network capacity. Risks include induced traffic, carbon lock-in and underinvestment in alternatives.",
+      "opposition": "Labour proposes €2.5bn to accelerate BusConnects, DART, Luas and rail projects and opposes planned fare increases. Other parties propose fare cuts or free public transport. Test demand response, service capacity and long-term operating subsidy.",
+      "international": "Netherlands for cycling and integrated land use; Switzerland for coordinated rail timetables and regional integration; Denmark for urban cycling and transit. Density, geography and existing rail infrastructure differ.",
+      "verdict": "Investment commitments are substantial, but effectiveness cannot be assessed at programme level until individual projects are delivered and measured for journey-time, reliability, access and emissions outcomes."
+    },
+    {
+      "id": "education",
+      "area": "Education & skills",
+      "government_policy": "Government commitments include education quality, school places, special education, childcare affordability, apprenticeships and higher-education capacity.",
+      "progress": "CSO reports 66.8% of 25–34 year-olds held a third-level qualification in 2025, the highest rate in the EU27. The 18–24 NEET rate was 8.8%, below the EU27 average of 11.8%. These positive attainment measures do not resolve school-place, special-needs, literacy, cost or skills-match issues.",
+      "left_case": "Universal access, adequately funded public schools, reduced fees, inclusive education, smaller classes where needed and public childcare. Risks include cost, staffing and implementation capacity.",
+      "right_case": "Parental choice, school autonomy, diverse provision, accountability, apprenticeships and stronger alignment with labour-market demand. Risks include unequal access, selection effects and under-provision in disadvantaged areas.",
+      "opposition": "Social Democrats propose making education genuinely free through capitation, ending voluntary contributions, free school transport and expanded hot meals. Labour proposes universal back-to-school supports and reversing exam/school transport fee increases. Sinn Féin proposes abolishing third-level fees. Compare costs, targeting and capacity.",
+      "international": "Finland for teacher professionalism and comprehensive schooling; Germany for vocational education and apprenticeships; Netherlands for differentiated pathways and school choice. Context and selection systems matter.",
+      "verdict": "Strong third-level attainment and low NEET rate are positives. A complete policy judgment requires learning outcomes, special-education access, childcare supply, teacher recruitment, student costs and socioeconomic gaps."
+    },
+    {
+      "id": "justice",
+      "area": "Justice & public safety",
+      "government_policy": "Government priorities include Garda capacity, court efficiency, victim supports, prison capacity, prevention, rehabilitation and public safety.",
+      "progress": "CSO recorded crime annualised totals to Q2 2026 show assaults/threats/harassment up 4% year-on-year, burglary down 6%, theft up 2%, and sexual offences down 19%. Recorded crime is affected by reporting and recording; the CSO victimisation survey is a separate measure.",
+      "left_case": "Prevention, rehabilitation, youth diversion, mental-health and addiction services, community policing, oversight and addressing social drivers. Risks include insufficient deterrence or slow protection for victims if enforcement is weak.",
+      "right_case": "Visible policing, faster justice, consistent enforcement, sentencing certainty, prison capacity and strong victim protection. Risks include overcrowding, high costs, disproportionate impacts and limited evidence that sentence severity alone reduces crime.",
+      "opposition": "Compare explicit party proposals on Garda recruitment, sentencing, youth justice, prisons, drug policy and victim supports. Do not use general ideological labels as substitutes for current proposals.",
+      "international": "Compare community policing, restorative justice, diversion and court management across Nordic states, Netherlands and UK jurisdictions. Definitions, legal systems and crime reporting differ.",
+      "verdict": "Crime trends are mixed by offence type. No single aggregate crime figure should determine the assessment; combine victimisation, recorded offences, detection, court delay, reoffending and public confidence."
+    },
+    {
+      "id": "agriculture",
+      "area": "Agriculture & rural affairs",
+      "government_policy": "Policy seeks to sustain farm incomes and food exports while meeting climate, biodiversity, water-quality, animal-welfare and rural-development commitments, including EU CAP obligations.",
+      "progress": "Teagasc's 2026 outlook forecasts average family farm income around €33,600, down 38% from 2025, with substantial differences between dairy, cattle, tillage and other systems. EPA monitoring reports ongoing nutrient and water-quality pressures.",
+      "left_case": "Support smaller farms, cooperative bargaining, rural services, fair supply-chain returns and public investment in a just transition and biodiversity. Risks include recurring subsidies without measurable environmental improvement.",
+      "right_case": "Protect farm competitiveness, property rights, export markets and regulatory proportionality; use innovation and incentives rather than blunt restrictions. Risks include externalised environmental costs and delayed transition.",
+      "opposition": "Compare proposals on farm income supports, carbon measures, CAP, rural transport, broadband, biodiversity payments and food policy. Distinguish party proposals from EU programme rules.",
+      "international": "Compare agri-environment schemes in Denmark, Netherlands and France, and cooperative models in other EU states. Farm structure, climate, soil and export mix differ.",
+      "verdict": "Farm viability and environmental performance are both central. A fair assessment should report income distribution by farm system alongside water, emissions, biodiversity and generational renewal."
+    },
+    {
+      "id": "disability",
+      "area": "Disability & equality",
+      "government_policy": "The Programme for Government commits to a step change in disability supports. Evaluate implementation through service access, personal assistance, therapy, school supports, accessible housing and independent living.",
+      "progress": "This starter register lacks a complete, current series for disability-service waiting times, therapy access, personal-assistance hours, residential placements and individualised budgets. The National Disability Authority and HSE should be primary evidence sources.",
+      "left_case": "Rights-based universal public provision, adequate income supports, public accountability and accessible community services. Risks include promises that are not matched by trained staff and local delivery capacity.",
+      "right_case": "Personalised budgets, service-user choice, family supports, community providers and efficient commissioning. Risks include postcode variation, fragmented accountability and unpaid care burdens.",
+      "opposition": "Social Democrats propose substantial disability-service and community-living investment; Labour proposes a Cost of Disability payment and expanded supports; Sinn Féin's reported proposals include disability payment measures. Costing and delivery pathways require source-level validation.",
+      "international": "Compare personal assistance and independent-living models in Nordic countries and community support approaches in the Netherlands. Rights frameworks and service definitions must be aligned.",
+      "verdict": "Not yet rated: insufficient comparable current data in this starter research. Lived experience, rights compliance and service access must be central."
+    },
+    {
+      "id": "foreign",
+      "area": "Foreign affairs & defence",
+      "government_policy": "Government policy includes EU engagement, international development, humanitarian response, neutrality, defence capability, trade and international law commitments.",
+      "progress": "This research baseline does not yet contain a complete, dated review of defence spending, Defence Forces staffing, equipment readiness, development assistance, peacekeeping participation or treaty obligations.",
+      "left_case": "Emphasise military neutrality, diplomacy, international law, disarmament, development assistance and multilateral conflict prevention. Risks include capability gaps and limited influence if Ireland cannot contribute to collective security or crisis response.",
+      "right_case": "Strengthen defence capability, maritime and cyber security, EU cooperation, strategic resilience and protection of trade routes. Risks include cost, mission creep and changes to the traditional neutrality position without adequate public consent.",
+      "opposition": "Record current party positions on neutrality, triple lock, defence spending, EU security and development aid from dated manifestos and parliamentary votes. Do not infer policy solely from party labels.",
+      "international": "Compare neutral or non-aligned states and small EU members with different defence models, including Austria, Finland, Sweden and Malta, while noting major differences in history, geography and treaty commitments.",
+      "verdict": "Not yet rated. A credible assessment needs current Defence Forces readiness, legal analysis, spending comparisons and clear separation of neutrality, non-membership of military alliances and operational cooperation."
+    }
+  ]
+}
