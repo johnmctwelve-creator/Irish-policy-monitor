@@ -1,130 +1,275 @@
 {
   "metadata": {
-    "version": "0.1",
+    "version": "1.0",
     "research_cutoff": "2026-11-24",
-    "status": "Structured initial assessments; provisional synthesis, not independent audit or party endorsement."
+    "status": "Expanded second research edition. Each policy area has a dated evidence-based assessment, a provisional conclusion, source links and explicit evidence gaps. Not an independent audit; conclusions are limited to the cited indicators."
   },
   "assessments": [
     {
       "id": "housing",
       "area": "Housing",
       "government_policy": "The 2025 Programme for Government and updated National Development Plan prioritise increasing housing supply, affordability, infrastructure and public capital delivery. The NDP announced €275.4bn public capital investment for 2026–2035, including €102.4bn for 2026–2030. This is a funding plan, not proof of homes delivered.",
-      "progress": "Supply indicators improved: 36,246 completions in 2025; CSO recorded 10,154 completions in Q3 2026, up 10.4% year-on-year. The Department's November 2026 update reports 38,792 completions in the 12 months to September. At the same time, emergency accommodation remained high at 18,065 people in September 2026, including 5,897 children; property prices rose 5.1% in the year to August. Higher supply has not yet resolved affordability or homelessness.",
+      "progress": "CSO recorded 10,154 completions in Q3 2026, 10.4% above Q3 2025; 26,833 were completed in the first nine months, up 10.6%. The Department's November update reports 38,792 completions in the 12 months to September. This is a real supply increase, but the Central Bank warns that delivery times have lengthened: homes completed so far in 2026 took a median 44–50 months from planning application to first completion, and around one-quarter of permissions granted in 2017–2020 had not commenced within five years. OECD's comparable-scope estimate records 16,734 people in emergency accommodation in 2025; Ireland's monthly domestic series uses a different scope. House prices rose 5.1% year-on-year to August 2026.",
       "left_case": "Increase direct public and cost-rental construction; expand local-authority and approved-housing-body capacity; strengthen tenant security and affordability; use public land strategically. Main risks to test: public-sector delivery capacity, construction cost, fiscal opportunity cost and whether additional rules reduce or improve supply.",
       "right_case": "Make private construction viable through predictable planning, serviced land, infrastructure, construction productivity, stable rental regulation and targeted incentives. Main risks to test: subsidies may capitalise into land prices, private supply may not reach lower-income households, and weaker tenant protections may shift risk to renters.",
       "opposition": "Labour's 2027 alternative proposes using €6bn of Apple tax receipts to transform the Land Development Agency into a state construction company and a 20% stamp duty on bulk property purchases. Social Democrats propose additional State-led delivery, including 12,500 social and 10,000 affordable homes, and modular factories. Sinn Féin proposes funding 24,000 social and affordable units annually and doubling the renters' tax credit. People Before Profit proposes trebling the housing budget and a State construction company. These are party proposals; costing, deliverability and legal details require scrutiny.",
       "international": "Vienna: municipal and limited-profit housing at scale; Netherlands: housing associations and regulated social rental; Singapore: state land and HDB ownership model. Transferability is constrained by Irish land ownership, finance, tax, planning and institutional capacity.",
-      "verdict": "Mixed progress: construction volumes have risen, but housing need, homelessness and affordability remain severe. Do not label policy successful solely because completions increased. Test completions against household formation, location, tenure, price-to-income, rents, vacancy, infrastructure and homelessness."
+      "verdict": "Mixed, with a serious affordability and access failure. Construction is accelerating, but delivery remains below the scale implied by the 300,000-home commitment and population growth. The long planning-to-completion pipeline and infrastructure constraints threaten future supply. The OECD's internationally comparable homelessness series shows a sharp rise since 2018, while Irish monthly emergency-accommodation figures show immediate pressure. Government should be judged on homes completed by tenure, location and affordability, alongside exits from homelessness—not permissions, commencements or capital allocations alone.",
+      "sources": [
+        [
+          "CSO, New Dwelling Completions Q3 2026",
+          "https://www.cso.ie/en/releasesandpublications/ep/p-ndc/newdwellingcompletionsq32026/"
+        ],
+        [
+          "Department of Housing, Monthly Housing Update November 2026",
+          "https://assets.gov.ie/static/documents/9104bf5e/20261104_Monthly_Housing_November.pdf"
+        ],
+        [
+          "Central Bank, Quarterly Bulletin Q3 2026",
+          "https://www.centralbank.ie/publication/quarterly-bulletins/quarterly-bulletin-q3-2026"
+        ],
+        [
+          "OECD, Data on Homelessness and Housing Exclusion 2026 — Ireland",
+          "https://www.oecd.org/en/publications/data-on-homelessness-and-housing-exclusion-2026_bd70370a-en/ireland_5132b1bd-en.html"
+        ]
+      ],
+      "evidence_gaps": "Publish annual tenure-specific target trajectories, household-formation comparison, affordability measures and homelessness exits."
     },
     {
       "id": "health",
       "area": "Health",
       "government_policy": "Government policy continues Sláintecare and capacity expansion through staffing, beds, community care and waiting-list initiatives. Assess the policy against access, outcomes and workforce capacity, not budget inputs alone.",
-      "progress": "NTPF recorded 692,524 people on outpatient waiting lists and 114,722 on inpatient/day-case lists in September 2026. CSO reports healthy life expectancy in 2024 at 66.6 years for men and 67.3 for women, both seventh highest in the EU27. These measures tell different stories: population health is comparatively strong while access bottlenecks remain material.",
+      "progress": "At end-September 2026, NTPF recorded 692,524 people waiting for a first outpatient consultation, 114,722 waiting for inpatient or day-case treatment and 43,285 waiting for GI endoscopy. These are separate waiting-list categories and should not be added without checking overlaps and definitions. CSO's latest comparable health indicators show healthy life expectancy in 2024 at 66.6 years for men and 67.3 for women, both seventh highest in the EU27. Ireland therefore combines comparatively strong population-health outcomes with substantial access bottlenecks in planned hospital care.",
       "left_case": "Prioritise universal access, public capacity, primary care and reduced out-of-pocket costs; strengthen public workforce planning and community services. Risks: recruitment bottlenecks, productivity and capital delays can limit the impact of increased public spending.",
       "right_case": "Use mixed public/private capacity where it demonstrably reduces waits; focus on management, productivity, patient choice and measurable service standards. Risks: two-tier access, workforce competition with public hospitals and fragmented care.",
       "opposition": "Sinn Féin's reported 2027 proposals include 4,000 additional hospital beds over five years and medical-card expansion. Social Democrats propose over €1bn for Sláintecare, health staffing, mental health and social care. Labour proposes expanding free GP care to children aged 8–12. PBP proposes additional acute and ICU beds and free GP care. Each proposal needs workforce, capital and operating-cost analysis.",
       "international": "Germany and the Netherlands use social-insurance and regulated multi-provider arrangements; the UK and Nordic countries rely more heavily on tax-funded systems. Compare waiting times, avoidable mortality, out-of-pocket spending, primary-care access and equity.",
-      "verdict": "Mixed: strong population health indicators coexist with substantial waiting lists. The key test is whether reforms improve timely access and outcomes equitably, not whether capacity or expenditure announcements rise."
+      "verdict": "Mixed. Population-health indicators are relatively strong, but the size of planned-care waiting lists is a major weakness in timely access. The available figures do not reveal clinical urgency, time already waited, repeat entries or outcomes after treatment. A credible assessment needs waiting-time bands, median and 90th-percentile waits, activity, cancellations, staffing vacancies, primary-care access and outcomes by region and deprivation. More beds or spending should count as inputs, not proof of better access.",
+      "sources": [
+        [
+          "NTPF, September 2026 National Public Hospital Waiting List Data",
+          "https://www.ntpf.ie/news_and_events/ntpf-publishes-september-2026-national-public-hospital-waiting-list-data/"
+        ],
+        [
+          "CSO, Measuring Ireland's Progress 2026",
+          "https://www.cso.ie/en/releasesandpublications/ep/p-mip/measuringirelandsprogress2026/keyfindings/"
+        ]
+      ],
+      "evidence_gaps": "Publish comparable waits by specialty and urgency, workforce capacity, treatment activity and patient outcomes."
     },
     {
       "id": "economy",
       "area": "Economy & taxation",
       "government_policy": "Government emphasises competitiveness, employment, fiscal stability, infrastructure and tax-policy predictability. Budget decisions should be evaluated against distribution, productivity, resilience and sustainable public services.",
-      "progress": "Employment reached 74.6% in 2025, above the EU27 average of 71%. Ireland's consumer price level was 36.2% above the EU average in 2025, second highest in the EU27. The State recorded a €10.7bn general government surplus in 2025; this was materially lower than 2024 because 2024 included a €14.2bn one-off CJEU-related receipt. Debt was €209.9bn, or 34.8% of GDP. GDP and headline fiscal measures require Irish-specific interpretation due to multinational activity.",
+      "progress": "Employment reached 74.6% in 2025, above the EU27 average of 71.0%; long-term unemployment was 1.1%, below the EU27 average of 1.9%. Yet Ireland's consumer-price level was 36.2% above the EU27 average in 2025, the second highest in the Union. CSO recorded a general-government surplus of €10.7bn (1.8% of GDP) in 2025, versus €23.4bn in 2024; the earlier figure included a one-off €14.2bn receipt following a CJEU ruling. Gross general-government debt was €209.9bn at end-2025, 34.8% of GDP. GDP is unusually affected by multinational activity, so domestic demand, modified GNI, household disposable income and public-service capacity should also be tracked.",
       "left_case": "More progressive taxation and wealth/capital taxation can fund universal services and reduce inequality; targeted transfers can protect low-income households. Risks include tax-base mobility, avoidance, behavioural responses and spending capacity constraints.",
       "right_case": "Competitive tax rates, stable rules, investment incentives and spending discipline support jobs and enterprise. Risks include underfunded services, regressive distribution, asset concentration and over-reliance on volatile corporation-tax receipts.",
       "opposition": "Labour proposes indexation of income tax and USC bands/credits, energy credits and higher welfare supports. Social Democrats propose tax-credit and standard-rate-band changes plus a 2% net wealth tax above €5m. Sinn Féin proposes USC relief for first €40,000 and additional levies on higher earners. PBP proposes new high-income tax bands and higher employer PRSI. Assess distributional and behavioural impacts using Revenue/ESRI microsimulation.",
       "international": "Nordic countries combine relatively high taxes with broad services; Germany and France use social insurance and mixed taxation; low-tax models prioritise private provision. Compare total tax wedge, disposable income, public-service coverage and productivity rather than headline rates alone.",
-      "verdict": "Strong employment and fiscal position, but high consumer price levels and revenue concentration are material vulnerabilities. The policy question is how to convert economic capacity into durable productivity, infrastructure and broadly shared living standards."
+      "verdict": "Strong employment and a fiscal surplus are genuine strengths, but they coexist with very high price levels, infrastructure constraints and exposure to concentrated corporation-tax receipts. The 2024 surplus is not a sound recurring baseline because of its one-off receipt. The central test is whether volatile revenue is converted into durable infrastructure and services without creating permanent spending commitments that cannot be sustained. Report distributional outcomes and modified national-income measures alongside GDP.",
+      "sources": [
+        [
+          "CSO, Measuring Ireland's Progress 2026",
+          "https://www.cso.ie/en/releasesandpublications/ep/p-mip/measuringirelandsprogress2026/keyfindings/"
+        ],
+        [
+          "CSO, Government Finance Statistics 2025 (October 2026)",
+          "https://www.cso.ie/en/releasesandpublications/ep/p-gfsa/governmentfinancestatistics2025october2026/keyfindings/"
+        ]
+      ],
+      "evidence_gaps": "Publish exposure to concentrated corporation-tax receipts, modified GNI, household disposable income and distributional impacts."
     },
     {
       "id": "immigration",
       "area": "Immigration & asylum",
       "government_policy": "Government policy must balance EU and international protection obligations, migration management, labour-market needs, accommodation capacity, integration and returns following due process.",
-      "progress": "The OECD's 2026 Ireland country note reports 16,734 people in homelessness estimates for 2025 using PASS and a defined ETHOS-Light scope, excluding rough sleeping and some hidden homelessness categories. This illustrates why definitions matter. A complete current assessment also needs International Protection Office applications, processing times, decisions, accommodation capacity, appeals, returns and integration outcomes.",
+      "progress": "The policy question has at least four distinct parts: international protection, other legal migration, labour-market migration and returns after due process. Government states that people awaiting an international-protection decision must receive basic supports, including accommodation and education for children; applicants are not entitled to ordinary social-welfare or housing benefits. After six months without a first decision, an applicant may be eligible to work. The current public evidence set in this edition does not yet provide a reconciled monthly series for applications, first-instance decisions, processing-time distribution, accommodation capacity, appeals, returns and integration outcomes. That is a data-coverage limitation, not evidence that no action has occurred.",
       "left_case": "Protect access to asylum, due process, family unity and non-discrimination; invest in reception capacity and integration, and address labour exploitation. Risks include pressure on housing and services if capacity planning lags population flows.",
       "right_case": "Improve border and identity controls, faster fair decisions, enforce final decisions lawfully, plan migration around infrastructure and labour needs, and prevent abuse. Risks include wrongful decisions, legal challenge, labour shortages and excessive deterrence of people entitled to protection.",
       "opposition": "Parties differ across asylum processing, accommodation, migration pathways, integration, returns and EU burden-sharing. Record only explicit current policy statements with dates and links; do not infer a party position from left/right labels.",
       "international": "Compare EU asylum systems and reception models, including Germany, Netherlands and Denmark, against EU law, geography, arrival routes, legal safeguards and capacity. Avoid simple league tables.",
-      "verdict": "Not yet rated. A fair assessment needs a transparent dashboard of applications, processing times, recognition, accommodation, appeals, lawful returns and integration, with disaggregated data and legal context."
+      "verdict": "Not rated on overall effectiveness because the essential operational series have not been assembled into one consistent, dated dashboard. It is possible to state the legal framework and accommodation obligation, but not responsibly to conclude whether the system is becoming faster, fairer or more sustainable without application-to-decision times, recognition rates, appeal outcomes, accommodation occupancy and lawful-return data. Future updates must distinguish international protection from other migration and must not use homelessness figures as a proxy for asylum-system performance.",
+      "sources": [
+        [
+          "Department of Justice, International Protection Accommodation and Supports",
+          "https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/collections/international-protection-accommodation-and-supports/"
+        ],
+        [
+          "Department of Justice, Statement of Strategy 2025–2028",
+          "https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/collections/department-of-justice-home-affairs-and-migration-statement-of-strategy-2025-2028-accessible-version/"
+        ]
+      ],
+      "evidence_gaps": "Reconcile applications, decisions, waiting times, accommodation capacity, appeals, returns and integration in one dated series."
     },
     {
       "id": "climate",
       "area": "Climate & energy",
       "government_policy": "Government policy is framed by the Climate Action and Low Carbon Development Act, carbon budgets, sectoral emissions ceilings, renewable deployment, energy security and adaptation.",
-      "progress": "EPA provisional data show greenhouse-gas emissions fell 2.2% in 2025, but the EPA says the pace of reductions must accelerate to meet 2030 targets. Water-quality and agricultural nutrient indicators also show pressures. Annual emissions changes should be compared with carbon budgets and sectoral pathways.",
+      "progress": "EPA provisional inventory data show emissions fell 2.2% (1.2 Mt CO₂eq) in 2025, the fourth consecutive annual fall. However, emissions including land use were only 14.5% below 2018, against a statutory 51% reduction objective for 2030; the EPA says reductions of over 10% each year are now needed. Agriculture emissions fell only 0.2%; transport fell 1.5%. The EPA also reports 2025 nitrogen levels in 20 representative rivers rose 10% year-on-year, and early 2026 data were 4.3% above the same period in 2025. Emissions and water quality are separate tests of environmental performance.",
       "left_case": "Faster public investment, just-transition funding, stronger regulation, public transport, building retrofits and supports for low-income households. Risks include affordability, grid bottlenecks, implementation capacity and burdens on rural/farming communities if transition supports are inadequate.",
       "right_case": "Technology-neutral and market-led decarbonisation, energy security, cost control, innovation and flexibility in sectoral pathways. Risks include delayed emissions cuts, lock-in of fossil infrastructure and failure to meet statutory targets.",
       "opposition": "Labour's 2027 budget promotes plug-in solar units and energy credits. Social Democrats advocate Solar for All and long-term energy-cost measures. Sinn Féin and PBP propose different energy credits and price interventions. Assess emissions impact, additionality, grid integration and fiscal cost separately from short-term bill relief.",
       "international": "Denmark for wind integration and district heating; Sweden for low-carbon electricity and carbon pricing; Germany for large-scale energy transition and grid challenges. Compare energy mix, interconnection, storage, industrial structure and household prices.",
-      "verdict": "Emissions fell in 2025, a positive annual movement, but a single year does not establish compliance with carbon budgets. Judge policy against cumulative emissions, sectoral ceilings, energy affordability and delivery."
+      "verdict": "Off track against the 2030 climate objective, despite four consecutive annual emissions reductions. The 2025 decline is welcome but far too small relative to the remaining target gap. Agriculture, transport and nitrogen pollution remain difficult areas. A credible scorecard must track cumulative carbon-budget performance, sectoral ceilings, renewable generation, grid capacity, building retrofits, transport mode share and water quality. Do not infer success from annual emissions reductions alone.",
+      "sources": [
+        [
+          "EPA, Ireland's greenhouse gas emissions decrease by 2.2% in 2025",
+          "https://www.epa.ie/news-releases/news-releases-2026/irelands-greenhouse-gas-emissions-decrease-by-22-in-2025-.php"
+        ],
+        [
+          "EPA, River nitrogen levels increased in 2025",
+          "https://www.epa.ie/news-releases/news-releases-2026/river-nitrogen-levels-increased-in-2025-.php"
+        ],
+        [
+          "EPA, River nitrogen levels first half 2026",
+          "https://www.epa.ie/news-releases/news-releases-2026/river-nitrogen-levels-show-an-increase-in-the-first-half-of-2026-compared-to-the-same-period-in-2025.php"
+        ]
+      ],
+      "evidence_gaps": "Publish cumulative carbon-budget balances, sectoral pathways, grid constraints and water-quality outcomes."
     },
     {
       "id": "transport",
       "area": "Transport & infrastructure",
       "government_policy": "The updated National Development Plan announced €275.4bn public capital investment for 2026–2035, including major investment in transport, housing, water and energy infrastructure.",
-      "progress": "The capital plan is a multi-year commitment, not completed infrastructure. Track project-level business cases, planning, procurement, cost changes, construction milestones, passenger numbers, journey times, accessibility and regional connectivity.",
+      "progress": "The NTA reports 363.5 million TFI passenger journeys in 2025, up 6% (almost 20 million journeys) on 2024. It also records delivery milestones including 36 new or enhanced rural Local Link routes, 124 operational electric buses in the Dublin BusConnects programme, Woodbrook DART station and planning approvals for major schemes. These are meaningful service and project outputs. They do not yet establish reliability, capacity adequacy, journey-time improvements or access outside main corridors. The NDP's capital allocation is a funding plan, not a completed transport network.",
       "left_case": "Prioritise affordable public transport, integrated land-use planning, active travel, public ownership and rural access. Risks include capital cost, weak project management and insufficient service frequency outside dense corridors.",
       "right_case": "Apply rigorous cost-benefit analysis, improve roads where justified, use private delivery where it improves value, and focus on reliability and network capacity. Risks include induced traffic, carbon lock-in and underinvestment in alternatives.",
       "opposition": "Labour proposes €2.5bn to accelerate BusConnects, DART, Luas and rail projects and opposes planned fare increases. Other parties propose fare cuts or free public transport. Test demand response, service capacity and long-term operating subsidy.",
       "international": "Netherlands for cycling and integrated land use; Switzerland for coordinated rail timetables and regional integration; Denmark for urban cycling and transit. Density, geography and existing rail infrastructure differ.",
-      "verdict": "Investment commitments are substantial, but effectiveness cannot be assessed at programme level until individual projects are delivered and measured for journey-time, reliability, access and emissions outcomes."
+      "verdict": "Positive demand and service expansion, but major infrastructure outcomes remain unfinished. Record passenger journeys show growing use, not necessarily that capacity is sufficient or that rural and disabled passengers have equitable access. Assess project cost and schedule performance, bus punctuality, rail frequency, journey times, accessibility, fare burden, rural coverage and mode shift. Publish project-by-project delivery data rather than relying on headline capital allocations.",
+      "sources": [
+        [
+          "National Transport Authority, 2025 Annual Report",
+          "https://www.nationaltransport.ie/news/nta-publishes-2025-annual-report-and-financial-statements/"
+        ],
+        [
+          "Transport for Ireland, Passenger Journeys Up 6% Across the TFI Network in 2025",
+          "https://www.transportforireland.ie/ga/news/passenger-journeys-up-6-across-the-tfi-network-in-2025/"
+        ]
+      ],
+      "evidence_gaps": "Publish project cost/schedule dashboards, punctuality, accessibility, journey-time and rural-service indicators."
     },
     {
       "id": "education",
       "area": "Education & skills",
       "government_policy": "Government commitments include education quality, school places, special education, childcare affordability, apprenticeships and higher-education capacity.",
-      "progress": "CSO reports 66.8% of 25–34 year-olds held a third-level qualification in 2025, the highest rate in the EU27. The 18–24 NEET rate was 8.8%, below the EU27 average of 11.8%. These positive attainment measures do not resolve school-place, special-needs, literacy, cost or skills-match issues.",
+      "progress": "CSO reports that 66.8% of people aged 25–34 held a third-level qualification in 2025, the highest rate in the EU27. The 18–24 NEET rate in the existing research register is 8.8%, below the EU27 average of 11.8%. Average mainstream primary class size fell from 25 in 2015–16 to 22 in 2024–25; the 2025–26 figures vary substantially by school size, from 13 in schools with fewer than 50 pupils to 24 in schools with 500 or more. These indicators show strong attainment and some improvement in class-size averages, but they do not measure learning outcomes, special-education access or affordability.",
       "left_case": "Universal access, adequately funded public schools, reduced fees, inclusive education, smaller classes where needed and public childcare. Risks include cost, staffing and implementation capacity.",
       "right_case": "Parental choice, school autonomy, diverse provision, accountability, apprenticeships and stronger alignment with labour-market demand. Risks include unequal access, selection effects and under-provision in disadvantaged areas.",
       "opposition": "Social Democrats propose making education genuinely free through capitation, ending voluntary contributions, free school transport and expanded hot meals. Labour proposes universal back-to-school supports and reversing exam/school transport fee increases. Sinn Féin proposes abolishing third-level fees. Compare costs, targeting and capacity.",
       "international": "Finland for teacher professionalism and comprehensive schooling; Germany for vocational education and apprenticeships; Netherlands for differentiated pathways and school choice. Context and selection systems matter.",
-      "verdict": "Strong third-level attainment and low NEET rate are positives. A complete policy judgment requires learning outcomes, special-education access, childcare supply, teacher recruitment, student costs and socioeconomic gaps."
+      "verdict": "Positive on third-level attainment and average primary class size, but incomplete on quality and equality of access. The system should be assessed on literacy and numeracy, special-needs assessment and placement, teacher and special-needs-assistant vacancies, school transport, early-years affordability, student costs and outcomes by socioeconomic background. A national average can conceal local shortages and larger classes in bigger schools.",
+      "sources": [
+        [
+          "CSO, Measuring Ireland's Progress 2026",
+          "https://www.cso.ie/en/releasesandpublications/ep/p-mip/measuringirelandsprogress2026/keyfindings/"
+        ],
+        [
+          "CSO, Primary Education — Children and Young Persons Hub",
+          "https://www.cso.ie/en/releasesandpublications/hubs/p-cyp/childrenandyoungpersonshub/education/primaryeducation/"
+        ],
+        [
+          "CSO, Children and Young Persons Hub highlights June 2026",
+          "https://www.cso.ie/en/csolatestnews/pressreleases/2026pressreleases/pressstatement-highlightsfromthechildrenandyoungpersonshubjune2026/"
+        ]
+      ],
+      "evidence_gaps": "Publish learning outcomes, special-needs waiting times, teacher/SNA vacancies and household cost measures."
     },
     {
       "id": "justice",
       "area": "Justice & public safety",
       "government_policy": "Government priorities include Garda capacity, court efficiency, victim supports, prison capacity, prevention, rehabilitation and public safety.",
-      "progress": "CSO recorded crime annualised totals to Q2 2026 show assaults/threats/harassment up 4% year-on-year, burglary down 6%, theft up 2%, and sexual offences down 19%. Recorded crime is affected by reporting and recording; the CSO victimisation survey is a separate measure.",
+      "progress": "The CSO's 2025 Crime and Victimisation Survey found 19% of respondents had experienced some form of personal crime in the preceding year, compared with 10% in 2019. Fraud affected 11%, compared with 4% in 2019. Only 30% of personal crimes were reported in 2025, down from 39% in 2019. While 85% felt very or fairly safe walking in their local area, 57% considered Gardaí very or quite effective at tackling local crime, down from 68% in 2019; 43% were confident the wider justice system brought offenders to justice. Survey victimisation and Garda-recorded offences measure different things.",
       "left_case": "Prevention, rehabilitation, youth diversion, mental-health and addiction services, community policing, oversight and addressing social drivers. Risks include insufficient deterrence or slow protection for victims if enforcement is weak.",
       "right_case": "Visible policing, faster justice, consistent enforcement, sentencing certainty, prison capacity and strong victim protection. Risks include overcrowding, high costs, disproportionate impacts and limited evidence that sentence severity alone reduces crime.",
       "opposition": "Compare explicit party proposals on Garda recruitment, sentencing, youth justice, prisons, drug policy and victim supports. Do not use general ideological labels as substitutes for current proposals.",
       "international": "Compare community policing, restorative justice, diversion and court management across Nordic states, Netherlands and UK jurisdictions. Definitions, legal systems and crime reporting differ.",
-      "verdict": "Crime trends are mixed by offence type. No single aggregate crime figure should determine the assessment; combine victimisation, recorded offences, detection, court delay, reoffending and public confidence."
+      "verdict": "Mixed, with deteriorating public-confidence and victimisation indicators that should not be obscured by offence-specific recorded-crime trends. The near-doubling in reported personal victimisation since 2019 is significant, particularly the rise in fraud. At the same time, most respondents still felt safe locally. Government performance should be assessed through victimisation, reporting, detection, court waiting times, victim supports, prison capacity and reoffending—not a single crime total.",
+      "sources": [
+        [
+          "CSO, Crime and Victimisation 2025 — Key Findings",
+          "https://www.cso.ie/en/releasesandpublications/ep/p-cv/crimeandvictimisation2025/keyfindings/"
+        ],
+        [
+          "Department of Justice, Statement of Strategy 2025–2028",
+          "https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/collections/department-of-justice-home-affairs-and-migration-statement-of-strategy-2025-2028-accessible-version/"
+        ]
+      ],
+      "evidence_gaps": "Publish detection, prosecution, court delay, victim support and reoffending measures alongside survey victimisation."
     },
     {
       "id": "agriculture",
       "area": "Agriculture & rural affairs",
       "government_policy": "Policy seeks to sustain farm incomes and food exports while meeting climate, biodiversity, water-quality, animal-welfare and rural-development commitments, including EU CAP obligations.",
-      "progress": "Teagasc's 2026 outlook forecasts average family farm income around €33,600, down 38% from 2025, with substantial differences between dairy, cattle, tillage and other systems. EPA monitoring reports ongoing nutrient and water-quality pressures.",
+      "progress": "Teagasc's 2026 outlook in the existing research baseline forecasts average family farm income of about €33,600, 38% below 2025, with large differences between dairy, cattle and tillage farms. Environmental performance is also under pressure: EPA data show agriculture was the main source of river nitrogen, average nitrogen at 20 representative sites rose 10% in 2025, and first-half 2026 readings were 4.3% higher than the same period in 2025. The EPA's 2025 water-quality assessment found little overall improvement and identified excess nutrients from agriculture and wastewater as major pressures. Farm income averages conceal substantial variation by system and scale.",
       "left_case": "Support smaller farms, cooperative bargaining, rural services, fair supply-chain returns and public investment in a just transition and biodiversity. Risks include recurring subsidies without measurable environmental improvement.",
       "right_case": "Protect farm competitiveness, property rights, export markets and regulatory proportionality; use innovation and incentives rather than blunt restrictions. Risks include externalised environmental costs and delayed transition.",
       "opposition": "Compare proposals on farm income supports, carbon measures, CAP, rural transport, broadband, biodiversity payments and food policy. Distinguish party proposals from EU programme rules.",
       "international": "Compare agri-environment schemes in Denmark, Netherlands and France, and cooperative models in other EU states. Farm structure, climate, soil and export mix differ.",
-      "verdict": "Farm viability and environmental performance are both central. A fair assessment should report income distribution by farm system alongside water, emissions, biodiversity and generational renewal."
+      "verdict": "Mixed and under pressure on both farm viability and environmental outcomes. The projected income fall is a serious economic risk for farm households, while worsening nitrogen indicators and stagnant water quality show that existing measures have not yet delivered sufficient catchment-level improvement. Policy should target supports to farm-system economics and measurable environmental outcomes, while avoiding a false choice between viable farms and clean water. Report income distributions, emissions, nitrogen, phosphorus, biodiversity and generational renewal together.",
+      "sources": [
+        [
+          "EPA, Water Quality in 2025 — Indicators Report",
+          "https://www.epa.ie/news-releases/news-releases-2026/faster-action-is-needed-as-water-quality-shows-little-overall-improvement-in-2025-says-epa-.php"
+        ],
+        [
+          "EPA, River nitrogen levels increased in 2025",
+          "https://www.epa.ie/news-releases/news-releases-2026/river-nitrogen-levels-increased-in-2025-.php"
+        ],
+        [
+          "EPA, River nitrogen levels first half 2026",
+          "https://www.epa.ie/news-releases/news-releases-2026/river-nitrogen-levels-show-an-increase-in-the-first-half-of-2026-compared-to-the-same-period-in-2025.php"
+        ]
+      ],
+      "evidence_gaps": "Publish farm-system income distributions alongside catchment nitrogen/phosphorus, emissions and biodiversity indicators."
     },
     {
       "id": "disability",
       "area": "Disability & equality",
       "government_policy": "The Programme for Government commits to a step change in disability supports. Evaluate implementation through service access, personal assistance, therapy, school supports, accessible housing and independent living.",
-      "progress": "This starter register lacks a complete, current series for disability-service waiting times, therapy access, personal-assistance hours, residential placements and individualised budgets. The National Disability Authority and HSE should be primary evidence sources.",
+      "progress": "The National Disability Authority's Census 2022 analysis reports that 49.3% of working-age people with disabilities were employed, compared with 70.8% of people without disabilities. Separately, the NDA's public-sector monitoring found that employees reporting a disability represented 5.4% of the public-sector workforce in 2024, above the then 4.5% statutory target; the statutory target rose to 6% in 2025. These are useful but distinct measures: the public-sector figure does not describe employment across the whole economy, and neither measures access to therapy, personal assistance or independent living.",
       "left_case": "Rights-based universal public provision, adequate income supports, public accountability and accessible community services. Risks include promises that are not matched by trained staff and local delivery capacity.",
       "right_case": "Personalised budgets, service-user choice, family supports, community providers and efficient commissioning. Risks include postcode variation, fragmented accountability and unpaid care burdens.",
       "opposition": "Social Democrats propose substantial disability-service and community-living investment; Labour proposes a Cost of Disability payment and expanded supports; Sinn Féin's reported proposals include disability payment measures. Costing and delivery pathways require source-level validation.",
       "international": "Compare personal assistance and independent-living models in Nordic countries and community support approaches in the Netherlands. Rights frameworks and service definitions must be aligned.",
-      "verdict": "Not yet rated: insufficient comparable current data in this starter research. Lived experience, rights compliance and service access must be central."
+      "verdict": "Not yet rateable across the full disability-services agenda, but the employment gap is substantial and measurable. The public-sector target result is a positive implementation indicator, not evidence that wider employment or service inequalities have been resolved. A complete assessment requires current data on assessment-of-need delays, therapy waiting times, personal-assistance hours unmet, respite, accessible housing, school supports, congregated settings and rights-based independent living.",
+      "sources": [
+        [
+          "National Disability Authority, Employment and Disability factsheet",
+          "https://nda.ie/publications/nda-factsheet-2-employment"
+        ],
+        [
+          "National Disability Authority, Part 5 Disability Act compliance report 2024",
+          "https://nda.ie/news/report-compliance-with-part-5-2024"
+        ]
+      ],
+      "evidence_gaps": "Publish service access and waiting-time series for therapy, assessment of need, personal assistance, respite and accessible housing."
     },
     {
       "id": "foreign",
       "area": "Foreign affairs & defence",
       "government_policy": "Government policy includes EU engagement, international development, humanitarian response, neutrality, defence capability, trade and international law commitments.",
-      "progress": "This research baseline does not yet contain a complete, dated review of defence spending, Defence Forces staffing, equipment readiness, development assistance, peacekeeping participation or treaty obligations.",
+      "progress": "Budget 2026 allocated €1.5bn to Defence, including €300m capital funding and €873m current funding; the Department said the package supports equipment, radar, maritime awareness, communications and recruitment of a net 400 Permanent Defence Forces members. The Defence Sectoral NDP 2026–2030 provides €1.7bn capital investment over five years. These are inputs and planned capabilities; this edition does not yet contain independently verified readiness, personnel-strength, fleet-availability or procurement-delivery outcomes. Neutrality, non-membership of military alliances, UN mandates and EU security cooperation are separate legal and policy questions.",
       "left_case": "Emphasise military neutrality, diplomacy, international law, disarmament, development assistance and multilateral conflict prevention. Risks include capability gaps and limited influence if Ireland cannot contribute to collective security or crisis response.",
       "right_case": "Strengthen defence capability, maritime and cyber security, EU cooperation, strategic resilience and protection of trade routes. Risks include cost, mission creep and changes to the traditional neutrality position without adequate public consent.",
       "opposition": "Record current party positions on neutrality, triple lock, defence spending, EU security and development aid from dated manifestos and parliamentary votes. Do not infer policy solely from party labels.",
       "international": "Compare neutral or non-aligned states and small EU members with different defence models, including Austria, Finland, Sweden and Malta, while noting major differences in history, geography and treaty commitments.",
-      "verdict": "Not yet rated. A credible assessment needs current Defence Forces readiness, legal analysis, spending comparisons and clear separation of neutrality, non-membership of military alliances and operational cooperation."
+      "verdict": "Policy direction and funding are identifiable, but operational effectiveness is not yet rateable. A credible conclusion requires verified Defence Forces strength and retention, equipment availability, maritime and air-surveillance coverage, cyber resilience, procurement milestones, peacekeeping commitments, overseas development assistance and legal analysis of neutrality and the triple lock. Increased allocations alone do not demonstrate readiness or strategic coherence.",
+      "sources": [
+        [
+          "Department of Defence, Budget 2026 — €1.5bn allocation",
+          "https://www.gov.ie/en/department-of-defence/news/budget-2026-record-15-billion-for-defence/"
+        ],
+        [
+          "Department of Defence, Defence Sectoral NDP 2026–2030",
+          "https://www.gov.ie/en/department-of-defence/press-releases/minister-for-defence-launches-17-billion-defence-sectoral-national-development-plan-20262030/"
+        ],
+        [
+          "Department of Defence, Defence Policy Review 2024",
+          "https://www.gov.ie/en/department-of-defence/policies/defence-policy-review/"
+        ]
+      ],
+      "evidence_gaps": "Publish personnel strength, retention, readiness, equipment availability, procurement delivery and treaty/legal analysis."
     }
   ]
 }
