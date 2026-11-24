@@ -371,3 +371,18 @@ html{scroll-padding-top:24px}
 .executive-callout>*{position:relative;z-index:1}
 @media(max-width:760px){.executive-callout:after{width:100%;height:44%;opacity:.12;background-position:center bottom}}
 @media(max-width:520px){.executive-kpis article{padding:12px 10px 12px 48px}.executive-kpis .kpi-status-icon{left:10px;top:13px;width:28px;height:28px;font-size:16px}.executive-kpis span{font-size:10px}.executive-kpis small{font-size:9px}}
+
+/* Irish history portrait treatment: archival monochrome portraits, deliberately faint */
+.site-header .section-nav:before{opacity:.37;filter:grayscale(1) contrast(1.06)}
+.hero,.alignment-section,.section#explore,.campaigns-section,.civic-action-section{position:relative;isolation:isolate;overflow:hidden}
+.hero:before,.alignment-section:before,.section#explore:before,.campaigns-section:before,.civic-action-section:before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background-repeat:no-repeat;background-size:auto 118%;background-position:right center;filter:grayscale(1) contrast(1.05);opacity:.105}
+.hero:before{background-image:linear-gradient(90deg,rgba(13,48,39,.95) 0%,rgba(13,48,39,.76) 48%,rgba(13,48,39,.25) 100%),url("https://commons.wikimedia.org/wiki/Special:FilePath/Michael_Collins.jpg");background-position:center,right 24%}
+.alignment-section:before{background-image:linear-gradient(90deg,rgba(14,48,40,.94),rgba(14,48,40,.66)),url("https://commons.wikimedia.org/wiki/Special:FilePath/Countess_Markievicz.jpg");background-position:center,right 20%}
+.section#explore:before{background-image:linear-gradient(90deg,rgba(255,255,255,.94),rgba(255,255,255,.74)),url("https://commons.wikimedia.org/wiki/Special:FilePath/Connolly.james.jpg");background-position:center,right 18%;opacity:.075}
+.campaigns-section:before{background-image:linear-gradient(90deg,rgba(255,255,255,.95),rgba(255,255,255,.78)),url("https://commons.wikimedia.org/wiki/Special:FilePath/W._B._Yeats.jpg");background-position:center,left 25%;opacity:.07}
+.civic-action-section:before{background-image:linear-gradient(90deg,rgba(242,245,241,.95),rgba(242,245,241,.77)),url("https://commons.wikimedia.org/wiki/Special:FilePath/Patrick_Pearse.jpg");background-position:center,right 20%;opacity:.08}
+.hero>* ,.alignment-section>* ,.section#explore>* ,.campaigns-section>* ,.civic-action-section>*{position:relative;z-index:1}
+@media(max-width:760px){
+ .hero:before,.alignment-section:before,.section#explore:before,.campaigns-section:before,.civic-action-section:before{background-size:auto 85%;background-position:right bottom;opacity:.07}
+ .site-header .section-nav:before{opacity:.34}
+}
