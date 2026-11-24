@@ -2,6 +2,19 @@ document.addEventListener("DOMContentLoaded",function(){
 const panel=document.getElementById("ipm-guide-panel"),launch=document.getElementById("ipm-guide-launch"),close=document.getElementById("ipm-guide-close"),search=document.getElementById("ipm-guide-search"),results=document.getElementById("ipm-guide-results"),shortcuts=document.getElementById("ipm-guide-shortcuts"),clear=document.getElementById("ipm-guide-search-clear"),progress=document.getElementById("ipm-reading-progress-fill"),topBtn=document.getElementById("ipm-back-top");
 function setOpen(open){if(!panel||!launch)return;panel.hidden=!open;launch.setAttribute("aria-expanded",String(open));launch.querySelector("span:last-child").textContent=open?"Close guide":"Ask Civic Guide";if(open&&search)search.focus();}
 if(launch)launch.addEventListener("click",()=>setOpen(panel.hidden));if(close)close.addEventListener("click",()=>setOpen(false));
+// Every guide destination closes the panel, updates the URL and brings the requested section into view.
+if(panel)panel.addEventListener("click",function(e){
+ const link=e.target.closest('a[href^="#"]');if(!link)return;
+ const id=decodeURIComponent(link.getAttribute("href").slice(1));
+ const target=document.getElementById(id);if(!target)return;
+ e.preventDefault();setOpen(false);
+ if(search){search.value="";render();}
+ if(shortcuts)shortcuts.hidden=false;
+ if(location.hash!=="#"+id)history.pushState(null,"","#"+id);
+ target.scrollIntoView({behavior:"smooth",block:"start"});
+ target.classList.add("ipm-guide-destination");
+ window.setTimeout(()=>target.classList.remove("ipm-guide-destination"),1800);
+});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&panel&&!panel.hidden)setOpen(false);});
 const entries=[
 ["At a glance","National overview of Government performance and progress.","executive-summary","government performance progress national snapshot"],
