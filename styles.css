@@ -312,3 +312,30 @@ html{scroll-padding-top:24px}
 .campaigns-disclaimer{font-size:9px;line-height:1.6;color:#839087;margin:12px 0 0}
 @media(max-width:900px){.campaigns-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.campaigns-section{padding:48px 18px}.campaigns-grid{grid-template-columns:1fr}.campaign-card{padding:17px}.campaigns-footer{align-items:flex-start;flex-direction:column;gap:9px}.campaigns-footer a{white-space:normal}}
+
+/* Navigation refresh: labelled links in calm, stacked rows. */
+
+.site-header{padding:16px max(5vw,24px) 18px;background:#102f29}
+.site-header .header-brand-row{max-width:1320px;margin:0 auto 14px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.site-header .brand{font-size:20px}
+.site-header .brand-mark{width:44px;height:44px}
+.site-header .header-note{color:#b9ccc2;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.site-header .section-nav{position:relative;isolation:isolate;overflow:hidden;max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;padding:15px;border:1px solid rgba(255,255,255,.19);border-radius:13px;background:#153d32}
+.site-header .section-nav:before{content:"";position:absolute;z-index:-2;inset:0;background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Michael_Collins.jpg");background-size:cover;background-position:center 28%;filter:grayscale(1);opacity:.24}
+.site-header .section-nav:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(9,35,29,.91),rgba(9,35,29,.78) 48%,rgba(9,35,29,.91))}
+.site-header .section-nav a{position:relative;z-index:1;display:flex;align-items:center;justify-content:flex-start;gap:11px;min-width:0;min-height:52px;padding:10px 13px;border:1px solid rgba(255,255,255,.17);border-radius:9px;background:rgba(18,57,46,.78);color:#f7faf8;font-size:12px;line-height:1.25;font-weight:700;white-space:normal;text-decoration:none;transition:background .18s,border-color .18s,transform .18s}
+.site-header .section-nav a:hover,.site-header .section-nav a:focus-visible{background:#e6c17d;border-color:#f3d99f;color:#17392f;transform:translateY(-1px);outline:2px solid #f3d99f;outline-offset:2px}
+.site-header .nav-icon{width:27px;height:27px;flex:0 0 27px;display:grid;place-items:center;border-radius:7px;background:rgba(255,255,255,.13);color:#edc77e;font-size:16px}
+.site-header .section-nav a:hover .nav-icon,.site-header .section-nav a:focus-visible .nav-icon{background:rgba(23,57,47,.1);color:#17392f}
+.site-header .nav-photo-credit{display:none}
+@media(max-width:900px){.site-header .section-nav{grid-template-columns:repeat(3,minmax(0,1fr))}.site-header .header-note{display:none}}
+@media(max-width:560px){
+ .site-header{padding:11px 12px 13px}
+ .site-header .header-brand-row{margin-bottom:11px}
+ .site-header .brand{font-size:17px}
+ .site-header .brand small{font-size:9px}
+ .site-header .section-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;padding:10px;background:#153d32}
+ .site-header .section-nav a{min-height:48px;padding:9px 10px;gap:8px;font-size:11px}
+ .site-header .nav-icon{width:25px;height:25px;flex-basis:25px}
+}
+@media(prefers-reduced-motion:reduce){.site-header .section-nav a{transition:none}}
