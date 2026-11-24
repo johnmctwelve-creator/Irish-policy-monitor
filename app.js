@@ -85,7 +85,7 @@ function renderFiscalModel(){
 function renderQuestionnaire(){
  const q=state.questionnaire;if(!q)return;
  const root=$("#alignment-questions");if(!root)return;
- root.innerHTML=q.dimensions.map((d,i)=>`<fieldset class="alignment-question"><legend><span>${i+1} / ${q.dimensions.length}</span>${safe(d.label)}</legend><p>${safe(d.question)}</p><div class="alignment-options">${d.options.map(o=>`<label><input type="radio" name="align-${safe(d.id)}" value="${safe(o.id)}"><span>${safe(o.label)}</span></label>`).join("")}</div></fieldset>`).join("");
+ root.innerHTML=q.dimensions.map((d,i)=>`<fieldset class="alignment-question"><legend><span>${i+1} / ${q.dimensions.length}</span>${safe(d.label)}</legend><p>${safe(d.question)}</p><div class="alignment-options">${d.options.map(o=>`<label><input type="radio" name="align-${safe(d.id)}" value="${safe(o.id)}"><span>${safe(o.label)}</span></label>`).join("")}</div><label class="nonnegotiable-toggle"><input type="checkbox" class="alignment-redline" data-issue="${safe(d.id)}"><span><strong>Non-negotiable issue</strong><small>A party must match my selected answer exactly on this issue.</small></span></label></fieldset>`).join("");
  $("#alignment-progress").textContent="0 of "+q.dimensions.length+" answered";
  root.addEventListener("change",updateAlignmentProgress);
  $("#alignment-reset").addEventListener("click",()=>{root.querySelectorAll("input").forEach(x=>x.checked=false);$("#alignment-results").hidden=true;updateAlignmentProgress();});
@@ -94,8 +94,18 @@ function renderQuestionnaire(){
 }
 function calculateAlignment(){
  const q=state.questionnaire,root=$("#alignment-questions");
- const answers={};q.dimensions.forEach(d=>{const x=root.querySelector(`input[name="align-${d.id}"]:checked`);if(x)answers[d.id]=x.value;});
- if(!Object.keys(answers).length){$("#alignment-validation").textContent="Answer at least one issue to see a comparison.";return;}
+ const answers={},redlines=[];
+ q.dimensions.forEach(d=>{
+  const x=root.querySelector(`input[name="align-${d.id}"]:checked`);
+  if(x)answers[d.id]=x.value;
+  const hard=root.querySelector(`.alignment-redline[data-issue="${d.id}"]`);
+  if(hard?.checked){
+   if(!x){answers[d.id]=null;}
+   else if(x.value==="unsure"){answers[d.id]="unsure";}
+   redlines.push(d.id);
+  }
+ });
+ if(!Object.keys(answers).some(k=>answers[k]&&answers[k]!=="unsure")){$("#alignment-validation").textContent="Answer at least one policy question with a definite preference before comparing.";return;}
  const adjacent={
  housing:{state:["mixed"],mixed:["state","market"],market:["mixed"]},
  health:{public:["reform"],reform:["public","choice"],choice:["reform"]},
@@ -104,16 +114,35 @@ function calculateAlignment(){
  immigration:{rights:["managed"],managed:["rights","strict"],strict:["managed"]},
  education:{inclusive:["capacity"],capacity:["inclusive","choice"],choice:["capacity"]}
  };
- const results=Object.entries(q.party_codes).map(([party,code])=>{
-  let score=0,max=0,matched=0,details=[];
-  q.dimensions.forEach(d=>{const ans=answers[d.id];if(!ans||ans==="unsure")return;const w=d.weight||1;max+=2*w;const p=code[d.id];const pts=p===ans?2:(adjacent[d.id]?.[ans]||[]).includes(p)?1:0;score+=pts*w;if(pts)matched++;details.push({label:d.label,points:pts*w,weight:w});});
-  return {party,score,max,percent:max?Math.round(score/max*100):0,matched,details};
- }).sort((x,y)=>y.percent-x.percent||y.score-x.score||x.party.localeCompare(y.party));
- const top=results[0].percent,tied=results.filter(x=>x.percent===top);
+ const scored=Object.entries(q.party_codes).map(([party,code])=>{
+  let score=0,max=0,matched=0,hardMet=0,hardMax=redlines.length,details=[];
+  q.dimensions.forEach(d=>{
+   const ans=answers[d.id];if(!ans||ans==="unsure")return;
+   const w=d.weight||1;max+=2*w;const p=code[d.id];
+   const pts=p===ans?2:(adjacent[d.id]?.[ans]||[]).includes(p)?1:0;
+   score+=pts*w;if(pts)matched++;
+   const hard=redlines.includes(d.id);if(hard&&p===ans)hardMet++;
+   details.push({label:d.label,points:pts*w,hard,exact: p===ans});
+  });
+  const eligible=redlines.every(id=>answers[id]&&answers[id]!=="unsure"&&code[id]===answers[id]);
+  return {party,score,max,matched,hardMet,hardMax,eligible,percent:max?Math.round(score/max*100):0,details};
+ });
+ const anyEligible=scored.some(x=>x.eligible);
+ const results=scored.sort((x,y)=>{
+  if(redlines.length&&anyEligible&&x.eligible!==y.eligible)return x.eligible?-1:1;
+  if(redlines.length&&!anyEligible&&x.hardMet!==y.hardMet)return y.hardMet-x.hardMet;
+  return y.percent-x.percent||y.score-x.score||x.party.localeCompare(y.party);
+ });
+ const top=results[0],topGroup=results.filter(x=>(redlines.length&&anyEligible?x.eligible===top.eligible:!anyEligible&&redlines.length?x.hardMet===top.hardMet:true)&&x.percent===top.percent);
  $("#alignment-results").hidden=false;
  $("#alignment-validation").textContent="";
- $("#alignment-summary").textContent=tied.length>1?"Your answers produce a joint highest match. These parties share the highest broad-category alignment in this questionnaire.":"Your answers produce the highest broad-category match shown below. This is a comparison aid, not a recommendation.";
- $("#alignment-ranking").innerHTML=results.map((r,i)=>`<article class="alignment-result-row"><div><strong>${i+1}. ${safe(r.party)}</strong><small>${r.matched} of ${Object.keys(answers).length} answered issues with some alignment</small></div><div class="alignment-score"><b>${r.percent}%</b><div class="alignment-track"><i style="width:${r.percent}%"></i></div></div></article>`).join("");
- $("#alignment-detail").innerHTML=tied.map(r=>`<section><h4>${safe(r.party)} — issue-by-issue</h4><ul>${r.details.map(d=>`<li>${safe(d.label)}: ${d.points===0?"No broad match":d.points%2===0?"Strong broad match":"Partial broad match"}</li>`).join("")}</ul><p class="meta">A category match reflects the questionnaire's simplified coding, not a full reading of every party proposal.</p></section>`).join("");
+ let summary="";
+ if(redlines.length&&anyEligible)summary="Parties meeting every non-negotiable issue are shown first. Within that group, parties are ranked by their overall policy alignment.";
+ else if(redlines.length)summary="No party in this simplified comparison matches every non-negotiable issue exactly. Parties are ranked first by how many of your non-negotiables they match, then by overall policy alignment. Consider this a prompt to inspect the underlying policies, not a reason to discard a party automatically.";
+ else summary="Your answers produce the following broad policy-alignment ranking. This is a comparison aid, not a recommendation.";
+ $("#alignment-summary").textContent=summary;
+ $("#alignment-ranking").innerHTML=results.map((r,i)=>`<article class="alignment-result-row"><div><strong>${i+1}. ${safe(r.party)}</strong><small>${redlines.length?`${r.hardMet} of ${r.hardMax} non-negotiables met · `:""}${r.matched} answered issues with some alignment${redlines.length&&r.eligible?" · Meets all non-negotiables":""}</small></div><div class="alignment-score"><b>${r.percent}%</b><div class="alignment-track"><i style="width:${r.percent}%"></i></div></div></article>`).join("");
+ const show=redlines.length?results.filter(r=>r.eligible===top.eligible&&(!anyEligible?r.hardMet===top.hardMet:true)&&r.percent===top.percent):topGroup;
+ $("#alignment-detail").innerHTML=show.map(r=>`<section><h4>${safe(r.party)} — issue-by-issue</h4><ul>${r.details.map(d=>`<li>${safe(d.label)}: ${d.hard?(d.exact?"Non-negotiable met":"<strong>Non-negotiable not met</strong>"):d.points===0?"No broad match":d.points%2===0?"Strong broad match":"Partial broad match"}</li>`).join("")}</ul><p class="meta">A category match reflects the questionnaire's simplified coding, not a full reading of every party proposal.</p></section>`).join("");
  $("#alignment-results").scrollIntoView({behavior:"smooth",block:"start"});
 }
