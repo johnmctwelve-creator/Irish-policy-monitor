@@ -339,3 +339,35 @@ html{scroll-padding-top:24px}
  .site-header .nav-icon{width:25px;height:25px;flex-basis:25px}
 }
 @media(prefers-reduced-motion:reduce){.site-header .section-nav a{transition:none}}
+
+.policy-card .card-icon{width:43px;height:43px;border-radius:12px;font-size:21px;background:#e9f0eb;color:#20553e;border:1px solid #dce8df}
+.policy-card[data-id="climate"] .card-icon{background:#fff0e9;color:#a44c35}
+.policy-card[data-id="immigration"] .card-icon{background:#fff5df;color:#896323}
+.policy-card[data-id="housing"] .card-icon{background:#edf0fa;color:#4c5b8a}
+.policy-card[data-id="health"] .card-icon{background:#fcebed;color:#a34c5b}
+.policy-card[data-id="economy"] .card-icon{background:#eaf3f5;color:#386a7a}
+.policy-card[data-id="transport"] .card-icon{background:#e8f3f1;color:#26736b}
+.policy-card[data-id="education"] .card-icon{background:#f1edfa;color:#69558e}
+.policy-card[data-id="justice"] .card-icon{background:#f4eff0;color:#74535d}
+.policy-card[data-id="agriculture"] .card-icon{background:#eef4e6;color:#5b7837}
+.policy-card[data-id="disability"] .card-icon{background:#f3eef9;color:#76599a}
+.policy-card[data-id="foreign"] .card-icon{background:#edf1f4;color:#536879}
+.executive-kpis article{position:relative;overflow:hidden;padding:15px 14px 14px 58px;border-top:3px solid #d8e2dc}
+.executive-kpis .kpi-status-icon{position:absolute;left:14px;top:16px;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;font-size:18px;font-weight:900}
+.executive-kpis .status-positive{border-top-color:#32945b;background:linear-gradient(145deg,#f0faf2,#fff 68%)}
+.executive-kpis .status-positive .kpi-status-icon{background:#d9f1df;color:#237b43}
+.executive-kpis .status-positive>strong{color:#237b43}
+.executive-kpis .status-mixed{border-top-color:#c39a43;background:linear-gradient(145deg,#fff9eb,#fff 68%)}
+.executive-kpis .status-mixed .kpi-status-icon{background:#f7edcf;color:#956d1d}
+.executive-kpis .status-mixed>strong{color:#85641f}
+.executive-kpis .status-offtrack{border-top-color:#c85d4d;background:linear-gradient(145deg,#fff0ed,#fff 68%)}
+.executive-kpis .status-offtrack .kpi-status-icon{background:#f9ddd7;color:#b34839}
+.executive-kpis .status-offtrack>strong{color:#ad493b}
+.executive-kpis .status-provisional{border-top-color:#71839b;background:linear-gradient(145deg,#eff3f8,#fff 68%)}
+.executive-kpis .status-provisional .kpi-status-icon{background:#dfe7f0;color:#536a85}
+.executive-kpis .status-provisional>strong{color:#536a85}
+.executive-callout{position:relative;isolation:isolate;overflow:hidden}
+.executive-callout:after{content:"";position:absolute;z-index:-1;right:0;bottom:0;width:min(78%,620px);height:100%;pointer-events:none;background-repeat:no-repeat;background-position:right bottom;background-size:contain;opacity:.16;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20760%20300%22%20fill%3D%22none%22%3E%3Cg%20stroke%3D%22%23d9e9df%22%20stroke-width%3D%222.1%22%20opacity%3D%22.9%22%3E%3Cpath%20d%3D%22M18%20278H744M35%20278V193H220V278M50%20193V170H205V193M64%20170V153H191V170M82%20153V130H173V153M97%20130V112H158V130M112%20112V91H143V112M126%2091V72H130V91M125%2072L128%2012L132%2072M35%20207H220M49%20224H205M65%20242H190M81%20260H174%22%2F%3E%3Cpath%20d%3D%22M250%20278V198Q345%2095%20440%20198V278M250%20198Q345%20230%20440%20198M250%20198L345%20115L440%20198M278%20213L345%20150L412%20213M305%20222L345%20184L385%20222M345%20150V278M250%20278H440%22%2F%3E%3Cpath%20d%3D%22M475%20278V183H720V278M488%20183V157H707V183M501%20157V138H694V157M517%20138V120H678V138M535%20120V102H660V120M550%20102V87H645V102M568%2087V72H627V87M588%2072V59H607V72M597%2059V18M590%2059H604M475%20203H720M475%20226H720M475%20249H720%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}
+.executive-callout>*{position:relative;z-index:1}
+@media(max-width:760px){.executive-callout:after{width:100%;height:44%;opacity:.12;background-position:center bottom}}
+@media(max-width:520px){.executive-kpis article{padding:12px 10px 12px 48px}.executive-kpis .kpi-status-icon{left:10px;top:13px;width:28px;height:28px;font-size:16px}.executive-kpis span{font-size:10px}.executive-kpis small{font-size:9px}}
