@@ -41,3 +41,13 @@ This is an expanded research edition, not a complete independent audit or a comp
 - This read-only website has no accounts, public submissions, comments or automated data updates. Research updates require editorial review and a new repository commit.
 
 The site is not an official Government of Ireland publication and does not endorse any party.
+
+
+## Expanded Programme for Government and manifesto research
+
+Two additional datasets are published and rendered on the website:
+
+- `data/pfg_commitments_expanded.json`: 44 monitorable commitments across 11 policy domains, with printed Programme for Government page references and suggested measures. These are paraphrases, not a literal extraction of every pledge in the 162-page programme. Baselines, annual milestones and delivery statuses are not invented where the programme does not specify them.
+- `data/manifesto_comparison_2024.json`: thematic comparison of nine 2024 party manifesto sources across housing, health, economy, climate, immigration and education.
+
+The manifesto comparison is a first comparative edition, not yet a page-by-page manifesto audit. The Aontú link resolves to its policy portal and the Independent Ireland link to an archive index; obtain direct PDF links and verify page-level detail before treating those entries as fully sourced. The 2024 manifestos are historical party positions and must not be conflated with current policy or Government measures.
