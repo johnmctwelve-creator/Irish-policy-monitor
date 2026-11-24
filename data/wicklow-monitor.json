@@ -1,13 +1,110 @@
 {
   "updated_at": null,
-  "schedule": "Daily automated source-page check via GitHub Actions",
+  "schedule": "Daily automated source-page check via GitHub Actions (06:17 UTC)",
   "summary": {
     "sources_monitored": 8,
     "checks_succeeded": 0,
     "checks_failed": 0,
     "changes_detected_in_this_run": 0
   },
-  "sources": [],
+  "sources": [
+    {
+      "id": "dart-wicklow",
+      "project": "DART extension to Wicklow Town",
+      "authority": "Iarnród Éireann / NTA",
+      "url": "https://www.dartplus.ie/en-ie/news/design-build-tender-to-deliver-dart-services-to-wicklow-issued",
+      "status": "Charging infrastructure tender issued 26 August 2026; construction subject to planning and funding, services targeted from 2029.",
+      "status_as_of": "2026-08-26",
+      "checked_at": null,
+      "check": "pending",
+      "content_hash": null,
+      "changed": false
+    },
+    {
+      "id": "wicklow-active-travel",
+      "project": "Wicklow County active-travel programme",
+      "authority": "Wicklow County Council / NTA",
+      "url": "https://www.wicklow.ie/Active-Travel",
+      "status": "2026 allocations and municipal-district project phases published; includes €1.07m for Wicklow MD.",
+      "status_as_of": "2026-11-24",
+      "checked_at": null,
+      "check": "pending",
+      "content_hash": null,
+      "changed": false
+    },
+    {
+      "id": "wicklow-greenway",
+      "project": "Wicklow–Greystones Greenway",
+      "authority": "Wicklow County Council / TII",
+      "url": "https://wicklowgreenways.ie/blessington-lakes-egreenway1/greystones-to-wicklow",
+      "status": "Emerging preferred-route consultation closed 13 February 2026; final preferred option under consideration for TII Phase 2 Gateway Review.",
+      "status_as_of": "2026-10-31",
+      "checked_at": null,
+      "check": "pending",
+      "content_hash": null,
+      "changed": false
+    },
+    {
+      "id": "arklow-shillelagh",
+      "project": "Arklow–Shillelagh Greenway",
+      "authority": "Wicklow County Council / TII",
+      "url": "https://wicklowgreenways.ie/blessington-lakes-egreenway1/arklow-to-shillelagh",
+      "status": "Design and environmental evaluation; statutory planning submission targeted Q2 2028 in October 2026 council report.",
+      "status_as_of": "2026-10-31",
+      "checked_at": null,
+      "check": "pending",
+      "content_hash": null,
+      "changed": false
+    },
+    {
+      "id": "blessington-egreenway",
+      "project": "Blessington eGreenway",
+      "authority": "Wicklow County Council",
+      "url": "https://www.wicklow.ie/Portals/0/adam/Documents/sMwcWzUDhUq5X9FrUUZtig/Link/Chief%20Executive%20Report%20-%20October%202026.pdf",
+      "status": "Planning refusal in December 2024; October 2026 Chief Executive report says no current resources for a new or revised submission.",
+      "status_as_of": "2026-10-31",
+      "checked_at": null,
+      "check": "pending",
+      "content_hash": null,
+      "changed": false
+    },
+    {
+      "id": "eirgrid-wicklow",
+      "project": "Powering Up Wicklow / North Wicklow Reinforcement",
+      "authority": "EirGrid",
+      "url": "https://www.eirgrid.ie/wicklow",
+      "status": "North Wicklow reinforcement consultation listed for 20 October–11 December 2026; review source for current status.",
+      "status_as_of": "2026-11-24",
+      "checked_at": null,
+      "check": "pending",
+      "content_hash": null,
+      "changed": false
+    },
+    {
+      "id": "wicklow-town-wastewater",
+      "project": "Wicklow Town wastewater network upgrade",
+      "authority": "Uisce Éireann",
+      "url": "https://www.water.ie/news/eur59-million-wastewater-upgrade-commence-wicklow-town",
+      "status": "€5.9m wastewater upgrade announced with works commencing June 2026; latest construction/completion update to be checked.",
+      "status_as_of": "2026-06-02",
+      "checked_at": null,
+      "check": "pending",
+      "content_hash": null,
+      "changed": false
+    },
+    {
+      "id": "avoca-wastewater",
+      "project": "Avoca wastewater treatment plant",
+      "authority": "Uisce Éireann",
+      "url": "https://www.arklowwastewater.ie/projects/local-projects/avoca-sewerage-scheme",
+      "status": "Project page describes scheme; latest construction milestone and 2027 target require periodic verification.",
+      "status_as_of": "2026-11-24",
+      "checked_at": null,
+      "check": "pending",
+      "content_hash": null,
+      "changed": false
+    }
+  ],
   "events": [],
-  "method_note": "Awaiting first scheduled GitHub Actions run. Automated checks detect source-page changes; they do not independently verify project status."
+  "method_note": "The automated monitor checks official source availability and detects page-content changes. A changed page is a review alert, not an automatically verified change in project stage. Project status labels remain editorially maintained and must be checked against dated source records."
 }
