@@ -1,15 +1,24 @@
 {
   "metadata": {
     "title": "Irish General Election 2024 cross-party manifesto comparison",
-    "version": "0.1",
+    "version": "0.2",
     "scope": "Nine parties; six policy dimensions; 2024 election manifestos, not current party positions.",
-    "method": "High-level paraphrase of manifesto themes. Not exhaustive, not a costing review and not a feasibility assessment.",
+    "method": "Original party manifestos were inspected directly where an accessible PDF was available. Page references are printed manifesto pages. Costings distinguish party-authored assumptions/estimates from the independent PBO tax-and-welfare microsimulation. PBO results cover six parties and selected tax/welfare measures only; they do not independently cost full manifestos, public services, capital projects or infrastructure. Aontú and Independent Ireland were not included in the PBO model.",
     "limitations": [
       "The first comparison is thematic, not page-by-page. Add exact page references and selected quotations before presenting individual proposals as fully verified.",
       "Aontú link currently resolves to a policy portal, not a direct manifesto PDF.",
       "Independent Ireland link is an archive index, not a direct party PDF.",
       "Do not conflate 2024 manifestos with later party policy, alternative budgets or adopted Government policy.",
       "Omission from a summary does not mean the party has no policy on the subject."
+    ],
+    "research_cutoff": "2026-11-24",
+    "pbo_source": "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-05-29_general-election-2024-a-model-based-assessment-of-proposed-tax-and-welfare-policies_en.pdf",
+    "global_limitations": [
+      "Page references are printed page numbers in the manifesto. Ranges marked approximate or requiring verification must not be cited as exact.",
+      "PBO microsimulation assesses selected tax and welfare measures using SWITCH and EVE; it does not assess public-service provision, health/education delivery, infrastructure or full capital programmes.",
+      "PBO results are modelled average disposable-income effects relative to its baseline, not forecasts of actual household outcomes and not a verdict on policy desirability.",
+      "Party-authored costings are reported as party estimates, not independent verification. Annual recurring costs must not be conflated with one-off capital costs or multi-year totals.",
+      "Manifesto commitments are historical 2024 proposals and are not current party positions or adopted Programme for Government measures."
     ]
   },
   "parties": [
@@ -17,14 +26,44 @@
       "party": "Fianna Fáil",
       "manifesto_title": "Moving Forward. Together",
       "manifesto_year": 2024,
-      "manifesto_source": "https://7358484.fs1.hubspotusercontent-na1.net/hubfs/7358484/FF%20Manifesto%202024_V4_Screen%5B45%5D.pdf",
+      "manifesto_source": "https://movingforwardtogether.fiannafail.ie/hubfs/FF%20Manifesto%202024_V4_Screen%5B45%5D.pdf?hsLang=en",
       "housing": "Housing supply, planning, infrastructure and first-time-buyer supports.",
       "health": "Health investment and staffing, service reform and waiting-time reduction.",
       "economy": "Pro-enterprise, SMEs, exporters, competitiveness and jobs.",
       "climate": "Climate action and renewables balanced with household, farm and business costs.",
       "immigration": "Managed migration and an effective international-protection system.",
       "education": "Schools, teachers, childcare, skills and further education.",
-      "status": "High-level thematic summary; page-level verification outstanding."
+      "status": "Page-referenced thematic review with costing analysis; see confidence and limitations by party.",
+      "verification": {
+        "official": "https://movingforwardtogether.fiannafail.ie/hubfs/FF%20Manifesto%202024_V4_Screen%5B45%5D.pdf?hsLang=en",
+        "page_refs": {
+          "housing": "31–37",
+          "health": "53–63",
+          "climate": "44–52",
+          "immigration": "118–123",
+          "education": "95–107"
+        },
+        "checks": {
+          "housing": "The manifesto says capacity will rise to 60,000 homes per year by 2030. It also lists a €250m Modern Methods of Construction fund, a €2bn Towns Investment Fund and at least €3bn additional Irish Water investment. These are separate commitments and should not be summed as housing output.",
+          "costing": "The fiscal rule sets net spending growth to moderate from 6.6% in 2026 to 5.5% by 2030. It says departmental costings were carried out with relevant departments, Public Expenditure/NDP Delivery and Finance. The manifesto also identifies a €20bn reserve. These are party assumptions, not an independent audit."
+        },
+        "costing": {
+          "type": "Party-published fiscal framework and departmental costing statement",
+          "key_figures": [
+            "Net spending growth path: 6.6% in 2026, 6.0% in 2027 and 2028, 5.5% in 2029 and 2030",
+            "€20bn reserve stated for existing services and public-service pay"
+          ],
+          "independent_review": "PBO tax/welfare microsimulation available; it does not assess housing, health, infrastructure or other public-service spending."
+        },
+        "pbo": {
+          "coverage": "Included",
+          "poorest_decile_income_change_pct": 0.1,
+          "richest_decile_income_change_pct": -0.4,
+          "summary": "PBO modelled tax and welfare measures; average disposable income changes were small across deciles. Poorest decile +0.1%; richest -0.4% versus the PBO baseline.",
+          "caveat": "Not a full manifesto cost or macroeconomic forecast."
+        },
+        "evidence_quality": "Official party PDF inspected; printed-page section references checked. Costing statements are party-provided and should not be described as independent verification."
+      }
     },
     {
       "party": "Fine Gael",
@@ -37,7 +76,39 @@
       "climate": "Decarbonisation, renewables, affordability and energy security.",
       "immigration": "Faster processing, enforcement and a fair-but-firmer approach.",
       "education": "School places, special education, childcare, skills and apprenticeships.",
-      "status": "High-level thematic summary; page-level verification outstanding."
+      "status": "Page-referenced thematic review with costing analysis; see confidence and limitations by party.",
+      "verification": {
+        "official": "https://www.finegael.ie/app/uploads/2024/11/Fine-Gael-General-Election-2024-Manifesto.pdf",
+        "page_refs": {
+          "housing": "24–30",
+          "health": "80–92",
+          "climate": "42–48",
+          "immigration": "66–70",
+          "education": "13–16"
+        },
+        "checks": {
+          "housing": "The manifesto commits to 300,000 homes by 2030 and €40bn housing budget over five years, average €8bn annually. It also proposes 9,000 affordable purchase homes annually by 2030 and Help to Buy relief up to €40,000.",
+          "costing": "The manifesto has a dedicated costings section on printed page 116. It states €31.2bn total spending increase for 2026–2030 (including €26.4bn current and €4.8bn capital), €14.1bn extra capital expenditure from Apple receipts, €6bn tax revenue from wage growth and €1.1bn revenue-raising measures."
+        },
+        "costing": {
+          "type": "Party-published budget package",
+          "key_figures": [
+            "€31.2bn spending increase for 2026–2030",
+            "€14.1bn extra capital expenditure from Apple receipts",
+            "€6.0bn tax revenue attributed to wage growth",
+            "€1.1bn revenue-raising measures"
+          ],
+          "independent_review": "PBO tax/welfare microsimulation: poorest income decile -2.7%; richest -0.4% versus baseline."
+        },
+        "pbo": {
+          "coverage": "Included",
+          "poorest_decile_income_change_pct": -2.7,
+          "richest_decile_income_change_pct": -0.4,
+          "summary": "PBO estimated average household disposable income falls in every decile under the modelled tax/welfare package; poorest decile -2.7%, richest -0.4%.",
+          "caveat": "PBO's modelled tax/welfare package is not a full assessment of all manifesto spending or service proposals."
+        },
+        "evidence_quality": "Official party PDF inspected; section pages and printed costings page verified."
+      }
     },
     {
       "party": "Sinn Féin",
@@ -50,7 +121,37 @@
       "climate": "Just transition with household and worker protections.",
       "immigration": "Fair and efficient protection processing, accommodation and integration.",
       "education": "Reduce education costs, improve special-needs provision and staffing.",
-      "status": "High-level thematic summary; page-level verification outstanding."
+      "status": "Page-referenced thematic review with costing analysis; see confidence and limitations by party.",
+      "verification": {
+        "official": "https://vote.sinnfein.ie/wp-content/uploads/2024/11/SinnFeinManifesto2024.pdf",
+        "page_refs": {
+          "housing": "11–18",
+          "health": "19–26",
+          "climate": "approximately 37–40; verify printed page before citation",
+          "immigration": "approximately 54–58; verify printed page before citation",
+          "education": "approximately 60–64; verify printed page before citation"
+        },
+        "checks": {
+          "housing": "The manifesto's table allocates 300,000 homes 2025–2029: 75,000 social rental, 25,000 affordable rental, 25,000 affordable purchase, 115,000 private purchase and 60,000 private rental/self-build. It shows a further 370,000 cumulative homes by 2030.",
+          "costing": "PBO modelled selected tax and welfare measures, not the complete housing, health or capital programme. The manifesto also describes an investment approach using Apple tax receipts and other funding, but no single whole-manifesto independent costing should be inferred from the PBO."
+        },
+        "costing": {
+          "type": "Manifesto fiscal proposals plus independent PBO modelling of selected tax/welfare measures",
+          "key_figures": [
+            "Housing plan: 300,000 homes by 2029; 370,000 by 2030 in manifesto table",
+            "PBO poorest decile +0.9%; richest decile -4.8% versus baseline"
+          ],
+          "independent_review": "PBO modelling does not include public-service provision, infrastructure or capital investment."
+        },
+        "pbo": {
+          "coverage": "Included",
+          "poorest_decile_income_change_pct": 0.9,
+          "richest_decile_income_change_pct": -4.8,
+          "summary": "PBO estimated poorest decile +0.9%; richest -4.8% on average under the modelled package.",
+          "caveat": "Behavioural and scope limitations apply; not a whole-manifesto fiscal sustainability assessment."
+        },
+        "evidence_quality": "Official party PDF inspected; housing page and tenure breakdown verified. Several other theme page ranges remain provisional and are labelled as such."
+      }
     },
     {
       "party": "Labour",
@@ -63,20 +164,81 @@
       "climate": "Just transition, retrofit and public transport.",
       "immigration": "Rights-based migration, fair procedures and integration.",
       "education": "Reduce family costs, invest in schools and childcare.",
-      "status": "High-level thematic summary; page-level verification outstanding."
+      "status": "Page-referenced thematic review with costing analysis; see confidence and limitations by party.",
+      "verification": {
+        "official": "https://labour.ie/wp-content/uploads/2021/10/Labour-Manifesto-2024-Building-Better-Together.pdf",
+        "page_refs": {
+          "housing": "5–14",
+          "health": "25–30",
+          "climate": "20–24",
+          "immigration": "120–121 (migration and rights coverage appears in later sections; exact subtopic page should be checked)",
+          "education": "63–65"
+        },
+        "checks": {
+          "housing": "The manifesto proposes at least 50,000 homes annually, direct social housing build rising to 15,000 annually by 2028, and a long-term goal of social housing at 20% of stock. It says this requires an additional €2.8bn capital allocation per year by 2029, with about €1bn per year for affordable housing and cost-rental measures.",
+          "costing": "Appendix 'Budget Plans and Costings' begins on printed page 130. Labour asked the PBO to model an alternative annual expenditure ceiling of 6%; this is an expenditure framework and costing appendix, not a line-by-line independent costing of every manifesto promise."
+        },
+        "costing": {
+          "type": "Party manifesto costing appendix and PBO modelling of an alternative expenditure ceiling",
+          "key_figures": [
+            "At least 50,000 homes per year",
+            "Additional €2.8bn capital allocation per year by 2029 for social housing plan",
+            "Approximately €1bn additional annual capital spending for affordable/cost-rental measures"
+          ],
+          "independent_review": "PBO distributional modelling: poorest decile +2.0%; richest -2.2% versus baseline."
+        },
+        "pbo": {
+          "coverage": "Included",
+          "poorest_decile_income_change_pct": 2,
+          "richest_decile_income_change_pct": -2.2,
+          "summary": "PBO estimated poorest decile +2.0%; richest -2.2% on average under the modelled tax/welfare package.",
+          "caveat": "Does not cost the whole public-service or infrastructure programme."
+        },
+        "evidence_quality": "Official Labour manifesto PDF inspected; housing, climate, health, education and costing appendix page references checked. Migration theme needs narrower page verification."
+      }
     },
     {
       "party": "Social Democrats",
       "manifesto_title": "For the Future",
       "manifesto_year": 2024,
-      "manifesto_source": "https://www.socialdemocrats.ie/wp-content/uploads/2024/11/GEManifesto2024.pdf",
+      "manifesto_source": "https://www.socialdemocrats.ie/wp-content/uploads/2024/11/GEManifesto24-1.pdf",
       "housing": "State-led social and affordable housing, renter protections and right-to-housing approach.",
       "health": "Sláintecare, universal access and primary/community care.",
       "economy": "Progressive taxation, strong public services and social protection.",
       "climate": "Climate investment, fair transition, public transport and energy efficiency.",
       "immigration": "Humane asylum policy, fair processing and integration.",
       "education": "Reduce education costs, expand childcare and inclusive education.",
-      "status": "High-level thematic summary; page-level verification outstanding."
+      "status": "Page-referenced thematic review with costing analysis; see confidence and limitations by party.",
+      "verification": {
+        "official": "https://www.socialdemocrats.ie/wp-content/uploads/2024/11/GEManifesto24-1.pdf",
+        "page_refs": {
+          "housing": "approximately 9–18; affordable housing section begins 6 (PDF contents/page numbering to confirm)",
+          "health": "approximately 30–45",
+          "climate": "approximately 52–61",
+          "immigration": "79–80",
+          "education": "approximately 64–73"
+        },
+        "checks": {
+          "housing": "Manifesto says 75,000 affordable homes over five years: 50,000 affordable purchase and 25,000 affordable rental, delivered on a not-for-profit basis.",
+          "costing": "Printed page 143 contains average additional expenditure for 2026–2030. It lists €12.063bn total additional annual spending on average: housing €3.980bn, health €3.300bn, climate/nature €540m, childcare €505m, disability €1.054bn, welfare €1.415bn, education €749m and other €520m. Figures are annual averages, not five-year totals."
+        },
+        "costing": {
+          "type": "Party-published budgetary assumptions",
+          "key_figures": [
+            "€12.063bn average additional expenditure per year, 2026–2030",
+            "Housing €3.980bn/year; health €3.300bn/year; disability €1.054bn/year; education €749m/year"
+          ],
+          "independent_review": "PBO tax/welfare modelling: poorest decile +13.4%; richest -3.7% versus baseline."
+        },
+        "pbo": {
+          "coverage": "Included",
+          "poorest_decile_income_change_pct": 13.4,
+          "richest_decile_income_change_pct": -3.7,
+          "summary": "PBO estimated poorest decile +13.4%; richest -3.7% on average under the modelled tax/welfare package.",
+          "caveat": "PBO analysis does not validate the party's full additional spending plan or the funding of every service commitment."
+        },
+        "evidence_quality": "Official manifesto PDF inspected; immigration and budgetary assumptions pages verified. Other thematic page ranges are approximate pending direct line-by-line confirmation."
+      }
     },
     {
       "party": "Green Party",
@@ -89,46 +251,166 @@
       "climate": "Emissions reduction, renewables, retrofit and biodiversity.",
       "immigration": "Rights-based protection, integration and inclusion.",
       "education": "Education investment, early-years provision and inclusion.",
-      "status": "High-level thematic summary; page-level verification outstanding."
+      "status": "Page-referenced thematic review with costing analysis; see confidence and limitations by party.",
+      "verification": {
+        "official": "https://www.greenparty.ie/sites/default/files/2024-11/Manifesto%20OCT%2024%20-%20digital%20version_final.pdf",
+        "page_refs": {
+          "housing": "3–10",
+          "health": "71–78",
+          "climate": "16–22",
+          "immigration": "63–66",
+          "education": "29–34"
+        },
+        "checks": {
+          "housing": "The manifesto section 'More and Better Homes' begins on printed page 3. The party sets out housing supply, affordability and planning proposals; the exact numerical targets should be quoted from individual subsections rather than inferred from section headings.",
+          "costing": "PBO independently modelled selected Green Party tax and welfare proposals. Its model estimated average income changes of -1.1% for the poorest decile and -1.1% for the richest decile. This does not assess the manifesto's full climate, transport or public-service investment programme."
+        },
+        "costing": {
+          "type": "Manifesto fiscal measures plus independent PBO microsimulation of selected tax/welfare policies",
+          "key_figures": [
+            "PBO poorest decile -1.1%; richest decile -1.1% versus baseline"
+          ],
+          "independent_review": "PBO distributional analysis only; not a comprehensive costing of all Green Party commitments."
+        },
+        "pbo": {
+          "coverage": "Included",
+          "poorest_decile_income_change_pct": -1.1,
+          "richest_decile_income_change_pct": -1.1,
+          "summary": "PBO estimated average household income -1.1% in both poorest and richest deciles under modelled tax/welfare package.",
+          "caveat": "PBO's scope excludes public-service provision and infrastructure spending."
+        },
+        "evidence_quality": "Official party manifesto PDF inspected; section headings and printed page starts verified. Costing conclusions are limited to PBO's selected tax/welfare model."
+      }
     },
     {
       "party": "People Before Profit",
       "manifesto_title": "Another Ireland is Possible",
       "manifesto_year": 2024,
-      "manifesto_source": "https://www.pbp.ie/ge24/manifesto/",
+      "manifesto_source": "https://www.pbp.ie/content/files/2024/11/PBP-Manifesto-GE2024.pdf",
       "housing": "Public housing at scale, rent controls and action on vacancy/speculation.",
       "health": "Universal public healthcare and ending two-tier access.",
       "economy": "Redistributive taxation, higher wages, public ownership and services.",
       "climate": "Publicly planned decarbonisation and worker/household protection.",
       "immigration": "Pro-migrant and refugee rights, anti-racist approach.",
       "education": "Free and accessible education and special-needs supports.",
-      "status": "High-level thematic summary; page-level verification outstanding."
+      "status": "Page-referenced thematic review with costing analysis; see confidence and limitations by party.",
+      "verification": {
+        "official": "https://www.pbp.ie/content/files/2024/11/PBP-Manifesto-GE2024.pdf",
+        "page_refs": {
+          "housing": "6–8",
+          "health": "14–15",
+          "climate": "24–27",
+          "immigration": "30 (anti-racism/refugees section); no full asylum-system chapter",
+          "education": "16–17"
+        },
+        "checks": {
+          "housing": "The manifesto proposes a State Construction Company financed by Apple tax receipts, building 30,000 social and 5,000 affordable homes annually, and public housing access without income limits. Rent controls and a mortgage-interest cap are also proposed.",
+          "costing": "The manifesto says it summarises policies and recent alternative budgets; detailed 2025 costings are in a separate Budget 2025 document. PBO modelled selected tax and welfare proposals: poorest decile +15.6%, richest -12.7% versus baseline."
+        },
+        "costing": {
+          "type": "Separate alternative-budget documents; PBO microsimulation of selected tax/welfare measures",
+          "key_figures": [
+            "Housing proposal: 30,000 social and 5,000 affordable homes annually",
+            "PBO poorest decile +15.6%; richest -12.7% versus baseline"
+          ],
+          "independent_review": "PBO distributional model available; it does not cost the entire State construction, climate or health programme."
+        },
+        "pbo": {
+          "coverage": "Included",
+          "poorest_decile_income_change_pct": 15.6,
+          "richest_decile_income_change_pct": -12.7,
+          "summary": "PBO estimated poorest decile +15.6%; richest -12.7% on average under the modelled package.",
+          "caveat": "Not a full macroeconomic or whole-manifesto costing; some proposals are not modelled."
+        },
+        "evidence_quality": "Official party PDF inspected; housing, health, education and climate page references verified. Immigration coverage is not a standalone chapter."
+      }
     },
     {
       "party": "Aontú",
       "manifesto_title": "Our Common Sense Manifesto",
       "manifesto_year": 2024,
-      "manifesto_source": "https://aontu.ie/jobs-enterprise",
+      "manifesto_source": "https://www.tcd.ie/Political_Science/about/people/michael_gallagher/Manifestos2024/AontuManifesto24Part1.pdf",
       "housing": "Social/affordable supply, vacancy reuse, tenant protections and construction capacity.",
       "health": "Health-system reform, frontline capacity and funding/management changes.",
       "economy": "Fiscal prudence, family supports, rural enterprise and lower costs.",
       "climate": "Caution about climate measures that burden farms and households; alternative cost/energy measures.",
       "immigration": "Stricter and faster controls with fair-treatment commitments.",
       "education": "Family supports, school choice and special-needs provision.",
-      "status": "High-level thematic summary; page-level verification outstanding."
+      "status": "Page-referenced thematic review with costing analysis; see confidence and limitations by party.",
+      "verification": {
+        "official": "https://www.tcd.ie/Political_Science/about/people/michael_gallagher/Manifestos2024/AontuManifesto24Part1.pdf",
+        "page_refs": {
+          "housing": "5–14",
+          "health": "15–22",
+          "climate": "not verified as a dedicated chapter; climate and energy measures appear in cost-of-living/enterprise/agriculture sections",
+          "immigration": "23–34",
+          "education": "not independently verified from inspected pages"
+        },
+        "checks": {
+          "housing": "The manifesto proposes 8,000 vacant-home grants up to €70,000 (stated party cost €560m/year), a €30,000 above-shop refurbishment grant (stated €60m), 15,000 social and affordable homes annually, and a no-fault eviction ban.",
+          "costing": "The party gives itemised estimates for several proposals: €560m/year for vacant-home grants, €60m for above-shop grants, €259m for 3,500 nurses/midwives, €195m/year for zero VAT on electricity, €764m/year for hospitality VAT reduction (up to), and €45m set-up plus €15m annual running cost for an efficiency department. These are party estimates, not independent costings. No PBO microsimulation result was located for Aontú."
+        },
+        "costing": {
+          "type": "Party-stated individual measure estimates; no comparable independent PBO model located",
+          "key_figures": [
+            "Vacant-home grants: stated €560m/year",
+            "Above-shop grants: stated €60m",
+            "3,500 nurses/midwives: stated €259m",
+            "Zero VAT on electricity: stated €195m/year",
+            "Hospitality VAT reduction: stated up to €764m/year",
+            "Efficiency department: €45m set-up and €15m/year operating"
+          ],
+          "independent_review": "No PBO distributional model result for Aontú in the PBO 2025 six-party report. Party figures should be treated as claims pending independent costing."
+        },
+        "pbo": {
+          "coverage": "Not included in PBO's six-party microsimulation",
+          "summary": "No comparable PBO tax/welfare distributional result for Aontú was included in the report reviewed.",
+          "caveat": "Absence from the PBO report does not establish that no departmental costing was ever requested or performed."
+        },
+        "evidence_quality": "A full manifesto PDF copy hosted by Trinity College Dublin's political science archive was inspected. Printed page references and several party-provided cost estimates were checked; no independent validation of those estimates."
+      }
     },
     {
       "party": "Independent Ireland",
       "manifesto_title": "Common Sense Solutions for a Better Ireland",
       "manifesto_year": 2024,
-      "manifesto_source": "https://pidgeon.ie/manifestos/election.html",
+      "manifesto_source": "https://www.independentireland.ie/s/Compressed-General-Election-Manifesto.pdf",
       "housing": "Construction incentives, planning reform and bringing more homes to market.",
       "health": "Health-service reform and access; exact manifesto commitments need page verification.",
       "economy": "Lower costs, rural/regional development and SME support.",
       "climate": "Technology-neutral transition and energy affordability.",
       "immigration": "Stronger control and more efficient processing.",
       "education": "Rural school access and special-needs supports; page verification needed.",
-      "status": "High-level thematic summary; page-level verification outstanding."
+      "status": "Page-referenced thematic review with costing analysis; see confidence and limitations by party.",
+      "verification": {
+        "official": "https://www.independentireland.ie/s/Compressed-General-Election-Manifesto.pdf",
+        "page_refs": {
+          "housing": "6–7",
+          "health": "10–11",
+          "climate": "18–19",
+          "immigration": "16–17",
+          "education": "20–21"
+        },
+        "checks": {
+          "housing": "The manifesto proposes an additional €600m per year for infrastructure supporting community/social housing, tax incentives for vacant-property development and tax-free rents below €1,000. Its costing section gives a €45m set-up cost and €15m annual operating budget for a Department of Efficiency and Reform, with a stated goal of 10% savings of 2024 government spend over the next government.",
+          "costing": "The manifesto has a dedicated costings page (printed page 25) and links some measures to it. The 10% savings figure is a goal, not an independently verified saving or a full consolidated fiscal balance. PBO did not include Independent Ireland in its six-party model."
+        },
+        "costing": {
+          "type": "Party-published costings page and measure-specific estimates",
+          "key_figures": [
+            "Department of Efficiency and Reform: €45m set-up; €15m annual operation",
+            "Target claimed: 10% savings of 2024 government spend over the next government",
+            "Housing infrastructure: additional €600m/year"
+          ],
+          "independent_review": "No comparable PBO microsimulation result for Independent Ireland in the report reviewed."
+        },
+        "pbo": {
+          "coverage": "Not included in PBO's six-party microsimulation",
+          "summary": "No comparable PBO tax/welfare distributional result for Independent Ireland was included in the report reviewed.",
+          "caveat": "The claimed 10% savings target needs a baseline, definition of spend, implementation cost, timeline and independently validated savings methodology."
+        },
+        "evidence_quality": "Official Independent Ireland manifesto PDF inspected; housing section and costings references checked. The party's savings estimates are attributed, not endorsed."
+      }
     }
   ]
 }
