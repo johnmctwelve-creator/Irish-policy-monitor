@@ -114,14 +114,19 @@
 
   <section class="section" id="parties">
     <div class="section-heading"><div><p class="eyebrow">Political alternatives</p><h2>What parties propose</h2><p class="section-intro">Browse selected, source-linked party positions and compare proposals.</p></div></div>
-    <div id="party-list" class="party-list"><p class="loading">Loading party positions…</p></div>
+    <div class="compare-toolbar"><label>Find a proposal <input id="party-search" type="search" placeholder="Search parties or proposals…"></label><label>Party <select id="party-filter"><option value="">All parties</option></select></label></div>
+    <div class="table-scroll comparison-scroll"><table class="comparison-table"><thead><tr><th>Party</th><th>Policy area</th><th>Position at a glance</th><th>Proposal detail</th><th>Publication / status</th><th>Source</th></tr></thead><tbody id="party-list"><tr><td colspan="6">Loading party positions…</td></tr></tbody></table></div>
+    <p id="party-count" class="compare-count" aria-live="polite"></p>
     <div class="tracker-note">This is not a complete manifesto comparison. A missing entry means this register has not yet verified a position for that party and policy area—not that the party has no policy.</div>
   </section>
 
   <section class="section" id="manifestos">
     <div class="section-heading"><div><p class="eyebrow">Election 2024 archive</p><h2>Compare party manifestos</h2><p class="section-intro">Nine parties, six policy areas and independent fiscal analysis where available. These are historical 2024 positions, not current commitments.</p></div></div>
-    <div class="manifesto-note">The comparison distinguishes party cost estimates from independent analysis. The PBO model covers selected tax and welfare measures for seven parties only; it excludes public-service and infrastructure spending. Aontú and Independent Ireland were not included in that model. Page ranges marked approximate remain to be checked.</div>
-    <div id="manifesto-list" class="manifesto-list"><p class="loading">Loading manifesto comparison…</p></div>
+    <details class="research-note"><summary>Scope and limitations</summary><p>The comparison distinguishes party cost estimates from independent analysis. The PBO model covers selected tax and welfare measures for seven parties only; it excludes public-service and infrastructure spending. Aontú and Independent Ireland were not included in that model. Page ranges marked approximate remain to be checked. These are 2024 manifesto positions, not current party commitments.</p></details>
+    <div class="compare-toolbar manifesto-toolbar"><label>Compare policy area <select id="manifesto-area"><option value="housing">Housing</option><option value="health">Health</option><option value="economy">Economy</option><option value="climate">Climate</option><option value="immigration">Immigration</option><option value="education">Education</option></select></label><label>Find a party <input id="manifesto-search" type="search" placeholder="Search party names…"></label></div>
+    <div class="table-scroll comparison-scroll"><table class="comparison-table manifesto-comparison"><thead><tr><th>Party</th><th>Position on selected area</th><th>Manifesto pages</th><th>Evidence quality</th><th>Original manifesto</th></tr></thead><tbody id="manifesto-list"><tr><td colspan="5">Loading manifesto comparison…</td></tr></tbody></table></div>
+    <p id="manifesto-count" class="compare-count" aria-live="polite"></p>
+    <details class="research-note pbo-details"><summary>Independent PBO tax and welfare comparison</summary><div id="manifesto-pbo"></div></details>
   </section>
 
   <section class="section" id="promises">
