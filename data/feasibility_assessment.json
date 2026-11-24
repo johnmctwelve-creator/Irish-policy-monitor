@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "title": "Manifesto affordability and deliverability assessment",
+    "version": "1.0",
+    "research_cutoff": "2026-11-24",
+    "scope": "A structured screening of 2024 general-election manifesto proposals for fiscal arithmetic, funding credibility, delivery capacity, implementation dependencies and uncertainty. This is not an official fiscal forecast or a complete independent costing.",
+    "method": "Separate (1) recurring current spending, (2) one-off capital spending, (3) tax reductions, (4) revenue-raising measures, (5) savings/efficiency claims and (6) uncosted policy intentions. Assess whether the published material identifies a cost, time period, funding source, baseline, delivery owner and measurable output. Use PBO microsimulation only for the selected tax/welfare measures it actually modelled.",
+    "limitations": [
+      "The PBO's 2025 manifesto report models selected tax and welfare measures for seven parties, not complete manifestos. Health, education, infrastructure, corporation tax and most capital programmes are outside its scope.",
+      "PBO modelling is a 2030 endpoint relative to a wage-indexed baseline. SWITCH direct tax and welfare modelling is static and does not model behavioural changes in those measures; EVE models selected indirect-tax demand responses.",
+      "Party costings are treated as attributed claims unless independently validated. A party's stated funding source is not proof that the revenue will arise.",
+      "This assessment does not assign a numeric overall score or rank parties. Data quality differs materially between manifestos.",
+      "Implementation capacity is screened qualitatively. The register does not have a full departmental workforce, procurement, planning or project pipeline model.",
+      "2024 manifestos are historical proposals. They are not automatically current party policy or adopted Government policy."
+    ],
+    "primary_sources": [
+      {
+        "name": "PBO — General Election 2024: a model-based assessment of proposed tax and welfare policies (Publication 16 of 2025)",
+        "url": "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-05-29_general-election-2024-a-model-based-assessment-of-proposed-tax-and-welfare-policies_en.pdf",
+        "scope": "Independent modelling of selected tax and welfare proposals for seven parties."
+      },
+      {
+        "name": "PBO — Assessing the Uncertainty of Budget 2025 Costings: A Scorecard Approach",
+        "url": "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-02-25_assessing-the-uncertainty-of-budget-2025-costings-a-scorecard-approach_en.pdf",
+        "scope": "Illustrates uncertainty in data, behavioural assumptions and model specification in policy costings."
+      },
+      {
+        "name": "8GI — Accountability ledger: Ireland fiscal model",
+        "url": "https://www.8gi.org/public-record/ireland/accountability/fiscal-model",
+        "scope": "Secondary, claim-level arithmetic dataset; useful for tracing claims, but estimates and aggregation choices require independent scrutiny."
+      }
+    ]
+  },
+  "rubric": [
+    {
+      "id": "fiscal",
+      "label": "Fiscal arithmetic",
+      "question": "Are recurring costs, one-off capital costs, tax cuts and revenue measures separated and reconciled over the same years?"
+    },
+    {
+      "id": "funding",
+      "label": "Funding credibility",
+      "question": "Are funding sources quantified, legally/administratively plausible and not double-counted or dependent on optimistic windfalls?"
+    },
+    {
+      "id": "baseline",
+      "label": "Baseline and additionality",
+      "question": "Does the proposal distinguish new spending from maintaining existing services, inflation, demographics and already-planned investment?"
+    },
+    {
+      "id": "delivery",
+      "label": "Delivery capacity",
+      "question": "Are workforce, planning, procurement, infrastructure, land and implementation lead times addressed?"
+    },
+    {
+      "id": "outcomes",
+      "label": "Measurable outcomes",
+      "question": "Are there baselines, annual milestones, accountable owners and outcome measures rather than announcements alone?"
+    },
+    {
+      "id": "uncertainty",
+      "label": "Risk and sensitivity",
+      "question": "Are behavioural, economic, demographic, construction-cost and revenue-volatility risks tested?"
+    }
+  ],
+  "parties": [
+    {
+      "party": "Fianna Fáil",
+      "pbo": "Included",
+      "pbo_profile": "PBO modelled tax receipts +0.4% and welfare expenditure +1.0% versus its wage-indexed baseline. This is the smallest overall tax-receipt increase in the seven-party comparison, not a full fiscal balance.",
+      "strengths": [
+        "Manifesto provides a multi-year fiscal framework and states a net-expenditure growth path.",
+        "The manifesto includes departmental costing claims and distinguishes a reserve from ordinary revenue."
+      ],
+      "risks": [
+        "The framework relies on continued strong receipts and macroeconomic conditions; windfall corporation-tax receipts are volatile and corporation tax is outside the PBO model.",
+        "Housing, health and infrastructure commitments require capacity and capital pipeline checks not covered by the PBO microsimulation.",
+        "The PBO model found household tax receipts +0.4% and welfare expenditure +1.0%; these figures do not validate capital or service delivery."
+      ],
+      "funding_watch": "Test recurring commitments against sustainable non-windfall revenue; separately disclose Apple-related receipts, reserves and one-off capital funding.",
+      "delivery_watch": "Housing completions, water/wastewater connections, construction workforce, hospital capacity and project milestones.",
+      "confidence": "Moderate for selected tax/welfare distributional effects; low-to-moderate for whole-manifesto affordability."
+    },
+    {
+      "party": "Fine Gael",
+      "pbo": "Included",
+      "pbo_profile": "PBO modelled tax receipts +0.5% and welfare expenditure −1.8% versus baseline. Its tax/welfare package reduced average disposable income in the poorest decile by 2.7% in the previous comparison data.",
+      "strengths": [
+        "Manifesto includes an identifiable multi-year costings section and headline expenditure/revenue assumptions.",
+        "The package is comparatively explicit about some capital funding and revenue measures."
+      ],
+      "risks": [
+        "Reliance on Apple receipts, wage-growth-related revenue and planned savings needs sensitivity analysis; capital windfalls are not recurring funding for permanent current services.",
+        "PBO distributional modelling found the poorest decile worst affected among the larger parties in that model; this is an incidence issue, not a full affordability verdict.",
+        "Housing targets and health commitments need workforce, planning and infrastructure capacity checks."
+      ],
+      "funding_watch": "Stress-test receipts if corporation tax falls; separate one-off Apple receipts from recurring revenue and show a fully reconciled net expenditure path.",
+      "delivery_watch": "Annual home completions by tenure, affordable-home delivery, GP/consultant capacity, school places and transport-project schedules.",
+      "confidence": "Moderate for selected tax/welfare effects; low-to-moderate for full-package sustainability."
+    },
+    {
+      "party": "Sinn Féin",
+      "pbo": "Included",
+      "pbo_profile": "PBO modelled tax receipts +4.1% and welfare expenditure −3.2% versus baseline. Its selected tax/welfare package improved average income for the poorest decile by 0.9% and reduced average income for the richest decile by 4.8%.",
+      "strengths": [
+        "Manifesto provides detailed housing tenure targets and a quantified multi-year delivery ambition.",
+        "PBO analysis gives an independent view of selected tax/welfare effects and revenue changes."
+      ],
+      "risks": [
+        "Large housing and public-service ambitions require a reconciled annual capital/current split and credible workforce, land, planning and utility delivery plans.",
+        "PBO model does not independently verify the full manifesto's housing, health, infrastructure or corporation-tax assumptions.",
+        "Revenue increases from higher taxes may be affected by behavioural responses, avoidance, investment and labour-supply changes; SWITCH direct-tax modelling does not capture these responses."
+      ],
+      "funding_watch": "Publish a single consolidated year-by-year fiscal table reconciling tax, current spending, capital investment, reserves and debt/fund drawdowns.",
+      "delivery_watch": "Show annual social, affordable-purchase, affordable-rental and private completions, with serviced land and construction capacity.",
+      "confidence": "Moderate for selected tax/welfare distribution; low-to-moderate for full manifesto fiscal and operational feasibility."
+    },
+    {
+      "party": "Labour",
+      "pbo": "Included",
+      "pbo_profile": "PBO modelled tax receipts +2.7% and welfare expenditure +0.7% versus baseline. The modelled package improved average income in the poorest decile by 2.0% and reduced average income in the richest decile by 2.2%.",
+      "strengths": [
+        "Manifesto includes a budget-plans/costings appendix and a stated expenditure framework.",
+        "Housing proposals include an annual construction ambition and a stated additional capital requirement."
+      ],
+      "risks": [
+        "A multi-year expenditure ceiling is not itself a fully reconciled cost for each commitment; departmental capacity and annual cash profiles need publication.",
+        "Housing and health expansion depend on recruitment, retention, planning, land and construction capacity.",
+        "PBO results apply to selected tax/welfare policies, not the manifesto's full capital and service package."
+      ],
+      "funding_watch": "Provide an annual table linking the expenditure ceiling to each department, revenue source and current/capital split.",
+      "delivery_watch": "Social-housing starts and completions, affordable homes, workforce recruitment/retention and waiting-time outcomes.",
+      "confidence": "Moderate for selected tax/welfare modelling; low-to-moderate for full package."
+    },
+    {
+      "party": "Social Democrats",
+      "pbo": "Included",
+      "pbo_profile": "PBO modelled tax receipts +10.9% and welfare expenditure +14.5% versus baseline. The modelled package improved average income in the poorest decile by 13.4% and reduced average income in the richest decile by 3.7%.",
+      "strengths": [
+        "Manifesto provides a detailed spending schedule and substantial quantified housing, health and social-policy ambitions.",
+        "PBO analysis independently models distributional effects of selected tax/welfare measures."
+      ],
+      "risks": [
+        "PBO found welfare spending growth of 14.5% exceeded modelled tax-receipt growth of 10.9%; this is a clear funding-pressure signal within the modelled tax/welfare package, not a full deficit forecast.",
+        "Large annual spending commitments require a complete recurring-revenue plan and stress test; higher tax receipts are not guaranteed at the stated level.",
+        "Service expansion depends on staffing and capital delivery, which are not validated by PBO."
+      ],
+      "funding_watch": "Reconcile the annual additional spending programme with recurring revenue, explicitly quantify any net borrowing or draw on reserves, and stress-test tax bases.",
+      "delivery_watch": "Cost and phase workforce expansion, housing construction and healthcare capacity before assuming full-year service savings/outcomes.",
+      "confidence": "Moderate for PBO modelled tax/welfare effects; fiscal sustainability needs further independent reconciliation."
+    },
+    {
+      "party": "Green Party",
+      "pbo": "Included",
+      "pbo_profile": "PBO modelled tax receipts +2.2% and welfare expenditure −3.2% versus baseline. Average disposable income changed by −1.1% in both the poorest and richest deciles in the selected package.",
+      "strengths": [
+        "Manifesto provides policy direction across climate, energy, transport and housing with some programme-level targets.",
+        "PBO offers an independent tax/welfare comparison, showing broadly similar modelled average changes at the income extremes."
+      ],
+      "risks": [
+        "Climate, energy and transport plans require project-by-project capital costs, grid and network readiness, planning approvals and distributional impact analysis.",
+        "PBO does not cost renewable generation, retrofit, transport infrastructure or other public-service investments.",
+        "A broad environmental target is not a delivery schedule; annual sectoral milestones and responsible agencies are needed."
+      ],
+      "funding_watch": "Publish a project-level capital plan with total cost, annual cash flow, private/public share, grid-enabling investment and contingent liabilities.",
+      "delivery_watch": "Renewables connected (not just consented), grid capacity, retrofit completions, emissions reductions and public-transport journey times.",
+      "confidence": "Moderate for selected tax/welfare distribution; low for whole climate/energy programme without project costings."
+    },
+    {
+      "party": "People Before Profit",
+      "pbo": "Included",
+      "pbo_profile": "PBO modelled tax receipts +7.9% and welfare expenditure +8.9% versus baseline. Its modelled package improved average income in the poorest decile by 15.6% and reduced average income in the richest decile by 12.7%.",
+      "strengths": [
+        "Manifesto sets out a clear public-provision approach and some quantified housing and tax/welfare proposals.",
+        "PBO independently models selected tax/welfare measures and shows large distributional effects."
+      ],
+      "risks": [
+        "PBO modelled welfare expenditure growth of 8.9% exceeded tax-receipt growth of 7.9%, a funding-pressure signal within the modelled package.",
+        "The manifesto's public construction and ownership proposals require substantial capital, staffing, land assembly, procurement and institutional build-up; these are not costed by the PBO model.",
+        "Large tax increases can produce behavioural responses; direct-tax model results are static and should not be treated as a realised revenue forecast."
+      ],
+      "funding_watch": "Publish a consolidated multi-year fiscal table, separate recurring revenue from one-off receipts and show behavioural sensitivity for large tax changes.",
+      "delivery_watch": "Set up and cost the proposed delivery institutions, identify land and workforce, and phase housing and public-service targets.",
+      "confidence": "Moderate for selected distributional effects; low-to-moderate for whole-package revenue and delivery feasibility."
+    },
+    {
+      "party": "Aontú",
+      "pbo": "Not included",
+      "pbo_profile": "No comparable PBO tax/welfare microsimulation result in the seven-party report. The party manifesto contains measure-specific estimates, but they remain party-stated unless independently checked.",
+      "strengths": [
+        "The manifesto gives several individual cost estimates, making selected proposals more testable than an entirely uncosted pledge list."
+      ],
+      "risks": [
+        "No comparable independent PBO distributional model is available in the cited report.",
+        "Several proposals have material recurring costs; one-off grants and annual costs need separate treatment and totals need reconciliation to avoid double counting.",
+        "No consolidated, independently reviewed multi-year fiscal framework is established by the source material reviewed."
+      ],
+      "funding_watch": "Reconcile each party estimate into annual and multi-year totals, state tax or spending offsets and obtain independent departmental/PBO validation.",
+      "delivery_watch": "Check whether proposed grants, health staffing and border-agency changes have delivery owners, workforce plans and realistic annual throughput.",
+      "confidence": "Low; party cost estimates exist but independent package-level validation is absent."
+    },
+    {
+      "party": "Independent Ireland",
+      "pbo": "Not included",
+      "pbo_profile": "No comparable PBO tax/welfare microsimulation result in the seven-party report. Party costings and savings targets should be treated as proposals pending independent validation.",
+      "strengths": [
+        "The manifesto includes a dedicated costing section and identifies some specific set-up and operating costs."
+      ],
+      "risks": [
+        "A target to save 10% of government spending is not a funded saving until the baseline, eligible expenditure, implementation costs, timetable and service impacts are defined.",
+        "The claimed savings programme requires evidence of which programmes or procurement lines can be reduced without shifting costs elsewhere or degrading services.",
+        "No comparable PBO distributional model was published for the party in the report reviewed."
+      ],
+      "funding_watch": "Publish a line-by-line savings register with baseline, responsible department, gross and net saving, implementation cost, timetable and independent verification.",
+      "delivery_watch": "Specify legal authority, staffing, procurement changes and service-protection tests for the proposed Department of Efficiency and Reform.",
+      "confidence": "Low; savings target and costings need independent evidence and reconciliation."
+    }
+  ],
+  "system_conclusion": "The strongest available independent comparison is the PBO's selected tax-and-welfare model. It is not a complete manifesto affordability test. Across parties, the key unclosed question is whether recurring service promises are financed by recurring revenue, while capital promises have realistic project pipelines and delivery capacity. The Social Democrats and People Before Profit show modelled welfare expenditure growth exceeding modelled tax-receipt growth in the PBO comparison; this warrants explicit reconciliation, not an automatic conclusion that their full plans are unaffordable. Fine Gael's and Fianna Fáil's reliance on windfall or growth-sensitive revenue also warrants stress testing. All parties need fuller evidence on workforce, planning, infrastructure and annual outcomes.",
+  "next_steps": [
+    "Obtain a single comparable year-by-year fiscal table from each party, separating current, capital, tax reductions, tax increases and one-off receipts.",
+    "Stress-test corporation-tax and other volatile receipts; show results under lower-growth and higher-interest scenarios.",
+    "Require project-level delivery plans for housing, hospitals, transport, energy and schools.",
+    "Track annual outputs and outcomes against named departments and agencies.",
+    "Commission an independent full-package fiscal assessment that includes corporation tax, public services, capital investment, behavioural effects and macroeconomic feedback."
+  ]
+}
