@@ -32,7 +32,7 @@ const entries=[
 ["Campaigns and movements","Explore campaigns and civic movements.","campaigns","campaign movements organise"],
 ["1916 Proclamation","Read the historical Proclamation and its context.","proclamation-1916","1916 proclamation history"],
 ["Find your policy match","Explore the policy priorities that matter to you.","policy-match","quiz policy match priorities"],
-["Which revolutionary are you?","Try the Irish history personality quiz.","revolutionary-quiz","revolutionary quiz history"]
+["Which revolutionary are you?","Try the Irish history personality quiz.","revolutionary-quiz","revolutionary quiz history"],\n["ESRI & Census trends to 2050","Explore population trends, ageing and the 2050 demographic outlook.","demographic-trends","ESRI census population projections 2050 ageing migration housing"]
 ];
 function render(){if(!search||!results)return;const q=search.value.trim().toLowerCase();if(!q){results.innerHTML="";if(shortcuts)shortcuts.hidden=false;return;}if(shortcuts)shortcuts.hidden=true;const words=q.split(/\s+/).filter(Boolean);const found=entries.map(e=>({e,score:words.reduce((n,w)=>n+((e[0]+" "+e[1]+" "+e[3]).toLowerCase().includes(w)?1:0),0)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score).slice(0,7);results.innerHTML=found.length?found.map(x=>'<a class="ipm-guide-result" href="#'+x.e[2]+'"><strong>'+x.e[0]+'</strong><small>'+x.e[1]+'</small></a>').join(""):'<div class="ipm-guide-empty">No matching section found. Try a broader term such as housing, evidence, Wicklow or consultation.</div>';results.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>setOpen(false)));}
 if(search)search.addEventListener("input",render);if(clear)clear.addEventListener("click",()=>{search.value="";render();search.focus();});
