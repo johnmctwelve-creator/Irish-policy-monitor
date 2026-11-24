@@ -1,29 +1,43 @@
 # Irish Policy Monitor — Website
 
-A responsive, static website built from the project's structured research files.
+A responsive, static public-interest guide to Irish Government policy, evidence, Programme for Government commitments and selected party alternatives.
 
-## Preview locally
-Because the website loads JSON data with `fetch`, run it through a local web server rather than opening `index.html` directly.
+## Published research edition
+
+The website currently includes:
+- 11 structured policy assessments, each with a provisional conclusion, left/right perspectives, opposition alternatives, international context, source links and explicit evidence gaps.
+- 33 source-linked research indicators.
+- 9 selected Programme for Government commitments, with evidence notes and provisional status definitions.
+- 9 selected party position records, including Government parties and opposition parties.
+- Responsive policy, evidence, party-comparison and commitment-tracker views.
+
+## Run locally
+
+The website loads JSON files with `fetch`, so serve it through a local web server rather than opening `index.html` directly.
 
 ```bash
 python -m http.server 8000
 ```
 
-Then visit http://localhost:8000/website/ (if started from the project root), or start the server inside this `website` folder and visit http://localhost:8000.
+Then visit http://localhost:8000/ if started inside this website folder.
 
-## Publish for public access
-The simplest no-cost route is GitHub Pages:
+## Publish with GitHub Pages
 
-1. Create a GitHub repository and upload the contents of this `website` folder.
-2. In the repository, open **Settings → Pages**.
+1. Upload the contents of this folder to the repository root.
+2. Open **Settings → Pages**.
 3. Choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
-4. GitHub will provide a public website URL. A custom domain can be connected later.
+4. GitHub Pages publishes the site at the repository's Pages URL.
 
-Netlify and Cloudflare Pages can also publish this static folder.
+## Editorial scope and limitations
 
-## Important scope and editorial notes
-- This is an initial public-facing research snapshot, not a complete audit of every Government commitment.
-- Some party-position summaries and source references still require verification against original publications.
-- The commitment tracker uses conservative status definitions; `in_progress` does not mean a target is on track.
-- This website is read-only. Public submissions, accounts, comments and automated data updates need a backend and moderation process.
-- Review every source and date before promoting the site as a current factual reference.
+This is an expanded research edition, not a complete independent audit or a comprehensive comparison of every party manifesto.
+
+- The nine commitment records are a selected subset, not a full extraction of the Programme for Government. Exact quotations, page references, annual trajectories and some baselines still require verification.
+- Party positions are selected, not exhaustive. Some entries rely on standing party policy pages or secondary summaries; publication dates, costings and parliamentary records require further checking.
+- Evidence coverage is uneven. Immigration processing and accommodation metrics, disability-service waiting times, and defence readiness measures remain priority data gaps.
+- Policy conclusions are provisional and limited to the dated indicators and sources shown. A missing indicator is not evidence of no action or policy failure.
+- International comparisons are contextual, not rankings; institutional differences limit direct transferability.
+- The commitment status `in_progress` means an implementation action or output is evidenced; it does not mean the final target is on track.
+- This read-only website has no accounts, public submissions, comments or automated data updates. Research updates require editorial review and a new repository commit.
+
+The site is not an official Government of Ireland publication and does not endorse any party.
