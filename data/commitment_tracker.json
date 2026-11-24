@@ -1,11 +1,16 @@
 {
   "metadata": {
     "title": "Programme for Government accountability tracker",
-    "version": "0.2",
+    "version": "0.3",
     "research_cutoff": "2026-11-24",
     "baseline_document": "Programme for Government 2025 — Securing Ireland's Future",
     "baseline_url": "https://www.gov.ie/en/department-of-the-taoiseach/publications/programme-for-government-2025-securing-irelands-future/",
-    "status_note": "Initial selected commitments, not a complete extraction of all programme pledges. Status refers to publicly verifiable implementation evidence, not political judgement."
+    "status_note": "Nine selected commitments with provisional evidence notes. This is not a complete extraction of the Programme for Government. Exact source quotations/page numbers and several target baselines/annual trajectories remain unverified. Do not use as a comprehensive government scorecard.",
+    "next_research_priorities": [
+      "Complete machine-readable extraction of every commitment from the official Programme for Government, retaining exact quotations and PDF page references.",
+      "Add owner, target, deadline, baseline, annual milestones and source links for every commitment.",
+      "Update delivery evidence on a fixed monthly or quarterly schedule and record changes transparently."
+    ]
   },
   "status_definitions": {
     "in_progress": "A relevant implementation action or measurable output is evidenced; this does not mean the final target is on track.",
@@ -34,7 +39,9 @@
       "outcome_indicator": "Completions by tenure and location; household formation; affordability; rents; homelessness; vacancy; infrastructure readiness.",
       "last_checked": "2026-11-24",
       "confidence": "medium",
-      "notes": "Completions are rising, but this does not establish whether the cumulative 300,000 target is on trajectory. Need a consistent baseline and annual target path. Homelessness and affordability remain separate outcome tests."
+      "notes": "Completions are rising, but this does not establish whether the cumulative 300,000 target is on trajectory. Need a consistent baseline and annual target path. Homelessness and affordability remain separate outcome tests.",
+      "source_reference_status": "Working transcription; confirm wording and page number against the official Programme for Government PDF before formal citation.",
+      "status_basis": "An implementation action or related output is evidenced; this does not demonstrate that the outcome target is on schedule."
     },
     {
       "commitment_id": "HOU-002",
@@ -55,7 +62,9 @@
       "outcome_indicator": "Monthly adult and child homelessness; exits to secure housing; repeat homelessness; prevention interventions; family support outcomes.",
       "last_checked": "2026-11-24",
       "confidence": "medium",
-      "notes": "A plan and funding are implementation actions, not proof of reduced homelessness. Definitions and reporting months differ across cited figures."
+      "notes": "A plan and funding are implementation actions, not proof of reduced homelessness. Definitions and reporting months differ across cited figures.",
+      "source_reference_status": "Exact quotation/page reference still needs checking against the published Programme for Government PDF; do not treat the summary as a verbatim quotation.",
+      "status_basis": "An implementation action or related output is evidenced; this does not demonstrate that the outcome target is on schedule."
     },
     {
       "commitment_id": "HLT-001",
@@ -76,7 +85,9 @@
       "outcome_indicator": "Net staffed beds opened; occupancy; admissions; length of stay; waiting-time bands; cancelled procedures; workforce capacity.",
       "last_checked": "2026-11-24",
       "confidence": "low",
-      "notes": "Waiting lists do not measure bed delivery. Need HSE bed census, staffed-bed series and a baseline definition distinguishing new from refurbished beds."
+      "notes": "Waiting lists do not measure bed delivery. Need HSE bed census, staffed-bed series and a baseline definition distinguishing new from refurbished beds.",
+      "source_reference_status": "Exact quotation/page reference still needs checking against the published Programme for Government PDF; do not treat the summary as a verbatim quotation.",
+      "status_basis": "No reliable delivery series against the exact target is currently recorded; status is not a finding of no action."
     },
     {
       "commitment_id": "EDU-001",
@@ -97,7 +108,9 @@
       "outcome_indicator": "National and school-level pupil-teacher ratio; class size distribution; teacher vacancies; special education needs provision.",
       "last_checked": "2026-11-24",
       "confidence": "low",
-      "notes": "Do not substitute average class size for pupil-teacher ratio; they are different measures."
+      "notes": "Do not substitute average class size for pupil-teacher ratio; they are different measures.",
+      "source_reference_status": "Exact quotation/page reference still needs checking against the published Programme for Government PDF; do not treat the summary as a verbatim quotation.",
+      "status_basis": "No reliable delivery series against the exact target is currently recorded; status is not a finding of no action."
     },
     {
       "commitment_id": "HLT-002",
@@ -118,7 +131,9 @@
       "outcome_indicator": "Eligibility age; number of eligible children enrolled; GP capacity; access and utilisation.",
       "last_checked": "2026-11-24",
       "confidence": "low",
-      "notes": "Distinguish a policy announcement, a negotiated GP contract, commencement date and actual uptake."
+      "notes": "Distinguish a policy announcement, a negotiated GP contract, commencement date and actual uptake.",
+      "source_reference_status": "Exact quotation/page reference still needs checking against the published Programme for Government PDF; do not treat the summary as a verbatim quotation.",
+      "status_basis": "No reliable delivery series against the exact target is currently recorded; status is not a finding of no action."
     },
     {
       "commitment_id": "SOC-001",
@@ -139,7 +154,9 @@
       "outcome_indicator": "Means-test thresholds and rules by year; number of carers newly eligible; payment adequacy; labour supply and poverty effects.",
       "last_checked": "2026-11-24",
       "confidence": "low",
-      "notes": "A five-year pledge needs staged milestones. Do not mark delivered based only on a threshold increase."
+      "notes": "A five-year pledge needs staged milestones. Do not mark delivered based only on a threshold increase.",
+      "source_reference_status": "Exact quotation/page reference still needs checking against the published Programme for Government PDF; do not treat the summary as a verbatim quotation.",
+      "status_basis": "No reliable delivery series against the exact target is currently recorded; status is not a finding of no action."
     },
     {
       "commitment_id": "CLI-001",
@@ -160,7 +177,9 @@
       "outcome_indicator": "Annual and cumulative emissions against carbon budgets; sectoral ceilings; renewable electricity; retrofit delivery; transport and agriculture emissions.",
       "last_checked": "2026-11-24",
       "confidence": "medium",
-      "notes": "One annual reduction does not establish alignment with the 2030 target. Compare the inventory with carbon budgets and sectoral ceilings; 2025 data are provisional."
+      "notes": "One annual reduction does not establish alignment with the 2030 target. Compare the inventory with carbon budgets and sectoral ceilings; 2025 data are provisional.",
+      "source_reference_status": "Working transcription; confirm wording and page number against the official Programme for Government PDF before formal citation.",
+      "status_basis": "An implementation action or related output is evidenced; this does not demonstrate that the outcome target is on schedule."
     },
     {
       "commitment_id": "TRN-001",
@@ -181,7 +200,9 @@
       "outcome_indicator": "Project milestones, cost and schedule variance, passenger capacity, frequency, reliability, journey times, accessibility and emissions.",
       "last_checked": "2026-11-24",
       "confidence": "medium",
-      "notes": "Funding and approval milestones do not equal operational delivery. Maintain one record per major project in the next iteration."
+      "notes": "Funding and approval milestones do not equal operational delivery. Maintain one record per major project in the next iteration.",
+      "source_reference_status": "Exact quotation/page reference still needs checking against the published Programme for Government PDF; do not treat the summary as a verbatim quotation.",
+      "status_basis": "An implementation action or related output is evidenced; this does not demonstrate that the outcome target is on schedule."
     },
     {
       "commitment_id": "DIS-001",
@@ -202,7 +223,9 @@
       "outcome_indicator": "Therapy waiting times, personal assistance hours, residential placements, accessible transport, education supports and independent-living outcomes.",
       "last_checked": "2026-11-24",
       "confidence": "low",
-      "notes": "Use disaggregated measures and disabled people's lived experience; expenditure alone is not an outcome."
+      "notes": "Use disaggregated measures and disabled people's lived experience; expenditure alone is not an outcome.",
+      "source_reference_status": "Working transcription; confirm wording and page number against the official Programme for Government PDF before formal citation.",
+      "status_basis": "No reliable delivery series against the exact target is currently recorded; status is not a finding of no action."
     }
   ]
 }
