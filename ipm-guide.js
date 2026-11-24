@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",function(){
 const panel=document.getElementById("ipm-guide-panel"),launch=document.getElementById("ipm-guide-launch"),close=document.getElementById("ipm-guide-close"),search=document.getElementById("ipm-guide-search"),results=document.getElementById("ipm-guide-results"),shortcuts=document.getElementById("ipm-guide-shortcuts"),clear=document.getElementById("ipm-guide-search-clear"),progress=document.getElementById("ipm-reading-progress-fill"),topBtn=document.getElementById("ipm-back-top");
 function setOpen(open){if(!panel||!launch)return;panel.hidden=!open;launch.setAttribute("aria-expanded",String(open));launch.querySelector("span:last-child").textContent=open?"Close guide":"Ask Civic Guide";if(open&&search)search.focus();}
-if(launch)launch.addEventListener("click",()=>setOpen(panel.hidden));if(close)close.addEventListener("click",()=>setOpen(false));
+if(launch)launch.addEventListener("click",()=>setOpen(panel.hidden));if(close)close.addEventListener("click",()=>{setOpen(false);launch?.focus();});\n if(panel)panel.addEventListener("keydown",e=>{if(e.key==="Escape"){setOpen(false);launch?.focus();}});
 // Every guide destination closes the panel, updates the URL and brings the requested section into view.
 if(panel)panel.addEventListener("click",function(e){
  const link=e.target.closest('a[href^="#"]');if(!link)return;
