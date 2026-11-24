@@ -143,6 +143,34 @@ function calculateAlignment(){
  $("#alignment-summary").textContent=summary;
  $("#alignment-ranking").innerHTML=results.map((r,i)=>`<article class="alignment-result-row"><div><strong>${i+1}. ${safe(r.party)}</strong><small>${redlines.length?`${r.hardMet} of ${r.hardMax} non-negotiables met · `:""}${r.matched} answered issues with some alignment${redlines.length&&r.eligible?" · Meets all non-negotiables":""}</small></div><div class="alignment-score"><b>${r.percent}%</b><div class="alignment-track"><i style="width:${r.percent}%"></i></div></div></article>`).join("");
  const show=redlines.length?results.filter(r=>r.eligible===top.eligible&&(!anyEligible?r.hardMet===top.hardMet:true)&&r.percent===top.percent):topGroup;
- $("#alignment-detail").innerHTML=show.map(r=>`<section><h4>${safe(r.party)} — issue-by-issue</h4><ul>${r.details.map(d=>`<li>${safe(d.label)}: ${d.hard?(d.exact?"Non-negotiable met":"<strong>Non-negotiable not met</strong>"):d.points===0?"No broad match":d.points%2===0?"Strong broad match":"Partial broad match"}</li>`).join("")}</ul><p class="meta">A category match reflects the questionnaire's simplified coding, not a full reading of every party proposal.</p></section>`).join("");
+ const answered=q.dimensions.filter(d=>answers[d.id]&&answers[d.id]!=="unsure");
+ const optionLabel=(d)=>d.options.find(o=>o.id===answers[d.id])?.label||"Not answered";
+ const publicLean=answered.filter(d=>({housing:"state",health:"public",economy:"redistribute"}[d.id]===answers[d.id])).length;
+ const marketLean=answered.filter(d=>({housing:"market",health:"choice",economy:"enterprise"}[d.id]===answers[d.id])).length;
+ const greenLean=answers.climate==="fast", rightsLean=answers.immigration==="rights";
+ let profile="A mixed-policy pragmatist",profileText="Your answers draw on more than one policy tradition. You appear to favour a question-by-question approach rather than one consistent ideological package.";
+ if(publicLean>=2&&publicLean>marketLean){profile="Public-services first";profileText="Your strongest recurring theme is a larger role for public provision, redistribution or direct State action.";}
+ else if(marketLean>=2&&marketLean>publicLean){profile="Enterprise and choice";profileText="Your strongest recurring theme is a greater role for private provision, market incentives or lower tax burdens.";}
+ else if(greenLean&&rightsLean){profile="Green-minded internationalist";profileText="Your answers combine faster climate action with a rights-focused approach to immigration and asylum.";}
+ else if(answers.climate==="cautious"&&answers.immigration==="strict"){profile="Cautious-change combination";profileText="Your answers favour a more cautious approach on climate targets and tighter migration controls.";}
+ const topDetails=top.details;
+ const strongest=topDetails.filter(d=>d.points>0).sort((x,y)=>y.points-x.points)[0];
+ const weakest=topDetails.slice().sort((x,y)=>x.points-y.points)[0];
+ const redlineText=redlines.length?(anyEligible?redlines.length+" non-negotiable issue(s) have at least one exact-match party.":"No party matches all "+redlines.length+" non-negotiable issue(s) exactly."):"You did not set any non-negotiable issues.";
+ const mismatch=weakest?weakest.label:"No issue-level comparison available";
+ const banter=strongest&&weakest&&strongest.label!==weakest.label
+  ? `Your strongest overlap is ${strongest.label.toLowerCase()}, while ${weakest.label.toLowerCase()} is where the policy conversation gets lively. Coalition talks may need an extra pot of tea.`
+  : "Your answers are unusually consistent across the issues you completed. The coalition negotiators can have a slightly shorter tea break.";
+ const resultText=[ "Irish Policy Monitor — my policy-alignment snapshot", "Policy mix: "+profile, profileText, "Closest broad match in this comparison: "+top.party+" ("+top.percent+"%)", "Best overlap: "+(strongest?.label||"Not available"), "Biggest gap: "+mismatch, redlineText, "Based on simplified categories in the parties' 2024 manifesto summaries; not a voting recommendation." ].join("\\n");
+ $("#alignment-detail").innerHTML=`
+ <div class="alignment-insight-grid">
+  <section class="alignment-profile"><span class="insight-kicker">Your policy mix</span><h4>${safe(profile)}</h4><p>${safe(profileText)}</p><p class="meta">${answered.length} of ${q.dimensions.length} issues answered</p></section>
+  <section><span class="insight-kicker">Your report card</span><ul class="alignment-report"><li><b>Closest broad match</b><span>${safe(top.party)} · ${top.percent}%</span></li><li><b>Strongest overlap</b><span>${safe(strongest?.label||"Not available")}</span></li><li><b>Biggest gap</b><span>${safe(mismatch)}</span></li><li><b>Non-negotiables</b><span>${safe(redlineText)}</span></li></ul></section>
+ </div>
+ <section class="alignment-fingerprint"><h4>Your policy fingerprint</h4><div class="fingerprint-list">${answered.map(d=>`<div><b>${safe(d.label)}</b><span>${safe(optionLabel(d))}</span></div>`).join("")}</div></section>
+ <section class="alignment-banter"><span class="insight-kicker">Coalition tea-break forecast</span><p>${safe(banter)}</p><small>A bit of fun, generated from your answers — not a prediction about actual coalition negotiations.</small></section>
+ <section class="alignment-party-detail">${show.map(r=>`<div><h4>${safe(r.party)} — issue-by-issue</h4><ul>${r.details.map(d=>`<li>${safe(d.label)}: ${d.hard?(d.exact?"Non-negotiable met":"Non-negotiable not met"):d.points===0?"No broad match":d.points%2===0?"Strong broad match":"Partial broad match"}</li>`).join("")}</ul><p class="meta">A category match reflects the questionnaire's simplified coding, not a full reading of every party proposal.</p></div>`).join("")}</section>
+ <div class="alignment-share"><button type="button" id="alignment-copy" class="alignment-reset">Copy my results summary</button><span id="alignment-copy-status" role="status"></span></div>`;
+ $("#alignment-copy").addEventListener("click",async()=>{const status=$("#alignment-copy-status");try{await navigator.clipboard.writeText(resultText);status.textContent="Copied — ready to share.";}catch(e){status.textContent="Copy unavailable in this browser. You can select the results text manually."; }});
  $("#alignment-results").scrollIntoView({behavior:"smooth",block:"start"});
 }
