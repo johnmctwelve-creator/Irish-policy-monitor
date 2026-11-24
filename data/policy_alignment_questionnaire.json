@@ -1,0 +1,229 @@
+{
+  "metadata": {
+    "title": "Policy alignment questionnaire",
+    "version": "1.0",
+    "basis": "Thematic summaries of nine parties' 2024 general-election manifestos currently published on Irish Policy Monitor.",
+    "warning": "Indicative self-assessment, not a voting recommendation. It compares broad policy direction, not every detailed proposal, current party policy, candidate record, coalition likelihood or implementation performance. Party positions may be incomplete or change."
+  },
+  "dimensions": [
+    {
+      "id": "housing",
+      "label": "Housing",
+      "question": "Which approach is closest to your view?",
+      "weight": 2,
+      "options": [
+        {
+          "id": "state",
+          "label": "The State should directly build much more social and affordable housing and strengthen renter protections."
+        },
+        {
+          "id": "mixed",
+          "label": "Increase supply through a mix of public, affordable and private construction, planning reform and infrastructure."
+        },
+        {
+          "id": "market",
+          "label": "Prioritise private construction, incentives for buyers and landlords, and faster planning to expand supply."
+        },
+        {
+          "id": "unsure",
+          "label": "I am unsure / none of these fully reflects my view."
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "label": "Health",
+      "question": "What should be the main direction for healthcare?",
+      "weight": 2,
+      "options": [
+        {
+          "id": "public",
+          "label": "Expand universal public provision, reduce reliance on private care and invest strongly in public capacity."
+        },
+        {
+          "id": "reform",
+          "label": "Improve public access and capacity through reform, workforce expansion and a mix of delivery approaches."
+        },
+        {
+          "id": "choice",
+          "label": "Increase choice and capacity using public, private and community providers."
+        },
+        {
+          "id": "unsure",
+          "label": "I am unsure / none of these fully reflects my view."
+        }
+      ]
+    },
+    {
+      "id": "economy",
+      "label": "Economy and taxation",
+      "question": "Which economic and tax approach do you favour?",
+      "weight": 2,
+      "options": [
+        {
+          "id": "redistribute",
+          "label": "More progressive taxation and stronger public services and social protection."
+        },
+        {
+          "id": "balance",
+          "label": "A balanced approach: support enterprise and jobs while funding public services and targeted supports."
+        },
+        {
+          "id": "enterprise",
+          "label": "Lower tax burdens, competitiveness, private enterprise and incentives for investment."
+        },
+        {
+          "id": "unsure",
+          "label": "I am unsure / none of these fully reflects my view."
+        }
+      ]
+    },
+    {
+      "id": "climate",
+      "label": "Climate and energy",
+      "question": "How should Ireland pursue climate and energy goals?",
+      "weight": 1,
+      "options": [
+        {
+          "id": "fast",
+          "label": "Accelerate emissions cuts and public investment, with a strong just-transition and household protections."
+        },
+        {
+          "id": "pragmatic",
+          "label": "Continue climate action while balancing affordability, energy security and effects on farms and businesses."
+        },
+        {
+          "id": "cautious",
+          "label": "Slow or reconsider targets where costs, energy security or economic impacts are too high."
+        },
+        {
+          "id": "unsure",
+          "label": "I am unsure / none of these fully reflects my view."
+        }
+      ]
+    },
+    {
+      "id": "immigration",
+      "label": "Immigration and asylum",
+      "question": "Which approach is closest to your view?",
+      "weight": 1,
+      "options": [
+        {
+          "id": "rights",
+          "label": "Emphasise humanitarian obligations, rights, integration and fair procedures."
+        },
+        {
+          "id": "managed",
+          "label": "Combine fair procedures and integration with efficient processing and managed migration."
+        },
+        {
+          "id": "strict",
+          "label": "Prioritise tighter controls, faster decisions, enforcement and reduced irregular migration."
+        },
+        {
+          "id": "unsure",
+          "label": "I am unsure / none of these fully reflects my view."
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "label": "Education",
+      "question": "What should education policy prioritise?",
+      "weight": 1,
+      "options": [
+        {
+          "id": "inclusive",
+          "label": "Reduce costs for families and expand inclusive, special-needs and early-years provision."
+        },
+        {
+          "id": "capacity",
+          "label": "Improve school places, teacher capacity, skills, apprenticeships and childcare."
+        },
+        {
+          "id": "choice",
+          "label": "Increase parental choice, flexibility and diverse education options."
+        },
+        {
+          "id": "unsure",
+          "label": "I am unsure / none of these fully reflects my view."
+        }
+      ]
+    }
+  ],
+  "party_codes": {
+    "Fianna Fáil": {
+      "housing": "mixed",
+      "health": "reform",
+      "economy": "enterprise",
+      "climate": "pragmatic",
+      "immigration": "managed",
+      "education": "capacity"
+    },
+    "Fine Gael": {
+      "housing": "market",
+      "health": "choice",
+      "economy": "enterprise",
+      "climate": "pragmatic",
+      "immigration": "strict",
+      "education": "capacity"
+    },
+    "Sinn Féin": {
+      "housing": "state",
+      "health": "public",
+      "economy": "redistribute",
+      "climate": "fast",
+      "immigration": "managed",
+      "education": "inclusive"
+    },
+    "Labour": {
+      "housing": "state",
+      "health": "public",
+      "economy": "redistribute",
+      "climate": "fast",
+      "immigration": "rights",
+      "education": "inclusive"
+    },
+    "Social Democrats": {
+      "housing": "state",
+      "health": "public",
+      "economy": "redistribute",
+      "climate": "fast",
+      "immigration": "rights",
+      "education": "inclusive"
+    },
+    "Green Party": {
+      "housing": "mixed",
+      "health": "public",
+      "economy": "balance",
+      "climate": "fast",
+      "immigration": "rights",
+      "education": "inclusive"
+    },
+    "People Before Profit": {
+      "housing": "state",
+      "health": "public",
+      "economy": "redistribute",
+      "climate": "fast",
+      "immigration": "rights",
+      "education": "inclusive"
+    },
+    "Aontú": {
+      "housing": "mixed",
+      "health": "reform",
+      "economy": "balance",
+      "climate": "cautious",
+      "immigration": "strict",
+      "education": "capacity"
+    },
+    "Independent Ireland": {
+      "housing": "market",
+      "health": "choice",
+      "economy": "enterprise",
+      "climate": "cautious",
+      "immigration": "strict",
+      "education": "capacity"
+    }
+  },
+  "scoring": "For each answered issue, an exact broad-category match receives 2 points and an adjacent/overlapping match receives 1 point where editorially defined; unmatched or unsure answers receive 0. Issue weights are shown. Scores are an approximate fit indicator, not probabilities or endorsements."
+}
