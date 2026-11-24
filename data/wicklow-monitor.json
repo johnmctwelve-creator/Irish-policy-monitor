@@ -1,0 +1,13 @@
+{
+  "updated_at": null,
+  "schedule": "Daily automated source-page check via GitHub Actions",
+  "summary": {
+    "sources_monitored": 8,
+    "checks_succeeded": 0,
+    "checks_failed": 0,
+    "changes_detected_in_this_run": 0
+  },
+  "sources": [],
+  "events": [],
+  "method_note": "Awaiting first scheduled GitHub Actions run. Automated checks detect source-page changes; they do not independently verify project status."
+}
