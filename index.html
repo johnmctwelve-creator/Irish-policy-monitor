@@ -306,9 +306,39 @@
 </main>
 <footer class="site-footer"><div><strong>Irish Policy Monitor</strong><p>Understand the issues. Follow the decisions. Find your voice. Take action.</p></div><div class="footer-links"><a href="#method">Editorial method</a><a href="#promises">Accountability tracker</a><a href="https://www.gov.ie/en/department-of-the-taoiseach/publications/programme-for-government-2025-securing-irelands-future/" target="_blank" rel="noopener">Programme for Government ↗</a></div><p class="copyright">This project is not affiliated with the Government of Ireland or any political party.</p></footer>
 
+
+<div class="ipm-reading-progress" aria-hidden="true"><span id="ipm-reading-progress-fill"></span></div>
+<button class="ipm-back-top" id="ipm-back-top" type="button" aria-label="Back to top" title="Back to top"><span aria-hidden="true">↑</span></button>
+<div class="ipm-guide" id="ipm-guide">
+  <section class="ipm-guide-panel" id="ipm-guide-panel" aria-label="Civic Guide" hidden>
+    <header class="ipm-guide-header">
+      <div class="ipm-guide-brand"><span class="ipm-guide-mark" aria-hidden="true">IPM</span><span><strong>Civic Guide</strong><small>Your guide to Irish public life</small></span></div>
+      <button type="button" class="ipm-guide-close" id="ipm-guide-close" aria-label="Close Civic Guide">×</button>
+    </header>
+    <div class="ipm-guide-content">
+      <p class="ipm-guide-intro">What would you like to do?</p>
+      <p class="ipm-guide-explain">Find your way around the site, explore an issue or discover how to participate.</p>
+      <label for="ipm-guide-search">Search this website</label>
+      <div class="ipm-guide-search-row"><input id="ipm-guide-search" type="search" placeholder="Try housing, Wicklow, climate…" autocomplete="off"><button type="button" id="ipm-guide-search-clear" aria-label="Clear search">×</button></div>
+      <div id="ipm-guide-results" class="ipm-guide-results" aria-live="polite"></div>
+      <div class="ipm-guide-shortcuts" id="ipm-guide-shortcuts">
+        <p class="ipm-guide-label">Quick routes</p>
+        <a href="#explore"><span aria-hidden="true">⌕</span><span><strong>Understand a policy issue</strong><small>Explore policies and their impacts</small></span><b>›</b></a>
+        <a href="#wicklow-civic-hub"><span aria-hidden="true">⌖</span><span><strong>Find local information</strong><small>Start with Wicklow and local authorities</small></span><b>›</b></a>
+        <a href="#civic-action"><span aria-hidden="true">✊</span><span><strong>Have my say</strong><small>Find ways to participate</small></span><b>›</b></a>
+        <a href="#promises"><span aria-hidden="true">✓</span><span><strong>Who is responsible?</strong><small>Follow commitments and evidence</small></span><b>›</b></a>
+        <a href="#evidence"><span aria-hidden="true">◉</span><span><strong>Find the evidence</strong><small>Research, records and sources</small></span><b>›</b></a>
+      </div>
+      <p class="ipm-guide-note">Civic Guide searches the information published on this website. It is a navigation aid, not an AI adviser or an official government service. Check linked original sources for current details.</p>
+    </div>
+  </section>
+  <button class="ipm-guide-launch" id="ipm-guide-launch" type="button" aria-expanded="false" aria-controls="ipm-guide-panel"><span class="ipm-guide-launch-icon" aria-hidden="true">✦</span><span>Ask Civic Guide</span></button>
+</div>
+
 <dialog id="policy-dialog" class="detail-dialog"><form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form><div id="policy-detail"></div></dialog>
 <script src="app.js"></script>
 <script src="revolutionary-quiz.js?v=2"></script>
 <script src="wicklow-platform.js?v=1"></script>
+<script src="ipm-guide.js?v=1"></script>
 </body>
 </html>
