@@ -444,3 +444,21 @@ html{scroll-padding-top:24px}
 .visitor-question small{margin-top:3px;font-size:10px;line-height:1.4;color:#c9d8d0}
 .visitor-question i{font-style:normal;color:#f0ca82;font-size:17px}
 @media(max-width:760px){.hero{gap:24px}.hero-visitor-panel{padding:15px}.visitor-question{padding:10px}.visitor-question strong{font-size:12px}}
+
+/* Simplified accordion navigation: no cramped multi-column tiles on phones */
+.section-nav{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;align-items:start}
+.nav-group{min-width:0}
+.nav-group-title{display:flex;align-items:center;gap:12px;cursor:pointer;list-style:none}
+.nav-group-title::-webkit-details-marker{display:none}
+.nav-group-title::after{content:"+";margin-left:auto;font-size:20px;font-weight:400;color:#e8c27c}
+.nav-group[open]>.nav-group-title::after{content:"−"}
+.nav-group-links{display:grid;grid-template-columns:1fr;gap:7px;padding-top:12px}
+.nav-group-links a{display:flex;align-items:center;gap:10px;min-width:0;min-height:42px;padding:8px 10px;white-space:normal;overflow-wrap:normal;word-break:normal}
+.nav-group-links a>span:last-child{min-width:0;word-break:normal;overflow-wrap:break-word}
+@media(max-width:900px){
+ .section-nav{grid-template-columns:minmax(0,1fr);gap:8px}
+ .nav-group{width:100%}
+ .nav-group-title{padding:13px 14px}
+ .nav-group-links{grid-template-columns:minmax(0,1fr);padding:8px 10px 12px}
+ .nav-group-links a{min-height:42px}
+}
