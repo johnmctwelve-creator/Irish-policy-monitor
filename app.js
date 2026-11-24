@@ -47,9 +47,15 @@ load().catch(err=>{console.error(err);document.querySelectorAll(".loading").forE
 
 function renderManifestos(){
  const cols=[["Housing","housing"],["Health","health"],["Economy","economy"],["Climate","climate"],["Immigration","immigration"],["Education","education"]];
- $("#manifesto-list").innerHTML=state.manifestos.map(p=>`<article class="manifesto-card"><div class="party-card-head"><h3>${safe(p.party)}</h3><span class="meta">${safe(p.manifesto_title)} · ${safe(p.manifesto_year)}</span></div><div class="manifesto-grid">${cols.map(c=>`<section><h4>${safe(c[0])}</h4><p>${safe(p[c[1]])}</p></section>`).join("")}</div><p class="meta">${safe(p.status)}</p>${link(p.manifesto_source,"Manifesto source")}</article>`).join("");
-}
-function renderExpandedCommitments(){
+ const pct=v=>v===undefined?"Not modelled":(v>0?"+":"")+v.toFixed(1)+"%";
+ $("#manifesto-list").innerHTML=state.manifestos.map(p=>{
+  const v=p.verification||{},pr=v.page_refs||{},c=v.costing||{},pb=v.pbo||{};
+  const pageRows=cols.map(([label,key])=>`<div><dt>${safe(label)}</dt><dd>${safe(p[key]||"No sufficiently verified summary recorded.")}</dd><small>Manifesto pages: ${safe(pr[key]||"Not verified")}</small></div>`).join("");
+  const figures=(c.key_figures||[]).map(x=>`<li>${safe(x)}</li>`).join("");
+  const pbo=pb.coverage==="Included"?`<div class="pbo-result"><strong>Independent PBO model — household income change by decile</strong><div><span>Poorest decile</span><b>${pct(pb.poorest_decile_income_change_pct)}</b></div><div><span>Richest decile</span><b>${pct(pb.richest_decile_income_change_pct)}</b></div><p>${safe(pb.summary)}</p><p class="meta">${safe(pb.caveat)}</p></div>`:`<div class="pbo-result"><strong>Independent PBO comparison</strong><p>${safe(pb.summary||"No comparable PBO microsimulation result recorded.")}</p><p class="meta">${safe(pb.caveat||"Not included in the six-party model.")}</p></div>`;
+  return `<article class="manifesto-card"><div class="party-card-head"><div><h3>${safe(p.party)}</h3><p class="meta">${safe(p.manifesto_title)} · ${safe(p.manifesto_year)} · ${safe(v.evidence_quality||p.status)}</p></div>${link(v.official||p.manifesto_source,"Open original manifesto")}</div><dl class="manifesto-grid">${pageRows}</dl><details class="costing-details"><summary>Costings and fiscal assumptions</summary><div><p><strong>Type:</strong> ${safe(c.type||"Not verified")}</p><ul>${figures||"<li>No sufficiently verified figures recorded.</li>"}</ul><p>${safe(v.checks?.costing||"No costing analysis recorded.")}</p><p><strong>Independent review:</strong> ${safe(c.independent_review||"No independent review located.")}</p></div></details>${pbo}<p class="meta">${safe(p.status)}</p>${link(p.manifesto_source,"Manifesto archive/source")}</article>`;
+ }).join("");
+}function renderExpandedCommitments(){
  const groups=[...new Set(state.expandedCommitments.map(x=>x.policy_area))];
  $("#expanded-pfg-list").innerHTML=groups.map(area=>`<details class="pfg-group"><summary>${safe(area)} <span>${state.expandedCommitments.filter(x=>x.policy_area===area).length} commitments</span></summary><div>${state.expandedCommitments.filter(x=>x.policy_area===area).map(x=>`<article class="pfg-item"><h4>${safe(x.commitment_summary)}</h4><p class="meta">PFG printed page ${safe(x.programme_page)} · ${safe(x.id)}</p><p><strong>How to measure:</strong> ${safe(x.measurement_required)}</p><p class="meta">Baseline: ${safe(x.baseline)} Status: ${safe(x.delivery_status)}</p>${link(x.source_url,"Programme for Government PDF")}</article>`).join("")}</div></details>`).join("");
 }
