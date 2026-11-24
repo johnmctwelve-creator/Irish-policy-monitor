@@ -493,3 +493,7 @@ html{scroll-padding-top:24px}
  .section-nav .nav-group-links>a{min-height:48px!important;padding:9px 11px!important}
  .section-nav>.nav-group>.nav-group-title{font-size:12px!important;letter-spacing:.08em!important}
 }
+
+/* Briefly highlight the destination opened from Civic Guide */
+.ipm-guide-destination{scroll-margin-top:24px;animation:ipm-guide-destination-pulse 1.8s ease-out}
+@keyframes ipm-guide-destination-pulse{0%,35%{outline:3px solid rgba(232,194,124,.9);outline-offset:5px}100%{outline:3px solid transparent;outline-offset:12px}}
