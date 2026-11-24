@@ -1,0 +1,258 @@
+{
+  "metadata": {
+    "title": "Five-year comparable fiscal framework 2026–2030",
+    "version": "1.0",
+    "research_cutoff": "2026-11-24",
+    "currency": "EUR billions, nominal",
+    "status": "Official baseline populated. Party-specific annual balances are not calculated where comparable year-by-year costing data are absent.",
+    "scope": "Transparent baseline and sensitivity model; not a full independent forecast.",
+    "sources": [
+      {
+        "name": "Budget 2027 fiscal projections",
+        "url": "https://assets.gov.ie/static/documents/a1841801/Budget_2027_Economic_and_Fiscal_Outlook.pdf"
+      },
+      {
+        "name": "Budget 2027 projections and corporation-tax estimates",
+        "url": "https://www.crowe.com/ie/insights/jim-power-budget-2027-analysis"
+      },
+      {
+        "name": "Irish Fiscal Advisory Council — Budget 2027",
+        "url": "https://www.fiscalcouncil.ie/flash-release-budget-2027/"
+      },
+      {
+        "name": "PBO — 2024 manifesto tax and welfare modelling",
+        "url": "https://data.oireachtas.ie/ie/oireachtas/parliamentaryBudgetOffice/2025/2025-05-29_general-election-2024-a-model-based-assessment-of-proposed-tax-and-welfare-policies_en.pdf"
+      }
+    ],
+    "limitations": [
+      "Gross voted expenditure is not total general-government expenditure and must not be subtracted from tax revenue to recreate the general-government balance.",
+      "PBO reports 2030 endpoint percentage deviations for selected tax and welfare measures only; these cannot be projected linearly across earlier years or converted to euros without baseline totals.",
+      "Corporation-tax windfall estimates are uncertain and not guaranteed recurring revenue.",
+      "Party manifesto costings use inconsistent periods, baselines and classifications; missing values remain uncosted rather than imputed."
+    ]
+  },
+  "baseline": [
+    {
+      "year": 2026,
+      "tax": 110.5,
+      "ct": 34.1,
+      "windfall": 18.8,
+      "gg_balance": 6.725,
+      "gg_balance_pct_gni": 1.9,
+      "current": 100.8,
+      "capital": 19.5,
+      "gross_voted": 120.3
+    },
+    {
+      "year": 2027,
+      "tax": 119.1,
+      "ct": 39.1,
+      "windfall": 22.9,
+      "gg_balance": 9.47,
+      "gg_balance_pct_gni": 2.5,
+      "current": 105.3,
+      "capital": 20.3,
+      "gross_voted": 125.6
+    },
+    {
+      "year": 2028,
+      "tax": 123.8,
+      "ct": 39.8,
+      "windfall": 22.8,
+      "gg_balance": 4.695,
+      "gg_balance_pct_gni": 1.2,
+      "current": 111.4,
+      "capital": 21.5,
+      "gross_voted": 132.9
+    },
+    {
+      "year": 2029,
+      "tax": 127.6,
+      "ct": 39.6,
+      "windfall": 21.7,
+      "gg_balance": 0.935,
+      "gg_balance_pct_gni": 0.2,
+      "current": 117.7,
+      "capital": 22.4,
+      "gross_voted": 140.1
+    },
+    {
+      "year": 2030,
+      "tax": 136.8,
+      "ct": 44.7,
+      "windfall": 26,
+      "gg_balance": 5.73,
+      "gg_balance_pct_gni": 1.3,
+      "current": 124.1,
+      "capital": 23.2,
+      "gross_voted": 147.3
+    }
+  ],
+  "stress": [
+    {
+      "label": "Baseline",
+      "haircut": 0
+    },
+    {
+      "label": "25% windfall reduction",
+      "haircut": 25
+    },
+    {
+      "label": "50% windfall reduction",
+      "haircut": 50
+    },
+    {
+      "label": "100% windfall reduction",
+      "haircut": 100
+    }
+  ],
+  "pbo": [
+    {
+      "party": "Fianna Fáil",
+      "tax_receipts_pct": 0.4,
+      "welfare_spending_pct": 1,
+      "poorest_decile_income_pct": 0.1,
+      "richest_decile_income_pct": -0.4
+    },
+    {
+      "party": "Fine Gael",
+      "tax_receipts_pct": 0.5,
+      "welfare_spending_pct": -1.8,
+      "poorest_decile_income_pct": -2.7,
+      "richest_decile_income_pct": -0.4
+    },
+    {
+      "party": "Green Party",
+      "tax_receipts_pct": 2.2,
+      "welfare_spending_pct": -3.2,
+      "poorest_decile_income_pct": -1.1,
+      "richest_decile_income_pct": -1.1
+    },
+    {
+      "party": "Labour",
+      "tax_receipts_pct": 2.7,
+      "welfare_spending_pct": 0.7,
+      "poorest_decile_income_pct": 2,
+      "richest_decile_income_pct": -2.2
+    },
+    {
+      "party": "People Before Profit",
+      "tax_receipts_pct": 7.9,
+      "welfare_spending_pct": 8.9,
+      "poorest_decile_income_pct": 15.6,
+      "richest_decile_income_pct": -12.7
+    },
+    {
+      "party": "Sinn Féin",
+      "tax_receipts_pct": 4.1,
+      "welfare_spending_pct": -3.2,
+      "poorest_decile_income_pct": 0.9,
+      "richest_decile_income_pct": -4.8
+    },
+    {
+      "party": "Social Democrats",
+      "tax_receipts_pct": 10.9,
+      "welfare_spending_pct": 14.5,
+      "poorest_decile_income_pct": 13.4,
+      "richest_decile_income_pct": -3.7
+    }
+  ],
+  "parties": [
+    {
+      "party": "Fianna Fáil",
+      "known": "Party manifesto stated a €3bn net tax package over five years (2024-era analysis); whole programme annual cost schedule not available in a common format.",
+      "missing": [
+        "Annual departmental current spending",
+        "Annual capital project cash flows",
+        "Annual tax measures and offsets",
+        "Recurring versus one-off funding"
+      ]
+    },
+    {
+      "party": "Fine Gael",
+      "known": "Party manifesto states €31.2bn spending increase 2026–2030, €14.1bn additional capital expenditure from Apple receipts, €6bn tax revenue attributed to wage growth and €1.1bn revenue-raising measures. Party claims require reconciliation.",
+      "missing": [
+        "Annual current/capital split of €31.2bn",
+        "Timing and eligibility of Apple-funded capital",
+        "Annual net tax measures",
+        "Delivery capacity and escalation assumptions"
+      ]
+    },
+    {
+      "party": "Sinn Féin",
+      "known": "Manifesto provides housing tenure targets; PBO models selected tax/welfare measures only. Whole-programme annual balance not independently established.",
+      "missing": [
+        "Annual current and capital cost by programme",
+        "Annual tax measures and corporation-tax assumptions",
+        "Capital project cash flow",
+        "Post-completion operating costs"
+      ]
+    },
+    {
+      "party": "Labour",
+      "known": "Manifesto states additional €2.8bn capital allocation per year by 2029 for housing and around €1bn annual capital for affordable/cost-rental measures; overlap needs checking.",
+      "missing": [
+        "Annual current costs",
+        "Reconciled capital totals and overlap",
+        "Annual revenue measures",
+        "Workforce and build-rate assumptions"
+      ]
+    },
+    {
+      "party": "Social Democrats",
+      "known": "Manifesto reports €12.063bn average additional spending per year 2026–2030, including housing €3.980bn, health €3.300bn, disability €1.054bn, education €749m, welfare €1.415bn, climate/nature €540m, childcare €505m and other €520m. Party-stated estimates.",
+      "missing": [
+        "Annual ramp-up profile",
+        "Current/capital split",
+        "Annual recurring revenue offsets",
+        "Capacity and inflation assumptions"
+      ]
+    },
+    {
+      "party": "Green Party",
+      "known": "PBO covers selected tax/welfare policies only; manifesto climate, retrofit, transport and public-service capital investment not independently costed in that model.",
+      "missing": [
+        "Project-level capital costs and annual cash profiles",
+        "Public/private funding shares",
+        "Grid and planning capacity",
+        "Recurring operating costs"
+      ]
+    },
+    {
+      "party": "People Before Profit",
+      "known": "PBO covers selected tax/welfare policies only; public construction and expanded public provision require additional capital and workforce costing.",
+      "missing": [
+        "Annual capital programme",
+        "State construction-company set-up and operating costs",
+        "Tax revenue with behavioural sensitivity",
+        "Land, labour and procurement capacity"
+      ]
+    },
+    {
+      "party": "Aontú",
+      "known": "Several measure-specific party estimates exist; no comparable PBO result in the seven-party report.",
+      "missing": [
+        "Consolidated annual cost schedule",
+        "Recurring versus one-off split",
+        "Funding offsets",
+        "Independent validation"
+      ]
+    },
+    {
+      "party": "Independent Ireland",
+      "known": "Manifesto gives selected set-up/operating costs and a 10% public-spending savings ambition; savings yield is not verified.",
+      "missing": [
+        "Line-by-line eligible savings baseline",
+        "Gross/net savings and implementation costs",
+        "Annual timetable and service impacts",
+        "Independent audit"
+      ]
+    }
+  ],
+  "rules": [
+    "Illustrative adjusted balance = published general-government balance − (estimated excess corporation tax × haircut).",
+    "This holds all other factors constant; it is not a forecast and does not model macroeconomic or behavioural responses.",
+    "No party-specific annual balance is calculated until comparable annual current spending, capital spending, tax changes, savings and funding schedules are available."
+  ],
+  "conclusion": "The official baseline projects a €6.725bn general-government surplus in 2026, narrowing to €0.935bn in 2029 before rising to €5.730bn in 2030. Estimated excess corporation-tax receipts range from €18.8bn to €26.0bn annually. Removing that entire estimated component, with everything else unchanged, would turn each projected surplus into a deficit. This is a one-factor sensitivity, not a forecast. Current manifesto data do not support nine comparable annual party balances: annual cost, revenue and timing schedules are inconsistent or absent. The model therefore displays the official baseline, stress tests, PBO's comparable 2030 endpoint and missing party inputs rather than inventing totals."
+}
