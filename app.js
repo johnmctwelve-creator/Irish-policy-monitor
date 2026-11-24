@@ -12,7 +12,7 @@ async function load(){
  $("#research-date").textContent=`Research snapshot: ${date} · Expanded edition; conclusions remain provisional`;
  $("#method-date").textContent=date;
  $("#area-count").textContent=state.assessments.length;$("#indicator-count").textContent=state.indicators.length;$("#promise-count").textContent=state.commitments.length;
- populateAreaFilter();renderPolicies();renderEvidence();renderPromises();renderParties();renderManifestos();renderExpandedCommitments();renderFeasibility();renderFiscalModel();renderQuestionnaire();
+ populateAreaFilter();renderExecutiveDashboard();renderPolicies();renderEvidence();renderPromises();renderParties();renderManifestos();renderExpandedCommitments();renderFeasibility();renderFiscalModel();renderQuestionnaire();
 }
 function populateAreaFilter(){const areas=[...new Set(state.indicators.map(x=>x.area))].sort();$("#evidence-filter").innerHTML='<option value="">All areas</option>'+areas.map(x=>`<option>${safe(x)}</option>`).join("");}
 function renderPolicies(){
@@ -173,4 +173,18 @@ function calculateAlignment(){
  <div class="alignment-share"><button type="button" id="alignment-copy" class="alignment-reset">Copy my results summary</button><span id="alignment-copy-status" role="status"></span></div>`;
  $("#alignment-copy").addEventListener("click",async()=>{const status=$("#alignment-copy-status");try{await navigator.clipboard.writeText(resultText);status.textContent="Copied — ready to share.";}catch(e){status.textContent="Copy unavailable in this browser. You can select the results text manually."; }});
  $("#alignment-results").scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function renderExecutiveDashboard(){
+ const node=$("#executive-summary");if(!node)return;
+ const counts=state.commitments.reduce((o,x)=>(o[x.status]=(o[x.status]||0)+1,o),{});
+ const total=state.commitments.length,progress=counts.in_progress||0,unverified=counts.not_verifiable||0;
+ const p=node.querySelector(".executive-commitments h3");
+ if(p)p.textContent=`${progress} of ${total} commitments show recorded progress`;
+ const note=node.querySelector(".executive-commitments p");
+ if(note)note.textContent=`${unverified} remain marked “not yet verifiable” in the current extracted register. This is a limitation of verified commitment-level evidence, not proof that those commitments have not been acted on. ${counts.delivered||0} are marked delivered in this register snapshot.`;
+ const donut=node.querySelector(".executive-donut strong");
+ if(donut)donut.textContent=total?`${(progress/total*100).toFixed(1)}%`:"—";
+ const label=node.querySelector(".executive-donut span");
+ if(label)label.textContent="marked in progress";
 }
