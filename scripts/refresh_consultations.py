@@ -26,7 +26,7 @@ class Links(HTMLParser):
         if self.href is not None: self.text.append(data)
     def handle_endtag(self, tag):
         if tag == "a" and self.href is not None:
-            title = re.sub(r"\\s+", " ", " ".join(self.text)).strip()
+            title = re.sub(r"\s+", " ", " ".join(self.text)).strip()
             if title: self.items.append((self.href, title))
             self.href=None; self.text=[]
 
@@ -37,14 +37,14 @@ def fetch(url):
 
 def parse_deadline(text):
     patterns = [
-        r"(?:closing date|closes|deadline(?: for submissions)?|submissions? (?:must be received|by)|before)\\s*[:,-]?\\s*(?:at\\s*)?(\\d{1,2}(?:st|nd|rd|th)?\\s+[A-Za-z]+\\s+20\\d{2})",
-        r"(\\d{1,2}[/-]\\d{1,2}[/-]20\\d{2})",
-        r"(\\d{4}-\\d{2}-\\d{2})",
+        r"(?:closing date|closes|deadline(?: for submissions)?|submissions? (?:must be received|by)|before)\s*[:,-]?\s*(?:at\s*)?(\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]+\s+20\d{2})",
+        r"(\d{1,2}[/-]\d{1,2}[/-]20\d{2})",
+        r"(\d{4}-\d{2}-\d{2})",
     ]
     for pattern in patterns:
         m=re.search(pattern,text,re.I)
         if m:
-            raw=re.sub(r"(?<=\\d)(st|nd|rd|th)\\b","",m.group(1),flags=re.I)
+            raw=re.sub(r"(?<=\d)(st|nd|rd|th)\b","",m.group(1),flags=re.I)
             for fmt in ("%d %B %Y","%d %b %Y","%d/%m/%Y","%d-%m-%Y","%Y-%m-%d"):
                 try: return datetime.strptime(raw,fmt).date()
                 except ValueError: pass
@@ -97,7 +97,7 @@ for name,url,kind in SOURCES:
 # Deduplicate by normalized title and canonical URL.
 seen=set(); unique=[]
 for item in items:
-    key=(re.sub(r"\\W+","",item["title"].lower()),item["url"].split("?")[0])
+    key=(re.sub(r"\W+","",item["title"].lower()),item["url"].split("?")[0])
     if key not in seen: seen.add(key); unique.append(item)
 unique.sort(key=lambda x:(x["deadline"] is None, x["deadline"] or "9999-12-31", x["authority"], x["title"]))
 payload={
