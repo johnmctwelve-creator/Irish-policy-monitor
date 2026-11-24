@@ -2,8 +2,8 @@
   "metadata": {
     "purpose": "Record attributable and current policy positions; party proposals are not enacted government policy.",
     "research_cutoff": "2026-11-24",
-    "caveat": "Source-linked register of selected published party positions, not a complete manifesto-by-manifesto comparison. Government parties' positions are distinguished from adopted Government policy. Absence from this register does not mean a party has no policy on an area.",
-    "version": "1.0"
+    "caveat": "Source-linked register of selected published party positions, not a complete manifesto-by-manifesto comparison. Government parties' positions are distinguished from adopted Government policy. Some positions come from standing policy pages or secondary summaries; dates and costings require further verification. Absence from this register does not mean a party has no policy on an area.",
+    "version": "1.1"
   },
   "fields": [
     "party",
@@ -100,6 +100,30 @@
       "costing_source": "Green Party Budget 2027 submission; detailed costing assumptions require independent review",
       "parliamentary_record": "",
       "status": "Opposition party proposal; some standing policy pages pre-date the current Dáil term",
+      "last_verified": "2026-11-24"
+    },
+    {
+      "party": "Aontú",
+      "policy_area": "Health; immigration; housing; carers; farming",
+      "position_summary": "Aontú's published policy pages advocate health-service restructuring and additional frontline capacity, a new border agency and faster asylum processing, and reform of asylum-accommodation planning exemptions. Its current pages also include proposals on carers and rural issues.",
+      "proposal_text": "Health page proposes 12 additional CAMHS teams, additional specialist nurses, 400 consultants and changes to HSE management/recruitment. Immigration page proposes a new integrated border agency, ending the planning exemption for asylum accommodation and a community dividend for host communities. These are party proposals; the page contains historic statistics and claims that require date-specific verification before comparison.",
+      "publication_date": "Current policy pages; manifesto 2024 for wider commitments",
+      "source_url": "https://aontu.ie/issues/",
+      "costing_source": "Aontú policy pages; detailed independent costing not assessed",
+      "parliamentary_record": "",
+      "status": "Opposition party position; current proposals and historic statistics must be date-checked",
+      "last_verified": "2026-11-24"
+    },
+    {
+      "party": "Independent Ireland",
+      "policy_area": "Housing; climate; transport; rural development",
+      "position_summary": "Independent Ireland's published policy emphasises incentivising private construction and returning skilled builders, planning reform, lower rents and a less prescriptive climate transition.",
+      "proposal_text": "Housing policy proposes expanding incentives for construction, a tax-relief route to attract returning builders, planning reform and rent-related tax measures. Climate policy advocates a technology-neutral energy mix, revisiting net-zero policy and practical adaptation and environmental measures. The party describes many proposals as cost-neutral; that claim requires independent fiscal and behavioural analysis.",
+      "publication_date": "Current policy pages; housing policy release 10 September (year to confirm on page)",
+      "source_url": "https://www.independentireland.ie/housing",
+      "costing_source": "Party policy pages and housing policy release; no independent costing verified",
+      "parliamentary_record": "",
+      "status": "Opposition party position; policy claims and costings require independent scrutiny",
       "last_verified": "2026-11-24"
     }
   ]
