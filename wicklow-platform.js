@@ -10,4 +10,28 @@ if(filter)filter.addEventListener("change",renderConsultations);
 fetch("data/consultations.json?v="+Date.now()).then(r=>{if(!r.ok)throw Error("feed unavailable");return r.json();}).then(data=>{consultationItems=(data.items||[]).filter(x=>x.url&&x.title);renderConsultations();const caveat=document.querySelector(".wicklow-live-caveat");if(caveat&&data.updated_at)caveat.textContent="Last automated refresh: "+new Date(data.updated_at).toLocaleString("en-IE",{dateStyle:"medium",timeStyle:"short"})+". "+(data.coverage_note||"Deadlines are extracted from source pages; verify details before submitting.");}).catch(()=>{if(list)list.innerHTML='<p class="wicklow-empty">The live feed is temporarily unavailable. Use the official Wicklow and national consultation portals linked above.</p>';});
 
 const form=document.getElementById("wicklow-idea-form");if(form)form.addEventListener("submit",function(e){e.preventDefault();const v=id=>document.getElementById(id).value.trim();const subject="Local policy idea — "+v("wicklow-idea-topic")+" — "+v("wicklow-idea-area");const body="LOCAL POLICY IDEA\n\nArea: "+v("wicklow-idea-area")+"\nPolicy area: "+v("wicklow-idea-topic")+"\nProblem: "+v("wicklow-idea-problem")+"\nSuggested change: "+v("wicklow-idea-proposal")+"\nSuggested lead: "+v("wicklow-idea-owner");const out=document.getElementById("wicklow-idea-feedback");out.textContent="Your idea summary is ready below. Copy it and send it to the relevant representative or consultation.";let pre=document.getElementById("wicklow-idea-preview");if(!pre){pre=document.createElement("pre");pre.id="wicklow-idea-preview";pre.style.cssText="white-space:pre-wrap;background:#f1f6f1;padding:12px;border-radius:8px;font-size:11px;margin-top:12px";form.appendChild(pre);}pre.textContent=subject+"\n\n"+body;let btn=document.getElementById("wicklow-idea-copy");if(!btn){btn=document.createElement("button");btn.type="button";btn.id="wicklow-idea-copy";btn.textContent="Copy idea summary";form.appendChild(btn);}btn.onclick=()=>{if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(pre.textContent).then(()=>out.textContent="Copied. Paste into your email or consultation submission.");};});
+/* Daily source-change monitor: source-page changes are review alerts, never automatic status changes. */
+const monitor=document.getElementById("wicklow-source-monitor");
+if(monitor){
+ const summary=document.getElementById("wicklow-monitor-summary");
+ const events=document.getElementById("wicklow-monitor-events");
+ const foot=document.getElementById("wicklow-monitor-foot");
+ const state=monitor.querySelector(".wicklow-monitor-state");
+ const esc=s=>String(s??"").replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
+ fetch("data/wicklow-monitor.json?v="+Date.now(),{cache:"no-store"})
+ .then(r=>{if(!r.ok)throw Error("monitor data unavailable");return r.json();})
+ .then(data=>{
+  const n=data.summary||{},sources=Array.isArray(data.sources)?data.sources:[];
+  const ok=n.checks_succeeded||0,total=n.sources_monitored||sources.length,failed=n.checks_failed||0;
+  state.textContent=ok?"Daily checks active":"Awaiting first check";
+  state.classList.toggle("is-active",ok>0);
+  summary.innerHTML='<div><strong>'+esc(ok)+'/'+esc(total)+'</strong><span>Official sources checked successfully</span></div><div><strong>'+esc(failed)+'</strong><span>Sources temporarily unavailable</span></div><div><strong>'+esc(n.changes_detected_in_this_run||0)+'</strong><span>Changes detected in latest run</span></div>';
+  const alerts=(data.events||[]).slice(0,5);
+  events.innerHTML=alerts.length?'<h5>Recent source-change alerts · review required</h5>'+alerts.map(e=>'<article><time>'+esc(e.detected_at||"")+'</time><b>'+esc(e.project||"Project update")+'</b><p>'+esc(e.message||"Official source page changed. Review before updating status.")+'</p><a href="'+esc(e.url||"#")+'" target="_blank" rel="noopener">Review official source ↗</a></article>').join(""):'<p class="wicklow-monitor-empty">No source-page changes have been flagged yet. This does not mean there have been no project developments.</p>';
+  const last=data.updated_at?new Date(data.updated_at).toLocaleString("en-IE",{dateStyle:"medium",timeStyle:"short",timeZone:"Europe/Dublin"}):"Not yet run";
+  foot.textContent="Last automated check: "+last+". "+(data.method_note||"Page changes require editorial review; statuses are not updated automatically.");
+ })
+ .catch(()=>{state.textContent="Monitor awaiting first run";summary.innerHTML="<span>Automated source checks will appear here after the first successful scheduled run.</span>";events.innerHTML="";foot.textContent="The manually verified project register remains available above. Automated monitoring does not yet have a completed check to display.";});
+}
+
 });
