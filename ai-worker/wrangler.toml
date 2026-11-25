@@ -1,4 +1,4 @@
-name = "irish-policy-monitor-ai"
+name = "irishpolicymonitorworker"
 main = "src/index.js"
 compatibility_date = "2026-11-24"
 
