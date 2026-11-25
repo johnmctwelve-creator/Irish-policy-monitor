@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25T13:35:08.425451+00:00",
+  "updated_at": "2026-11-25T19:05:18.276585+00:00",
   "items": [
     {
       "title": "All Consultations",
@@ -124,7 +124,7 @@
       "name": "MapAlerter participating councils",
       "url": "https://www.mapalerter.ie/search/public-consultations",
       "ok": true,
-      "items": 85
+      "items": 82
     }
   ],
   "coverage_note": "Wicklow is fetched directly from its official consultation hub. MapAlerter is a secondary aggregator for participating councils only; it states that councils not listed may not use the service. No aggregator listing is treated as a complete national register. Deadlines that cannot be parsed are marked unknown and must be verified at source."
