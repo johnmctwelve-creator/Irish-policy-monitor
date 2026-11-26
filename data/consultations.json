@@ -1,117 +1,6 @@
 {
-  "updated_at": "2026-11-26T13:33:28.529857+00:00",
-  "items": [
-    {
-      "title": "All Consultations",
-      "url": "https://www.mapalerter.ie/search/public-consultations#",
-      "authority": "Participating local authority (verify source)",
-      "topic": "community",
-      "topicLabel": "Community",
-      "deadline": null,
-      "source": "MapAlerter participating councils",
-      "source_url": "https://www.mapalerter.ie/search/public-consultations"
-    },
-    {
-      "title": "All Surveys",
-      "url": "https://www.mapalerter.ie/search/public-consultations#",
-      "authority": "Participating local authority (verify source)",
-      "topic": "community",
-      "topicLabel": "Community",
-      "deadline": null,
-      "source": "MapAlerter participating councils",
-      "source_url": "https://www.mapalerter.ie/search/public-consultations"
-    },
-    {
-      "title": "Business planning alerts at PlanningAlerts.ie",
-      "url": "https://www.planningalerts.ie?ref=mafoot",
-      "authority": "Participating local authority (verify source)",
-      "topic": "transport",
-      "topicLabel": "Transport",
-      "deadline": null,
-      "source": "MapAlerter participating councils",
-      "source_url": "https://www.mapalerter.ie/search/public-consultations"
-    },
-    {
-      "title": "Consultations",
-      "url": "https://www.mapalerter.ie/categories/public-consultation-alerts",
-      "authority": "Participating local authority (verify source)",
-      "topic": "community",
-      "topicLabel": "Community",
-      "deadline": null,
-      "source": "MapAlerter participating councils",
-      "source_url": "https://www.mapalerter.ie/search/public-consultations"
-    },
-    {
-      "title": "Planning",
-      "url": "https://www.mapalerter.ie/categories/planning",
-      "authority": "Participating local authority (verify source)",
-      "topic": "planning",
-      "topicLabel": "Planning",
-      "deadline": null,
-      "source": "MapAlerter participating councils",
-      "source_url": "https://www.mapalerter.ie/search/public-consultations"
-    },
-    {
-      "title": "Planning Alerts",
-      "url": "https://www.mapalerter.ie/categories/planning",
-      "authority": "Participating local authority (verify source)",
-      "topic": "planning",
-      "topicLabel": "Planning",
-      "deadline": null,
-      "source": "MapAlerter participating councils",
-      "source_url": "https://www.mapalerter.ie/search/public-consultations"
-    },
-    {
-      "title": "Pre-planning report services at PrePlanning.ie",
-      "url": "https://www.preplanning.ie?ref=mafoot",
-      "authority": "Participating local authority (verify source)",
-      "topic": "planning",
-      "topicLabel": "Planning",
-      "deadline": null,
-      "source": "MapAlerter participating councils",
-      "source_url": "https://www.mapalerter.ie/search/public-consultations"
-    },
-    {
-      "title": "Public Consultation Alerts",
-      "url": "https://www.mapalerter.ie/categories/public-consultation-alerts",
-      "authority": "Participating local authority (verify source)",
-      "topic": "community",
-      "topicLabel": "Community",
-      "deadline": null,
-      "source": "MapAlerter participating councils",
-      "source_url": "https://www.mapalerter.ie/search/public-consultations"
-    },
-    {
-      "title": "Public Consultations",
-      "url": "https://www.mapalerter.ie/search/public-consultations?view=form",
-      "authority": "Participating local authority (verify source)",
-      "topic": "community",
-      "topicLabel": "Community",
-      "deadline": null,
-      "source": "MapAlerter participating councils",
-      "source_url": "https://www.mapalerter.ie/search/public-consultations"
-    },
-    {
-      "title": "View Consultation",
-      "url": "https://mapalerter.ie/r?ref=B363P",
-      "authority": "Participating local authority (verify source)",
-      "topic": "community",
-      "topicLabel": "Community",
-      "deadline": null,
-      "source": "MapAlerter participating councils",
-      "source_url": "https://www.mapalerter.ie/search/public-consultations"
-    },
-    {
-      "title": "View Consultation Map",
-      "url": "https://www.mapalerter.ie/consultationmap",
-      "authority": "Participating local authority (verify source)",
-      "topic": "community",
-      "topicLabel": "Community",
-      "deadline": null,
-      "source": "MapAlerter participating councils",
-      "source_url": "https://www.mapalerter.ie/search/public-consultations"
-    }
-  ],
+  "updated_at": "2026-11-26T19:11:54.924253+00:00",
+  "items": [],
   "sources": [
     {
       "name": "Wicklow County Council",
@@ -124,7 +13,7 @@
       "name": "MapAlerter participating councils",
       "url": "https://www.mapalerter.ie/search/public-consultations",
       "ok": true,
-      "items": 85
+      "items": 0
     }
   ],
   "coverage_note": "Wicklow is fetched directly from its official consultation hub. MapAlerter is a secondary aggregator for participating councils only; it states that councils not listed may not use the service. No aggregator listing is treated as a complete national register. Deadlines that cannot be parsed are marked unknown and must be verified at source."
